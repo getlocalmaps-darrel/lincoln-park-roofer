@@ -148,6 +148,9 @@
             scroll-behavior: smooth;
             overflow-x: hidden; /* Prevent horizontal scroll */
             width: 100%;
+        
+            background: #0b1b2b; /* prevents white overscroll gap */
+            overscroll-behavior-y: none;
         }
         
         /* Prevent Horizontal Scroll globally */
@@ -156,6 +159,9 @@
             width: 100%;
             max-width: 100%;
             position: relative;
+        
+            background: #0b1b2b; /* match html background */
+            overscroll-behavior-y: none;
         }
         
         /* Custom Utilities */
@@ -207,7 +213,7 @@
 </style>
 </head>
 <!-- Added pt-[128px] to push content down because header is now fixed (floating) -->
-<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[128px]">
+<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[104px] md:pt-[152px]">
 
     <!-- HEADER / NAVIGATION -->
     <!-- Changed to fixed top-0 w-full z-[100] so it stays pinned at the top -->
