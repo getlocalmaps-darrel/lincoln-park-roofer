@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-04-FIXED -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-05-ANIMATION-RESTORED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -211,17 +211,17 @@
         }
 
         /* Scroll Animation Styles */
-        /* FIXED: Default to visible (opacity 1) so content shows even if JS fails */
+        /* Updated to be safe: default is visible. JS adds hidden state. */
         .reveal {
-            opacity: 1;
+            opacity: 1; 
             transform: translateY(0);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
         }
         
-        /* JS will add this class to 'prime' the animation. If JS dies, this never adds, and site stays visible. */
-        .reveal-init {
-            /* opacity: 0; REMOVED FOR SAFETY */
-            /* transform: translateY(40px); REMOVED FOR SAFETY */
+        /* JS adds this class immediately to prepare animation */
+        .reveal-hidden {
+            opacity: 0;
+            transform: translateY(40px);
         }
 
         .reveal.active {
@@ -1041,22 +1041,20 @@
         // SCROLL ANIMATION OBSERVER
         const revealElements = document.querySelectorAll(".reveal");
         
-        // 1. FIXED: Removed the aggressive hiding logic.
-        // Previously: revealElements.forEach(el => el.classList.add("reveal-init"));
-        // Now: Elements stay visible by default.
+        // Apply hidden state via JS so if JS fails, content remains visible (progressive enhancement)
+        revealElements.forEach(el => el.classList.add("reveal-hidden"));
 
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // 2. Remove hidden class and add active class
-                    entry.target.classList.remove("reveal-init");
+                    entry.target.classList.remove("reveal-hidden");
                     entry.target.classList.add("active");
                     observer.unobserve(entry.target);
                 }
             });
         }, {
             root: null,
-            threshold: 0.1, // Trigger when 10% visible
+            threshold: 0.1, 
             rootMargin: "0px 0px -50px 0px"
         });
 
