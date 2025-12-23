@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-09-ANIMATION-RESTORED-STABLE -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-10-ANIMATION-TIMING-FIX -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -206,11 +206,11 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
         }
 
-        /* Scroll Animation Styles (Restored) */
+        /* Scroll Animation Styles (Restored & Improved) */
         .reveal {
             opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease-out;
+            transform: translateY(50px); /* Increased travel distance */
+            transition: all 1s ease-out; /* Slower, smoother reveal */
         }
         .reveal.active {
             opacity: 1;
@@ -294,7 +294,7 @@
 
 <!-- HERO SLIDER SECTION -->
     <!-- Increased min-height slightly for mobile comfort -->
-    <section id="hero-slider" class="reveal relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
+    <section id="hero-slider" class="relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
         
         <!-- SLIDE 1: LINCOLN PARK ROOFER (Unchanged) -->
         <!-- Active by default: opacity-100, z-10 -->
@@ -1040,22 +1040,14 @@
             });
         }, {
             root: null,
-            threshold: 0.1, // Trigger when 10% visible
-            rootMargin: "0px 0px -50px 0px"
+            threshold: 0.15, // Increased threshold so element must be 15% visible
+            rootMargin: "0px" // Removed negative margin to let it trigger naturally as it enters
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
 
-        // Fallback: If JS fails or takes too long, ensure content is visible
-        // (Note: This specific block runs if JS is enabled; <noscript> handles disabled JS)
-        setTimeout(() => {
-            revealElements.forEach(el => {
-                if(getComputedStyle(el).opacity === '0') {
-                    el.classList.add('active'); 
-                }
-            });
-        }, 3000); // 3 second safety timeout
-
+        // Removed the timeout fallback that was auto-revealing content too early
+        
         // HERO SLIDER LOGIC
         let currentSlide = 0;
         let slideInterval;
