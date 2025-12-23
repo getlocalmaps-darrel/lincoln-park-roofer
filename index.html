@@ -211,11 +211,19 @@
         }
 
         /* Scroll Animation Styles */
+        /* FIXED: Default to visible (opacity 1) so content shows even if JS fails */
         .reveal {
-            opacity: 0;
-            transform: translateY(40px);
+            opacity: 1;
+            transform: translateY(0);
             transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
         }
+        
+        /* JS will add this class to 'prime' the animation. If JS dies, this never adds, and site stays visible. */
+        .reveal-init {
+            opacity: 0;
+            transform: translateY(40px);
+        }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
@@ -1033,9 +1041,14 @@
         // SCROLL ANIMATION OBSERVER
         const revealElements = document.querySelectorAll(".reveal");
         
+        // 1. Hide elements initially via JS (Safe Fallback pattern)
+        revealElements.forEach(el => el.classList.add("reveal-init"));
+
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
+                    // 2. Remove hidden class and add active class
+                    entry.target.classList.remove("reveal-init");
                     entry.target.classList.add("active");
                     observer.unobserve(entry.target);
                 }
