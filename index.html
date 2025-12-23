@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-05-ANIMATION-RESTORED -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-06-ANIMATION-TUNED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -211,22 +211,24 @@
         }
 
         /* Scroll Animation Styles */
-        /* Updated to be safe: default is visible. JS adds hidden state. */
+        /* FIXED: Default is visible. Animation only applies when ACTIVE class is added. */
         .reveal {
             opacity: 1; 
             transform: translateY(0);
-            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+            /* Important: NO transition here. This ensures immediate 'snapping' when hidden class is added. */
         }
         
-        /* JS adds this class immediately to prepare animation */
+        /* JS adds this class immediately. Opacity 0 makes it invisible. */
         .reveal-hidden {
             opacity: 0;
-            transform: translateY(40px);
+            transform: translateY(30px);
         }
 
+        /* When IntersectionObserver adds active, we transition back to defaults */
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Animation happens HERE */
         }
 
         /* Mobile Menu Transition */
