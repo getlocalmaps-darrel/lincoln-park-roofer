@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-11-SCROLL-UNLOCKED-FINAL -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-12-HERO-ANIMATION-FIX -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -220,6 +220,18 @@
             transform: translateY(40px);
         }
 
+        /* NEW: On-Load Animation for Hero Content */
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .load-animate {
+            opacity: 0; /* Hidden initially */
+            animation: fadeInUp 1s ease-out forwards; /* Plays once on load */
+            animation-delay: 0.2s; /* Small delay to ensure smooth entry */
+        }
+
         /* Mobile Menu Transition */
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
@@ -297,7 +309,8 @@
 
 <!-- HERO SLIDER SECTION -->
     <!-- Increased min-height slightly for mobile comfort -->
-    <section id="hero-slider" class="reveal relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
+    <!-- REMOVED 'reveal' class from here so background is stable. Content inside will animate. -->
+    <section id="hero-slider" class="relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
         
         <!-- SLIDE 1: LINCOLN PARK ROOFER (Unchanged) -->
         <!-- Active by default: opacity-100, z-10 -->
@@ -316,7 +329,8 @@
 
             <!-- Content -->
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-start pt-20 md:pt-24 lg:pt-20 pb-24 md:pb-32 lg:pb-40 z-50">
-                <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left">
+                <!-- ADDED: load-animate class to this wrapper -->
+                <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left load-animate">
                     <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">
                         Over 20 Years
                     </span>
