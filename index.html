@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-03 -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-04-FIXED -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -220,8 +220,8 @@
         
         /* JS will add this class to 'prime' the animation. If JS dies, this never adds, and site stays visible. */
         .reveal-init {
-            opacity: 0;
-            transform: translateY(40px);
+            /* opacity: 0; REMOVED FOR SAFETY */
+            /* transform: translateY(40px); REMOVED FOR SAFETY */
         }
 
         .reveal.active {
@@ -1041,8 +1041,9 @@
         // SCROLL ANIMATION OBSERVER
         const revealElements = document.querySelectorAll(".reveal");
         
-        // 1. Hide elements initially via JS (Safe Fallback pattern)
-        revealElements.forEach(el => el.classList.add("reveal-init"));
+        // 1. FIXED: Removed the aggressive hiding logic.
+        // Previously: revealElements.forEach(el => el.classList.add("reveal-init"));
+        // Now: Elements stay visible by default.
 
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
