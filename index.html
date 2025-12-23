@@ -210,6 +210,17 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
         }
 
+        /* Scroll Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1); /* Smooth easing */
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Mobile Menu Transition */
         #mobile-menu {
             transition: transform 0.3s ease-in-out;
@@ -400,7 +411,7 @@
             </section>
 
     <!-- TRUST BADGES STRIP -->
-    <div class="bg-white py-12 border-b border-gray-200 relative z-10">
+    <div class="bg-white py-12 border-b border-gray-200 relative z-10 reveal">
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center">
                 <!-- Google Badge -->
@@ -440,18 +451,18 @@
     </div>
 
     <!-- ABOUT / INTRO SECTION -->
-    <section id="about" class="py-12 md:py-20 bg-white">
+    <section id="about" class="py-12 md:py-20 bg-white reveal">
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
                 <!-- Image Area: Using the Truck Wrap image, CLEAN - Removed decorative borders -->
-                <div class="w-full lg:w-1/2 order-2 lg:order-1">
+                <div class="w-full lg:w-1/2 order-2 lg:order-1 reveal">
                     <!-- Truck Wrap Image loaded here with shadow only. Lazy loaded for performance. -->
                     <!-- CHANGED: Removed object-cover and fixed height. Added h-auto to show full image without cropping. -->
                     <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy">
                 </div>
                 
                 <!-- Content Area -->
-                <div class="w-full lg:w-1/2 order-1 lg:order-2">
+                <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
                     <h4 class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base">About Us</h4>
                     <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Reliable Roofing Done Right.</h2>
                     <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
@@ -477,7 +488,7 @@
 
 
     <!-- WHY CHOOSE US SECTION -->
-    <section id="why-us" class="py-10 md:py-12 bg-white relative">
+    <section id="why-us" class="py-10 md:py-12 bg-white relative reveal">
         <!-- subtle top & bottom lines with a soft shadow -->
         <div class="absolute top-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
         <div class="absolute bottom-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
@@ -494,35 +505,35 @@
 
             <div class="max-w-5xl mx-auto">
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             20+ years of local roofing experience
                         </span>
                     </li>
 
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             No subcontractors — your job stays with our team
                         </span>
                     </li>
 
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             Licensed &amp; insured for your peace of mind
                         </span>
                     </li>
 
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             Financing available for qualified homeowners
                         </span>
                     </li>
 
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             Insurance claim help — documentation, photos, and paperwork guidance
@@ -532,7 +543,7 @@
                         </span>
                     </li>
 
-                    <li class="flex items-start gap-3">
+                    <li class="flex items-start gap-3 reveal">
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">
                             The only company offering roof rejuvenation in Wayne &amp; Oakland Counties
@@ -556,7 +567,7 @@
     </section>
 
     <!-- SERVICES SECTION -->
-    <section id="services" class="py-12 md:py-20 bg-gray-50 relative">
+    <section id="services" class="py-12 md:py-20 bg-gray-50 relative reveal">
         <!-- Background Pattern Decor -->
         <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-100 hidden lg:block skew-x-12 transform origin-top-right"></div>
         
@@ -569,7 +580,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Service 1: New Roof Construction -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary">
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                         <!-- Added loading="lazy" for performance -->
                         <img src="IMG_2155.jpg" alt="New Roof Construction" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
@@ -586,7 +597,7 @@
                 </div>
 
                 <!-- Service 2: Roof Repair -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary">
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
                         <img src="IMG_2153.jpg" alt="Roof Repair" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
@@ -603,7 +614,7 @@
                 </div>
 
                 <!-- Service 3: Roof Rejuvenation -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary">
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
                         <img src="IMG_1911.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
@@ -620,7 +631,7 @@
                 </div>
 
                 <!-- Service 4: Siding -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary">
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
                         <img src="IMG_2140.jpg" alt="Siding Services" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
@@ -637,7 +648,7 @@
                 </div>
 
                 <!-- Service 5: Gutters -->
-                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary">
+                <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
                         <img src="IMG_0240.jpg" alt="Gutters" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
@@ -658,7 +669,7 @@
     </section>
 
     <!-- NEW: EXPANDED SERVICE AREAS SECTION (Replaces Blue CTA) -->
-    <section class="relative py-24 md:py-32 bg-brand-dark text-white w-full z-30 shadow-[0_-20px_40px_-10px_rgba(0,0,0,0.6),0_20px_40px_-10px_rgba(0,0,0,0.6)]">
+    <section class="relative py-24 md:py-32 bg-brand-dark text-white w-full z-30 shadow-[0_-20px_40px_-10px_rgba(0,0,0,0.6),0_20px_40px_-10px_rgba(0,0,0,0.6)] reveal">
         <!-- 1. Background Image layer (Bottom) -->
         <div class="absolute inset-0 z-0">
             <!-- Increased opacity from 40 to 60 for better visibility -->
@@ -677,7 +688,7 @@
 
             <!-- Cities Grid: 4 Columns on Desktop -->
             <!-- We will show the first 12 cities (3 rows of 4) by default, and hide the rest -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left" id="cities-grid">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left reveal" id="cities-grid">
                 
                 <!-- Visible Cities -->
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">Lincoln Park</a></div>
@@ -723,14 +734,14 @@
 
     <!-- FAQ SECTION (Modified: Removed duplicate "Areas We Serve" list, kept full-width FAQ) -->
         <!-- FAQ SECTION -->
-    <section id="faq" class="py-12 md:py-20 bg-white">
+    <section id="faq" class="py-12 md:py-20 bg-white reveal">
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-10">
                 <h3 class="big-text text-3xl md:text-4xl font-bold text-gray-900 border-b-4 border-brand-primary inline-block pb-2">Roofing FAQ (Lincoln Park, MI)</h3>
                 <p class="text-gray-600 mt-3 max-w-2xl mx-auto">Popular questions about roof replacement, roof repair, roof rejuvenation, and insurance claims.</p>
             </div>
 
-            <div class="max-w-3xl mx-auto space-y-4">
+            <div class="max-w-3xl mx-auto space-y-4 reveal">
                 <div class="border border-gray-200 rounded-lg overflow-hidden">
                     <button class="faq-btn w-full text-left px-4 md:px-6 py-4 bg-gray-50 hover:bg-gray-100 flex justify-between items-center focus:outline-none">
                         <span class="font-bold text-gray-800 text-sm md:text-base pr-4">How do I find the best roofer near me in Lincoln Park, MI?</span>
@@ -837,7 +848,7 @@
     <!-- CONTACT / FOOTER FORM -->
     <!-- Changed bg-brand-dark to a Gradient (Dark Blue) -->
     <!-- Removed Shingle Texture Overlay -->
-    <section id="contact" class="bg-gradient-to-br from-slate-900 to-blue-950 text-white py-12 md:py-20 relative overflow-hidden">
+    <section id="contact" class="bg-gradient-to-br from-slate-900 to-blue-950 text-white py-12 md:py-20 relative overflow-hidden reveal">
         
         <div class="container mx-auto px-4 md:px-6 relative z-10">
             <div class="flex flex-col lg:flex-row gap-12">
@@ -884,7 +895,7 @@
 
                 </div>
 
-                <div class="w-full lg:w-1/2 bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-2xl">
+                <div class="w-full lg:w-1/2 bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-2xl reveal">
                     <h3 class="big-text text-2xl font-bold mb-6 text-brand-dark">Request a Quote</h3>
                     <form action="mailto:chavezdarrel@yahoo.com;scott@kincaideroofrejuvenate.com?subject=lincoln park roofing lead" method="post" enctype="text/plain" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -910,7 +921,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20">
+    <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
             <!-- Footer Logo -->
             <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" class="h-16 md:h-20 w-auto opacity-95">
@@ -1018,6 +1029,24 @@
                 }
             });
         }
+
+        // SCROLL ANIMATION OBSERVER
+        const revealElements = document.querySelectorAll(".reveal");
+        
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.1, // Trigger when 10% visible
+            rootMargin: "0px 0px -50px 0px"
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
 
         // HERO SLIDER LOGIC
         let currentSlide = 0;
