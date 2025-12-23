@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-02 -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-03 -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -59,7 +59,21 @@
             { "@type": "City", "name": "Melvindale" },
             { "@type": "City", "name": "Ecorse" },
             { "@type": "City", "name": "River Rouge" },
-            { "@type": "City", "name": "Dearborn Heights" }
+            { "@type": "City", "name": "Dearborn Heights" },
+            { "@type": "City", "name": "Livonia" },
+            { "@type": "City", "name": "Westland" },
+            { "@type": "City", "name": "Plymouth" },
+            { "@type": "City", "name": "Northville" },
+            { "@type": "City", "name": "Novi" },
+            { "@type": "City", "name": "Farmington Hills" },
+            { "@type": "City", "name": "Southfield" },
+            { "@type": "City", "name": "Beverly Hills" },
+            { "@type": "City", "name": "Birmingham" },
+            { "@type": "City", "name": "Berkley" },
+            { "@type": "City", "name": "Oak Park" },
+            { "@type": "City", "name": "Ferndale" },
+            { "@type": "City", "name": "Royal Oak" },
+            { "@type": "City", "name": "Madison Heights" }
           ],
           "knowsAbout": [
             "best roofer near me",
@@ -360,14 +374,15 @@
                     <!-- Right Side: YouTube Video Embed -->
                     <div class="w-full lg:w-5/12 max-w-xl">
                         <div class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20">
+                            <!-- Added id="video-player" and enablejsapi=1 to control via API -->
                             <iframe 
+                                id="video-player"
                                 class="absolute inset-0 w-full h-full" 
-                                src="https://www.youtube.com/embed/zXRABs5AdOc" 
+                                src="https://www.youtube.com/embed/zXRABs5AdOc?enablejsapi=1" 
                                 title="Roof Rejuvenation Video" 
                                 frameborder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen
-                                loading="lazy">
+                                allowfullscreen>
                             </iframe>
                         </div>
                     </div>
@@ -643,12 +658,6 @@
     </section>
 
     <!-- NEW: EXPANDED SERVICE AREAS SECTION (Replaces Blue CTA) -->
-    <!-- 
-         CHANGES:
-         1. Added z-30: Lifts this section above others so shadow casts ONTO them.
-         2. Removed overflow-hidden: Allows shadow to extend outside the box.
-         3. Added custom shadow: casts dark shadow upwards AND downwards to break up the section.
-    -->
     <section class="relative py-24 md:py-32 bg-brand-dark text-white w-full z-30 shadow-[0_-20px_40px_-10px_rgba(0,0,0,0.6),0_20px_40px_-10px_rgba(0,0,0,0.6)]">
         <!-- 1. Background Image layer (Bottom) -->
         <div class="absolute inset-0 z-0">
@@ -658,65 +667,58 @@
             <div class="absolute inset-0 bg-brand-dark opacity-80"></div>
         </div>
 
-        <!-- REMOVED Inner Shadow Gradient Divs -->
-
         <!-- 3. Content (Top Layer) -->
-        <!-- z-20 ensures text is readable over the graphics -->
         <div class="container mx-auto px-4 md:px-6 relative z-20">
             <div class="text-center mb-12">
                 <h4 class="text-brand-accent font-bold uppercase tracking-widest mb-2 text-sm md:text-base">Local Experts</h4>
                 <h2 class="big-text text-3xl md:text-5xl font-bold text-white">Proudly Serving Metro Detroit</h2>
-                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">From Lincoln Park to Birmingham, we provide top-tier roofing services across the entire region.</p>
+                <p class="text-gray-300 mt-4 max-w-2xl mx-auto">From Lincoln Park to Birmingham, we provide top-tier roofing services across Wayne and Oakland Counties.</p>
             </div>
 
             <!-- Cities Grid: 4 Columns on Desktop -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left">
+            <!-- We will show the first 12 cities (3 rows of 4) by default, and hide the rest -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left" id="cities-grid">
                 
-                <!-- Column 1 -->
-                <div class="space-y-3">
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">Lincoln Park</a></div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Allen Park</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Taylor</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wyandotte</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southgate</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Melvindale</div>
-                </div>
+                <!-- Visible Cities -->
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">Lincoln Park</a></div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Allen Park</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Taylor</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wyandotte</div>
+                
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southgate</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Melvindale</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ecorse</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn Heights</div>
+                
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Livonia</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Westland</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Plymouth</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Northville</div>
 
-                <!-- Column 2 -->
-                <div class="space-y-3">
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ecorse</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">River Rouge</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Hennepin Point</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn Heights</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Highland Park</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Livonia</div>
-                </div>
+                <!-- Hidden Cities (Shown on Toggle) -->
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Farmington Hills</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southfield</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Beverly Hills</div>
+                
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Birmingham</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Oak Park</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ferndale</div>
+                
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Royal Oak</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
+                <div class="city-item hidden hidden-city big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Hennepin Point</div>
+            </div>
 
-                <!-- Column 3 -->
-                <div class="space-y-3">
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Westland</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Plymouth</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Northville</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Farmington Hills</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southfield</div>
-                </div>
-
-                <!-- Column 4 -->
-                <div class="space-y-3">
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Beverly Hills</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Birmingham</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Oak Park</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ferndale</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Royal Oak</div>
-                    <div class="big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
-                </div>
-
+            <!-- Expand/Collapse Button -->
+            <div class="text-center mt-10">
+                <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition">
+                    <span>Show More Cities</span>
+                    <i class="fas fa-chevron-down ml-2 transition-transform duration-300" id="toggle-icon"></i>
+                </button>
             </div>
         </div>
-
-        <!-- REMOVED Bottom Graphic Overlay -->
     </section>
 
     <!-- FAQ SECTION (Modified: Removed duplicate "Areas We Serve" list, kept full-width FAQ) -->
@@ -944,7 +946,10 @@
     </div>
 
     <!-- Scripts -->
+    <!-- Load YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script>
+        // ... mobile menu logic ...
         // Mobile Menu Toggle
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -967,7 +972,7 @@
         menuBtn.addEventListener("click", toggleMenu);
         mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-        // FAQ Accordion
+        // ... FAQ logic ...
         const faqBtns = document.querySelectorAll('.faq-btn');
         faqBtns.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -984,9 +989,63 @@
             });
         });
 
+        // SERVICE AREA EXPANSION LOGIC
+        const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
+        const hiddenCities = document.querySelectorAll('.hidden-city');
+        const toggleIcon = document.getElementById('toggle-icon');
+        let isExpanded = false;
+
+        if (toggleCitiesBtn) {
+            toggleCitiesBtn.addEventListener('click', () => {
+                isExpanded = !isExpanded;
+                
+                hiddenCities.forEach(city => {
+                    if (isExpanded) {
+                        city.classList.remove('hidden');
+                    } else {
+                        city.classList.add('hidden');
+                    }
+                });
+
+                if (isExpanded) {
+                    toggleCitiesBtn.querySelector('span').textContent = 'Show Less Cities';
+                    toggleIcon.style.transform = 'rotate(180deg)';
+                } else {
+                    toggleCitiesBtn.querySelector('span').textContent = 'Show More Cities';
+                    toggleIcon.style.transform = 'rotate(0deg)';
+                    // Scroll back up slightly to keep context
+                    document.getElementById('cities-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
+
         // HERO SLIDER LOGIC
         let currentSlide = 0;
         let slideInterval;
+        let player; // YouTube player instance
+
+        // 1. Setup YouTube API
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('video-player', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            });
+        }
+
+        // 2. Handle Video State Changes
+        function onPlayerStateChange(event) {
+            // YT.PlayerState.PLAYING = 1
+            if (event.data == YT.PlayerState.PLAYING) {
+                // Stop the slider immediately if video is playing
+                clearInterval(slideInterval);
+            } 
+            // YT.PlayerState.ENDED = 0, PAUSED = 2
+            else if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED) {
+                // Restart the slider loop when video stops/pauses
+                resetTimer();
+            }
+        }
 
         function getSlides() {
             return document.querySelectorAll('.hero-slide');
@@ -1003,41 +1062,30 @@
             
             if (totalSlides === 0) return;
 
-            // Normalize index
             if (index >= totalSlides) index = 0;
             if (index < 0) index = totalSlides - 1;
             
             currentSlide = index;
 
-            // Stop autoplay when the video slide is active
-            if (currentSlide === 1) {
-                clearInterval(slideInterval);
-            }
             // Loop through all slides
             for (let i = 0; i < totalSlides; i++) {
                 const slide = slides[i];
                 const dot = dots[i];
                 
                 if (i === currentSlide) {
-                    // Active Slide
                     if (slide) {
                         slide.classList.remove('opacity-0', 'z-0', 'pointer-events-none');
                         slide.classList.add('opacity-100', 'z-10');
                     }
-                    
-                    // Active Dot
                     if (dot) {
                         dot.classList.remove('opacity-40');
                         dot.classList.add('opacity-100');
                     }
                 } else {
-                    // Inactive Slide
                     if (slide) {
                         slide.classList.remove('opacity-100', 'z-10');
                         slide.classList.add('opacity-0', 'z-0', 'pointer-events-none');
                     }
-                    
-                    // Inactive Dot
                     if (dot) {
                         dot.classList.remove('opacity-100');
                         dot.classList.add('opacity-40');
@@ -1047,40 +1095,35 @@
         }
 
         function nextSlide() {
-            // If we're on the video slide (slide 2), don't auto-advance
-            if (currentSlide === 1) return;
+            // Removed the check that stopped slide 2 from advancing.
+            // Now it loops automatically unless stopped by the YouTube listener.
             showSlide(currentSlide + 1);
         }
 
         function goToSlide(index) {
             showSlide(index);
-            resetTimer(); // Reset auto-play when user manually clicks
+            resetTimer(); 
         }
 
         function resetTimer() {
             clearInterval(slideInterval);
-            // Pause autoplay on the video slide so it doesn't change mid-watch
-            if (currentSlide === 1) return;
-            slideInterval = setInterval(nextSlide, 6000); // 6 seconds per slide
+            slideInterval = setInterval(nextSlide, 6000); 
         }
 
-        // Initialize Slider
         document.addEventListener('DOMContentLoaded', () => {
-            // Set footer year (if present)
             const yearEl = document.getElementById('year');
             if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-            showSlide(0); // Show first slide
-            resetTimer(); // Start auto-play
+            showSlide(0); 
+            resetTimer(); 
 
-            // Swipe support (mobile): swipe left/right to change slides
+            // Swipe support... (rest of swipe code)
             const heroSlider = document.getElementById('hero-slider');
             if (heroSlider) {
                 let startX = 0;
                 let startY = 0;
 
                 heroSlider.addEventListener('touchstart', (e) => {
-                    // Don't interfere with video interaction
                     if (e.target && e.target.closest && e.target.closest('iframe')) return;
                     const t = e.touches && e.touches[0];
                     if (!t) return;
@@ -1095,7 +1138,6 @@
                     const dx = t.clientX - startX;
                     const dy = t.clientY - startY;
 
-                    // Horizontal swipe threshold
                     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
                         if (dx < 0) {
                             showSlide(currentSlide + 1);
@@ -1106,7 +1148,6 @@
                     }
                 }, { passive: true });
             }
-
         });
     </script>
 </body>
