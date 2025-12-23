@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-10-ANIMATION-TIMING-FIX -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-11-SCROLL-UNLOCKED-FINAL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -160,13 +160,12 @@
         /* Smooth Scrolling */
         html {
             scroll-behavior: smooth;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-            width: 100%;
+            /* REMOVED overflow-x: hidden from html - this fixes the scroll lock on mobile */
         }
         
-        /* Prevent Horizontal Scroll globally - LOCKED X, FREE Y */
+        /* Prevent Horizontal Scroll globally - LOCKED X on BODY only */
         body {
-            overflow-x: hidden; /* This is the "lock" for horizontal wobble */
+            overflow-x: hidden; /* This correctly locks horizontal wobble without killing vertical scroll */
             width: 100%;
             max-width: 100%;
             position: relative;
@@ -206,15 +205,19 @@
             box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
         }
 
-        /* Scroll Animation Styles (Restored & Improved) */
+        /* Scroll Animation Styles - SAFE MODE */
+        /* By default, opacity is 1. We hide it via JS class 'reveal-pending'. */
+        /* This ensures if JS fails, content is visible. */
         .reveal {
-            opacity: 0;
-            transform: translateY(50px); /* Increased travel distance */
-            transition: all 1s ease-out; /* Slower, smoother reveal */
-        }
-        .reveal.active {
+            transition: all 0.8s ease-out;
             opacity: 1;
             transform: translateY(0);
+        }
+        
+        /* This class is added by JS immediately to prepare for animation */
+        .reveal.reveal-pending {
+            opacity: 0;
+            transform: translateY(40px);
         }
 
         /* Mobile Menu Transition */
@@ -294,7 +297,7 @@
 
 <!-- HERO SLIDER SECTION -->
     <!-- Increased min-height slightly for mobile comfort -->
-    <section id="hero-slider" class="relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
+    <section id="hero-slider" class="reveal relative min-h-[680px] sm:min-h-[640px] md:min-h-[620px] lg:h-[600px] flex flex-col justify-center overflow-hidden bg-brand-dark">
         
         <!-- SLIDE 1: LINCOLN PARK ROOFER (Unchanged) -->
         <!-- Active by default: opacity-100, z-10 -->
@@ -1029,25 +1032,27 @@
         // SCROLL ANIMATION OBSERVER
         const revealElements = document.querySelectorAll(".reveal");
         
+        // Immediately add the pending class to hide elements for animation
+        // This runs as soon as JS parses
+        revealElements.forEach(el => el.classList.add("reveal-pending"));
+
         // Use IntersectionObserver to toggle the 'active' class
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add("active");
-                    // Optionally stop observing once revealed:
+                    // Remove pending class to trigger CSS transition to default state
+                    entry.target.classList.remove("reveal-pending");
                     observer.unobserve(entry.target);
                 }
             });
         }, {
             root: null,
-            threshold: 0.15, // Increased threshold so element must be 15% visible
-            rootMargin: "0px" // Removed negative margin to let it trigger naturally as it enters
+            threshold: 0.1, // Trigger when 10% visible
+            rootMargin: "0px" 
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
 
-        // Removed the timeout fallback that was auto-revealing content too early
-        
         // HERO SLIDER LOGIC
         let currentSlide = 0;
         let slideInterval;
