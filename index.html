@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-25-FINAL-OPTIMIZED -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-27-COMPLETE-FILE -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,16 +34,23 @@
     <!-- CRITICAL CSS -->
     <style>
         /* FIXED: Scrolling on Mobile */
-        html { scroll-behavior: smooth; } /* Removed overflow-x hidden from here */
+        html { scroll-behavior: smooth; }
         body { 
             margin: 0; padding: 0; 
             font-family: sans-serif; 
             background-color: #ffffff; 
             color: #1f2937; 
-            overflow-x: hidden; /* Kept here to prevent wobble */
+            overflow-x: hidden; 
             width: 100%;
             max-width: 100vw; 
         }
+
+        /* BRAND COLORS (Hardcoded for stability) */
+        .text-brand-primary { color: #0056b3 !important; }
+        .text-brand-accent { color: #fbbf24 !important; }
+        .bg-brand-primary { background-color: #0056b3 !important; }
+        .bg-brand-dark { background-color: #0f172a !important; }
+        .text-white { color: #ffffff !important; }
         
         /* HEADER */
         .critical-header { position: fixed; top: 0; width: 100%; z-index: 100; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -67,6 +74,9 @@
         /* VIDEO FACADE */
         .video-embed { position: relative; width: 100%; padding-top: 56.25%; cursor: pointer; }
         .video-embed iframe, .video-embed img { position: absolute; inset: 0; width: 100%; height: 100%; }
+        
+        /* OVERLAY FIX */
+        .overlay-dark { background-color: rgba(15, 23, 42, 0.9); }
     </style>
 
     <!-- Google Fonts: Async Loading -->
@@ -114,6 +124,9 @@
         #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(-100%); }
         #mobile-menu.open { transform: translateX(0); }
         img { max-width: 100%; }
+        /* Hero Text Shadow to ensure blue text reads on dark bg */
+        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
+        .text-outline { text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
     </style>
 </head>
 
@@ -124,7 +137,7 @@
     <header class="critical-header flex flex-col">
         <div class="critical-top-bar">
             <p class="big-text tracking-wide text-xs md:text-sm">
-                <span class="text-yellow-400">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
+                <span class="text-brand-accent">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
             </p>
         </div>
         <div class="bg-white w-full">
@@ -174,7 +187,11 @@
             <div class="critical-hero-content pt-20 md:pt-24 lg:pt-20 pb-24 md:pb-32 lg:pb-40">
                 <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left load-animate">
                     <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Over 20 Years</span>
-                    <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-md">Lincoln Park<br><span class="text-brand-primary text-brand-accent">Roofer</span></h1>
+                    <!-- RESTORED BLUE "LINCOLN PARK" with stroke to allow reading on dark bg -->
+                    <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+                        <span class="text-brand-primary text-outline" style="text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; color: #0056b3;">Lincoln Park</span><br>
+                        <span class="text-brand-accent">Roofer</span>
+                    </h1>
                     <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.</p>
                     <div class="flex flex-row flex-wrap gap-4 justify-center md:justify-start">
                         <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Estimate</a>
@@ -204,7 +221,7 @@
                         </div>
                     </div>
                     
-                    <!-- VIDEO FACADE (Performance Fix) -->
+                    <!-- VIDEO FACADE -->
                     <div class="w-full lg:w-5/12 max-w-xl">
                         <div id="video-container" class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 cursor-pointer group" onclick="loadVideo()">
                             <img src="https://img.youtube.com/vi/zXRABs5AdOc/maxresdefault.jpg" alt="Play Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
@@ -259,7 +276,8 @@
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
                     <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">About Us</span>
-                    <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Reliable Roofing Done Right.</h2>
+                    <!-- HEADINGS UPDATED TO BRAND BLUE -->
+                    <h2 class="big-text text-3xl md:text-5xl font-bold text-brand-primary mb-4 md:mb-6">Reliable Roofing Done Right.</h2>
                     <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">At <strong>Lincoln Park Roofing</strong>, we understand that a roof is more than just shingles—it's your home's first line of defense. With years of experience serving the Lincoln Park area, we bring professional craftsmanship and honest pricing to every job.</p>
                     <div class="flex items-center gap-4">
                         <div class="bg-brand-dark text-white p-3 md:p-4 rounded-full">
@@ -275,18 +293,20 @@
         </div>
     </section>
 
-    <!-- WHY CHOOSE US (Restored Content) -->
+    <!-- WHY CHOOSE US -->
     <section id="why-us" class="py-10 md:py-12 bg-white relative reveal">
         <div class="absolute top-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
         <div class="absolute bottom-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
         <div class="container mx-auto px-4 md:px-6">
             <div class="text-center mb-8">
-                <h3 class="big-text text-3xl md:text-4xl font-bold text-gray-900 border-b-2 border-brand-primary inline-block pb-2">Why Choose Lincoln Park Roofing</h3>
+                <!-- HEADINGS UPDATED TO BRAND BLUE -->
+                <h3 class="big-text text-3xl md:text-4xl font-bold text-brand-primary border-b-2 border-brand-primary inline-block pb-2">Why Choose Lincoln Park Roofing</h3>
                 <p class="text-gray-600 mt-3 max-w-3xl mx-auto">Simple, straightforward reasons homeowners across Lincoln Park, Wayne County, and Oakland County hire us.</p>
             </div>
             <div class="max-w-5xl mx-auto">
                 <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
                     <li class="flex items-start gap-3 reveal">
+                        <!-- ICON COLOR FIXED -->
                         <i class="fas fa-check-circle text-brand-primary text-xl mt-1"></i>
                         <span class="big-text text-lg md:text-xl font-bold text-gray-900">20+ years of local roofing experience</span>
                     </li>
@@ -335,7 +355,7 @@
         <div class="container mx-auto px-4 md:px-6 relative z-10">
             <div class="text-center mb-10 md:mb-16">
                 <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">What We Do</span>
-                <h2 class="big-text text-3xl md:text-6xl font-bold text-gray-900">Our Premium Services</h2>
+                <h2 class="big-text text-3xl md:text-6xl font-bold text-brand-primary">Our Premium Services</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
@@ -345,7 +365,8 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                        <!-- INVERTED ICON COLORS: Blue Icon on White -->
+                        <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
                             <i class="fas fa-home"></i>
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">New Roof Construction</h2>
@@ -360,7 +381,7 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                        <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
                             <i class="fas fa-hammer"></i>
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Roof Repair</h2>
@@ -375,7 +396,7 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                        <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
                             <i class="fas fa-spray-can"></i>
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Roof Rejuvenation</h2>
@@ -390,7 +411,7 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                        <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
                             <i class="fas fa-layer-group"></i>
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Siding</h2>
@@ -405,7 +426,7 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                        <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
                             <i class="fas fa-water"></i>
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Gutters</h2>
@@ -417,19 +438,21 @@
         </div>
     </section>
 
-    <!-- AREAS -->
+    <!-- AREAS (FULL LIST) -->
+    <!-- ADDED OVERLAY-DARK CLASS TO FIX BRIGHTNESS -->
     <section class="relative py-24 md:py-32 bg-brand-dark text-white w-full z-30 shadow-[0_-20px_40px_-10px_rgba(0,0,0,0.6),0_20px_40px_-10px_rgba(0,0,0,0.6)] reveal overflow-hidden">
         <div class="absolute inset-0 z-0">
             <img src="area-background.jpg" alt="Service Area Map" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
-            <div class="absolute inset-0 bg-brand-dark opacity-90"></div>
+            <!-- HARDCODED DARK OVERLAY -->
+            <div class="absolute inset-0 overlay-dark"></div>
         </div>
         <div class="container mx-auto px-4 md:px-6 relative z-20">
             <div class="text-center mb-12">
                 <span class="text-brand-accent font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">Local Experts</span>
                 <h2 class="big-text text-3xl md:text-5xl font-bold text-white">Proudly Serving Metro Detroit</h2>
             </div>
+            <!-- Expanded List Visible By Default -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left reveal" id="cities-grid">
-                <!-- Top 12 Visible -->
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html" class="hover:text-brand-accent">Lincoln Park</a></div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Allen Park</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Taylor</div>
@@ -520,10 +543,16 @@
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
             <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
             <p class="footer-main text-sm md:text-base text-gray-300">© <span id="year"></span> Lincoln Park Roofing. All rights reserved.</p>
+            
             <div class="footer-credit flex flex-col sm:flex-row items-center gap-3 text-xs md:text-sm text-gray-400">
                 <span>Website Design and Chat GPT Marketing by</span>
                 <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center">
-                    <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" class="h-8 w-auto opacity-90 hover:opacity-100 transition" loading="lazy" decoding="async" />
+                    <img
+                        src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
+                        alt="Get Local Maps"
+                        class="h-8 w-auto opacity-90 hover:opacity-100 transition"
+                        loading="lazy" decoding="async"
+                    />
                 </a>
             </div>
         </div>
