@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-13-PERFORMANCE-OPTIMIZED -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-14-AGGRESSIVE-OPTIMIZATION -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
     
     <!-- PERFORMANCE: Preload LCP Images (Hero Section) -->
     <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
@@ -278,7 +280,7 @@
                 
                 <!-- Logo Area -->
                 <a href="#" class="flex items-center gap-2 z-50 shrink-0">
-                    <img src="lincoln park logo.png" alt="Lincoln Park Roofing" class="h-12 md:h-24 w-auto object-contain">
+                    <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="100" height="48" class="h-12 md:h-24 w-auto object-contain">
                 </a>
 
                 <!-- Desktop Nav -->
@@ -329,14 +331,14 @@
             <!-- Background Image -->
             <div class="absolute inset-0 w-full h-full">
                 <!-- Fetch priority high for LCP -->
-                <img src="slide-1.jpg" alt="Lincoln Park Roofer" class="w-full h-full object-cover object-center" fetchpriority="high">
+                <img src="slide-1.jpg" alt="Lincoln Park Roofer" class="w-full h-full object-cover object-center" fetchpriority="high" decoding="async">
                 <!-- Overlay -->
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
 
             <!-- Overlapping White Graphic at Bottom -->
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" class="w-full h-auto block align-bottom" fetchpriority="high">
+                <img src="white-graphic3.png" alt="" class="w-full h-auto block align-bottom" fetchpriority="high" decoding="async">
             </div>
 
             <!-- Content -->
@@ -365,19 +367,19 @@
             </div>
         </div>
 
-        <!-- SLIDE 2: ROOF REJUVENATION (Updated with Video) -->
+        <!-- SLIDE 2: ROOF REJUVENATION (Updated with Video FACADE) -->
         <!-- Inactive by default: opacity-0, z-0, pointer-events-none -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none" id="slide-1">
             <!-- Background Image -->
             <div class="absolute inset-0 w-full h-full">
-                <img src="slide-2.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover object-center" loading="lazy">
+                <img src="slide-2.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
                 <!-- Overlay -->
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
 
             <!-- Overlapping White Graphic at Bottom -->
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" class="w-full h-auto block align-bottom" loading="lazy">
+                <img src="white-graphic3.png" alt="" class="w-full h-auto block align-bottom" loading="lazy" decoding="async">
             </div>
 
             <!-- Content Container -->
@@ -407,21 +409,17 @@
                         </div>
                     </div>
 
-                    <!-- Right Side: YouTube Video Embed -->
+                    <!-- Right Side: YouTube Video FACADE (Performance Fix) -->
                     <div class="w-full lg:w-5/12 max-w-xl">
-                        <div class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20">
-                            <!-- Added id="video-player" and enablejsapi=1 to control via API -->
-                            <!-- Added loading="lazy" for performance -->
-                            <iframe 
-                                id="video-player"
-                                class="absolute inset-0 w-full h-full" 
-                                src="https://www.youtube.com/embed/zXRABs5AdOc?enablejsapi=1" 
-                                title="Roof Rejuvenation Video" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowfullscreen
-                                loading="lazy">
-                            </iframe>
+                        <div id="video-container" class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 cursor-pointer group" onclick="loadVideo()">
+                            <!-- Static Thumbnail image loads fast -->
+                            <img src="https://img.youtube.com/vi/zXRABs5AdOc/maxresdefault.jpg" alt="Play Roof Rejuvenation Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
+                            <!-- Play Button Overlay -->
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition duration-300">
+                                    <i class="fas fa-play ml-1"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
@@ -485,7 +483,7 @@
                 <div class="w-full lg:w-1/2 order-2 lg:order-1 reveal">
                     <!-- Truck Wrap Image loaded here with shadow only. Lazy loaded for performance. -->
                     <!-- CHANGED: Removed object-cover and fixed height. Added h-auto to show full image without cropping. -->
-                    <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy">
+                    <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy" decoding="async">
                 </div>
                 
                 <!-- Content Area -->
@@ -610,7 +608,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                         <!-- Added loading="lazy" for performance -->
-                        <img src="IMG_2155.jpg" alt="New Roof Construction" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <img src="IMG_2155.jpg" alt="New Roof Construction" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
@@ -627,7 +625,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
-                        <img src="IMG_2153.jpg" alt="Roof Repair" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <img src="IMG_2153.jpg" alt="Roof Repair" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
@@ -644,7 +642,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
-                        <img src="IMG_1911.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <img src="IMG_1911.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
@@ -661,7 +659,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
-                        <img src="IMG_2140.jpg" alt="Siding Services" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <img src="IMG_2140.jpg" alt="Siding Services" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
@@ -678,7 +676,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative">
                          <!-- Added loading="lazy" for performance -->
-                        <img src="IMG_0240.jpg" alt="Gutters" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy">
+                        <img src="IMG_0240.jpg" alt="Gutters" class="w-full h-full object-cover transition duration-500 group-hover:scale-110" loading="lazy" decoding="async">
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
@@ -701,7 +699,7 @@
         <div class="absolute inset-0 z-0">
             <!-- Increased opacity from 40 to 60 for better visibility -->
             <!-- ADDED loading="lazy" to this background image -->
-            <img src="area-background.jpg" alt="Service Area Map" class="w-full h-full object-cover opacity-60" loading="lazy">
+            <img src="area-background.jpg" alt="Service Area Map" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
             <!-- Reduced overlay opacity from 90 to 80 to let more image show through -->
             <div class="absolute inset-0 bg-brand-dark opacity-80"></div>
         </div>
@@ -909,14 +907,14 @@
                     </div>
                 
                     <!-- Google Map (Service Area Business) -->
-                    <div class="mt-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10">
+                    <!-- LAZY LOADED VIA JS -->
+                    <div class="mt-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 w-full h-[260px] sm:h-[300px] md:h-[340px] lg:h-[360px] bg-slate-800 relative">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378116.33302825416!2d-83.73616694963289!3d42.2350897670785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f44403c2903%3A0xe2300eacd6da54b0!2sLincoln%20Park%20Roofing!5e0!3m2!1sen!2sus!4v1766107467070!5m2!1sen!2sus"
-                            style="border:0;"
+                            class="lazy-map w-full h-full border-0"
+                            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378116.33302825416!2d-83.73616694963289!3d42.2350897670785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f44403c2903%3A0xe2300eacd6da54b0!2sLincoln%20Park%20Roofing!5e0!3m2!1sen!2sus!4v1766107467070!5m2!1sen!2sus"
                             allowfullscreen=""
                             loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"
-                            class="w-full h-[260px] sm:h-[300px] md:h-[340px] lg:h-[360px]"
                             title="Lincoln Park Roofing - Service Area Map"
                         ></iframe>
                     </div>
@@ -985,7 +983,7 @@
     </div>
 
     <!-- Scripts -->
-    <!-- Load YouTube IFrame API -->
+    <!-- Load YouTube IFrame API (Deferred) -->
     <script src="https://www.youtube.com/iframe_api" defer></script>
     <script>
         // ... mobile menu logic ...
@@ -1062,25 +1060,60 @@
         const revealElements = document.querySelectorAll(".reveal");
         
         // Immediately add the pending class to hide elements for animation
-        // This runs as soon as JS parses
         revealElements.forEach(el => el.classList.add("reveal-pending"));
 
         // Use IntersectionObserver to toggle the 'active' class
         const revealObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Remove pending class to trigger CSS transition to default state
                     entry.target.classList.remove("reveal-pending");
                     observer.unobserve(entry.target);
                 }
             });
         }, {
             root: null,
-            threshold: 0.1, // Trigger when 10% visible
+            threshold: 0.1, 
             rootMargin: "0px" 
         });
 
         revealElements.forEach(el => revealObserver.observe(el));
+
+        // LAZY LOAD GOOGLE MAP
+        const mapObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const iframe = entry.target;
+                    // Only load if it hasn't been loaded yet
+                    if(iframe.getAttribute('data-src')) {
+                        iframe.src = iframe.getAttribute('data-src');
+                        iframe.removeAttribute('data-src'); // Clean up
+                        obs.unobserve(iframe);
+                    }
+                }
+            });
+        }, { rootMargin: "200px" }); // Start loading 200px before it comes into view
+
+        document.querySelectorAll('.lazy-map').forEach(m => mapObserver.observe(m));
+
+        // YOUTUBE FACADE LOADER
+        function loadVideo() {
+            const container = document.getElementById('video-container');
+            // Replace inner HTML with the iframe
+            container.innerHTML = '<iframe id="video-player" class="absolute inset-0 w-full h-full" src="https://www.youtube.com/embed/zXRABs5AdOc?autoplay=1&enablejsapi=1" title="Roof Rejuvenation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+            
+            // Re-initialize player variable if needed for logic control
+            // Note: Since we are autoplaying, we might want to stop the slider here immediately
+            clearInterval(slideInterval);
+            
+            // Re-hook the API if it's ready
+            if (typeof YT !== 'undefined' && YT && YT.Player) {
+                new YT.Player('video-player', {
+                    events: {
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
+        }
 
         // HERO SLIDER LOGIC
         let currentSlide = 0;
@@ -1089,23 +1122,24 @@
 
         // 1. Setup YouTube API
         function onYouTubeIframeAPIReady() {
-            player = new YT.Player('video-player', {
-                events: {
-                    'onStateChange': onPlayerStateChange
-                }
-            });
+            // Check if player exists (it might not if facade is still active)
+            if(document.getElementById('video-player')) {
+                player = new YT.Player('video-player', {
+                    events: {
+                        'onStateChange': onPlayerStateChange
+                    }
+                });
+            }
         }
 
         // 2. Handle Video State Changes
         function onPlayerStateChange(event) {
             // YT.PlayerState.PLAYING = 1
             if (event.data == YT.PlayerState.PLAYING) {
-                // Stop the slider immediately if video is playing
                 clearInterval(slideInterval);
             } 
             // YT.PlayerState.ENDED = 0, PAUSED = 2
             else if (event.data == YT.PlayerState.ENDED || event.data == YT.PlayerState.PAUSED) {
-                // Restart the slider loop when video stops/pauses
                 resetTimer();
             }
         }
@@ -1158,8 +1192,6 @@
         }
 
         function nextSlide() {
-            // Removed the check that stopped slide 2 from advancing.
-            // Now it loops automatically unless stopped by the YouTube listener.
             showSlide(currentSlide + 1);
         }
 
@@ -1187,7 +1219,9 @@
                 let startY = 0;
 
                 heroSlider.addEventListener('touchstart', (e) => {
-                    if (e.target && e.target.closest && e.target.closest('iframe')) return;
+                    // Ignore clicks on video container to prevent swipe issues
+                    if (e.target && e.target.closest && (e.target.closest('iframe') || e.target.closest('#video-container'))) return;
+                    
                     const t = e.touches && e.touches[0];
                     if (!t) return;
                     startX = t.clientX;
@@ -1195,7 +1229,8 @@
                 }, { passive: true });
 
                 heroSlider.addEventListener('touchend', (e) => {
-                    if (e.target && e.target.closest && e.target.closest('iframe')) return;
+                    if (e.target && e.target.closest && (e.target.closest('iframe') || e.target.closest('#video-container'))) return;
+                    
                     const t = e.changedTouches && e.changedTouches[0];
                     if (!t) return;
                     const dx = t.clientX - startX;
