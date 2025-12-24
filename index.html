@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-16-AGGRESSIVE-OPTIMIZATION-FINAL -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-18-LAYOUT-FONT-SWIPE-FIX -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -27,24 +27,37 @@
 
     <!-- CRITICAL CSS -->
     <style>
-        body { margin: 0; padding: 0; font-family: sans-serif; background-color: #ffffff; color: #1f2937; overflow-x: hidden; }
+        /* GLOBAL RESET & SCROLL LOCK */
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { 
+            margin: 0; padding: 0; 
+            font-family: sans-serif; 
+            background-color: #ffffff; 
+            color: #1f2937; 
+            overflow-x: hidden; /* Prevents side-to-side wobble */
+            width: 100%;
+            max-width: 100vw; 
+        }
+        
+        /* HEADER */
         .critical-header { position: fixed; top: 0; width: 100%; z-index: 100; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .critical-top-bar { background-color: #0056b3; color: white; text-align: center; padding: 8px; font-size: 12px; text-transform: uppercase; font-weight: bold; }
-        .critical-nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 16px; max-width: 1280px; margin: 0 auto; }
+        .critical-nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto; }
         .critical-logo { height: 48px; width: auto; }
+        
+        /* HERO */
         .critical-hero { position: relative; min-height: 600px; display: flex; align-items: center; background-color: #0f172a; overflow: hidden; }
         .critical-hero-content { position: relative; z-index: 50; padding: 20px; max-width: 1280px; margin: 0 auto; color: white; width: 100%; }
-        /* Utilities */
+        
+        /* UTILITIES */
         .big-text { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
-        html { scroll-behavior: smooth; }
-        .hidden-city { display: none; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
         
-        /* Animation Classes */
+        /* ANIMATION */
         .reveal { transition: all 0.8s ease-out; opacity: 1; transform: translateY(0); }
         .reveal.reveal-pending { opacity: 0; transform: translateY(40px); }
         
-        /* Icons */
+        /* ICONS */
         .icon-svg { width: 1em; height: 1em; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
     </style>
 
@@ -88,15 +101,18 @@
         #mobile-menu.open { transform: translateX(0); }
         .video-embed { position: relative; width: 100%; padding-top: 56.25%; }
         .video-embed iframe, .video-embed img { position: absolute; inset: 0; width: 100%; height: 100%; }
+        
+        /* Ensure layout is fixed to prevent wobble */
+        img { max-width: 100%; }
     </style>
 </head>
 
-<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[104px] md:pt-[152px]">
+<!-- ADJUSTED PADDING TOP TO 100px TO REMOVE WHITE BAR -->
+<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[100px]">
 
     <!-- HEADER -->
     <header class="critical-header flex flex-col">
         <div class="critical-top-bar">
-            <!-- Fixed contrast issue: Green-400 on Blue is hard to read. Switched to accent yellow/gold for better readability on blue. -->
             <p class="big-text tracking-wide text-xs md:text-sm">
                 <span class="text-brand-accent">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
             </p>
@@ -143,12 +159,14 @@
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full h-auto block align-bottom" fetchpriority="high" decoding="async">
+                <!-- Ensure max-width is 100% to stop mobile wobble -->
+                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full max-w-full h-auto block align-bottom" fetchpriority="high" decoding="async">
             </div>
             <div class="critical-hero-content pt-20 md:pt-24 lg:pt-20 pb-24 md:pb-32 lg:pb-40">
                 <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left load-animate">
                     <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Over 20 Years</span>
-                    <h1 class="critical-title big-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">Lincoln Park<br><span class="text-brand-primary text-brand-accent">Roofer</span></h1>
+                    <!-- RESTORED BIG TEXT STYLING -->
+                    <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">Lincoln Park<br><span class="text-brand-primary text-brand-accent">Roofer</span></h1>
                     <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.</p>
                     <div class="flex flex-row flex-wrap gap-4 justify-center md:justify-start">
                         <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Estimate</a>
@@ -164,12 +182,13 @@
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full h-auto block align-bottom" loading="lazy" decoding="async">
+                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full max-w-full h-auto block align-bottom" loading="lazy" decoding="async">
             </div>
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
                 <div class="flex flex-col lg:flex-row items-center w-full gap-10 lg:gap-16">
                     <div class="w-full lg:w-1/2 text-center lg:text-left">
                         <span class="inline-block bg-green-500 text-white font-bold px-3 py-1 mb-4 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Save Money</span>
+                        <!-- RESTORED BIG TEXT STYLING -->
                         <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">Roof<br><span class="text-white">Rejuvenation</span></h1>
                         <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">Extend the life of your roof by 5-15 years.</p>
                         <div class="flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
@@ -239,7 +258,6 @@
                     <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" width="600" height="400" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy" decoding="async">
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
-                    <!-- Corrected Heading Order: span -> h2 -->
                     <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">About Us</span>
                     <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Reliable Roofing Done Right.</h2>
                     <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">At <strong>Lincoln Park Roofing</strong>, we understand that a roof is more than just shingles—it's your home's first line of defense. With years of experience serving the Lincoln Park area, we bring professional craftsmanship and honest pricing to every job.</p>
@@ -252,6 +270,50 @@
                             <p class="big-text text-xl md:text-2xl font-bold text-brand-primary">(734) 224-5615</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESTORED: WHY CHOOSE US -->
+    <section id="why-us" class="py-10 md:py-12 bg-white relative reveal">
+        <div class="absolute top-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gray-200 shadow-sm"></div>
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-8">
+                <h3 class="big-text text-3xl md:text-4xl font-bold text-gray-900 border-b-2 border-brand-primary inline-block pb-2">Why Choose Lincoln Park Roofing</h3>
+                <p class="text-gray-600 mt-3 max-w-3xl mx-auto">Simple, straightforward reasons homeowners across Lincoln Park, Wayne County, and Oakland County hire us.</p>
+            </div>
+            <div class="max-w-5xl mx-auto">
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">20+ years of local roofing experience</span>
+                    </li>
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">No subcontractors — your job stays with our team</span>
+                    </li>
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">Licensed &amp; insured for your peace of mind</span>
+                    </li>
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">Financing available for qualified homeowners</span>
+                    </li>
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">Insurance claim help — documentation, photos, and paperwork guidance</span>
+                    </li>
+                    <li class="flex items-start gap-3 reveal">
+                        <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">The only company offering roof rejuvenation in Wayne &amp; Oakland Counties</span>
+                    </li>
+                </ul>
+                <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:7342245615" class="btn-primary-polished text-white font-bold py-3 px-8 rounded-full uppercase tracking-wider inline-flex items-center justify-center">Call Us</a>
+                    <a href="sms:7342245615" class="btn-white-polished font-bold py-3 px-8 rounded-full uppercase tracking-wider inline-flex items-center justify-center">Text Us</a>
                 </div>
             </div>
         </div>
@@ -326,8 +388,8 @@
                 <span class="text-brand-accent font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">Local Experts</span>
                 <h2 class="big-text text-3xl md:text-5xl font-bold text-white">Proudly Serving Metro Detroit</h2>
             </div>
+            <!-- Expanded List Visible By Default -->
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left reveal" id="cities-grid">
-                <!-- Visible Cities -->
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">Lincoln Park</a></div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Allen Park</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Taylor</div>
@@ -340,39 +402,31 @@
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Plymouth</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Northville</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Canton</div>
-
-                <!-- Hidden Cities -->
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Garden City</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Inkster</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wayne</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Redford</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Romulus</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Van Buren</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Woodhaven</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Brownstown</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Trenton</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Grosse Ile</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Flat Rock</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rockwood</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Farmington Hills</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southfield</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Troy</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rochester Hills</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Pontiac</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Royal Oak</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Birmingham</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ferndale</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Oak Park</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
-            </div>
-            <div class="text-center mt-10">
-                <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition">
-                    <span>Show More Cities</span>
-                    <svg class="icon-svg ml-2 transition-transform duration-300" id="toggle-icon" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
-                </button>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Garden City</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Inkster</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wayne</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Redford</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Romulus</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Van Buren</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Woodhaven</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Brownstown</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Trenton</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Grosse Ile</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Flat Rock</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rockwood</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Farmington Hills</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southfield</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Troy</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rochester Hills</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Pontiac</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Royal Oak</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Birmingham</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ferndale</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Oak Park</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
             </div>
         </div>
     </section>
@@ -432,28 +486,6 @@
         const mobileMenu = document.getElementById("mobile-menu");
         menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
         document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
-
-        // Service Area Toggle - Fixed Selector
-        const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
-        if (toggleCitiesBtn) {
-            toggleCitiesBtn.addEventListener('click', () => {
-                const hiddenCities = document.querySelectorAll('.hidden-city');
-                hiddenCities.forEach(c => c.classList.toggle('hidden'));
-                
-                const isExpanded = !hiddenCities[0].classList.contains('hidden');
-                const span = toggleCitiesBtn.querySelector('span');
-                const icon = document.getElementById('toggle-icon');
-                
-                if (isExpanded) {
-                    span.textContent = 'Show Less Cities';
-                    icon.style.transform = 'rotate(180deg)';
-                } else {
-                    span.textContent = 'Show More Cities';
-                    icon.style.transform = 'rotate(0deg)';
-                    document.getElementById('cities-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        }
 
         // Scroll Animation
         const revealElements = document.querySelectorAll(".reveal");
@@ -518,7 +550,31 @@
         function resetTimer() { clearInterval(slideInterval); slideInterval = setInterval(nextSlide, 6000); }
         
         document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('year').textContent = new Date().getFullYear();
+            // Restore Swipe Logic
+            const heroSlider = document.getElementById('hero-slider');
+            if (heroSlider) {
+                let startX = 0;
+                let startY = 0;
+                heroSlider.addEventListener('touchstart', (e) => {
+                    if (e.target && e.target.closest && (e.target.closest('iframe') || e.target.closest('#video-container'))) return;
+                    const t = e.touches && e.touches[0];
+                    if (!t) return;
+                    startX = t.clientX;
+                    startY = t.clientY;
+                }, { passive: true });
+                heroSlider.addEventListener('touchend', (e) => {
+                    if (e.target && e.target.closest && (e.target.closest('iframe') || e.target.closest('#video-container'))) return;
+                    const t = e.changedTouches && e.changedTouches[0];
+                    if (!t) return;
+                    const dx = t.clientX - startX;
+                    const dy = t.clientY - startY;
+                    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) {
+                        if (dx < 0) nextSlide(); else showSlide(currentSlide - 1);
+                        resetTimer();
+                    }
+                }, { passive: true });
+            }
+
             showSlide(0);
             resetTimer();
         });
