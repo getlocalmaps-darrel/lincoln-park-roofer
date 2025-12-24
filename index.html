@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-19-LINKS-ICONS-FIX -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-21-TAILWIND-CONFIG-FIX -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -62,22 +62,28 @@
         .icon-svg { height: 1em; width: auto; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
     </style>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Async Loading to prevent Render Blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: { dark: '#0f172a', primary: '#0056b3', accent: '#fbbf24', light: '#f1f5f9' }
-                    },
-                    fontFamily: { sans: ['"Open Sans"', 'sans-serif'], header: ['"Oswald"', 'sans-serif'] }
-                }
-            }
+    <!-- Tailwind: Defer loading to unblock rendering -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    
+    <!-- FIXED: Using script type="tailwind-config" to configure Tailwind without JS errors when deferred -->
+    <script type="tailwind-config">
+    {
+      "theme": {
+        "extend": {
+          "colors": {
+            "brand": { "dark": "#0f172a", "primary": "#0056b3", "accent": "#fbbf24", "light": "#f1f5f9" }
+          },
+          "fontFamily": {
+            "sans": ["Open Sans", "sans-serif"],
+            "header": ["Oswald", "sans-serif"]
+          }
         }
+      }
+    }
     </script>
 
     <!-- JSON-LD -->
@@ -462,7 +468,7 @@
                 </div>
                 <div class="w-full lg:w-1/2 bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-2xl reveal">
                     <h3 class="big-text text-2xl font-bold mb-6 text-brand-dark">Request a Quote</h3>
-                    <form action="mailto:chavezdarrel@yahoo.com;scott@kincaideroofrejuvenate.com?subject=lincoln park roofing lead" method="post" enctype="text/plain" class="space-y-4">
+                    <form id="quote-form" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <input type="text" name="FirstName" placeholder="First Name" class="w-full bg-gray-100 border border-gray-300 p-3 rounded">
                             <input type="text" name="LastName" placeholder="Last Name" class="w-full bg-gray-100 border border-gray-300 p-3 rounded">
@@ -473,6 +479,9 @@
                             <option>Service Needed?</option>
                             <option>New Roof</option>
                             <option>Roof Repair</option>
+                            <option>Roof Rejuvenation</option>
+                            <option>Siding</option>
+                            <option>Gutters</option>
                         </select>
                         <textarea name="Message" rows="4" placeholder="How can we help you?" class="w-full bg-gray-100 border border-gray-300 p-3 rounded"></textarea>
                         <button type="submit" class="btn-primary-polished w-full text-white font-bold py-4 rounded transition uppercase tracking-widest shadow-lg">Submit Request</button>
@@ -512,11 +521,33 @@
     <!-- Scripts -->
     <script src="https://www.youtube.com/iframe_api" defer></script>
     <script>
-        // Mobile Menu
+        // ... mobile menu logic ...
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
         menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
         document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
+
+        // Service Area Toggle - Fixed Selector
+        const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
+        if (toggleCitiesBtn) {
+            toggleCitiesBtn.addEventListener('click', () => {
+                const hiddenCities = document.querySelectorAll('.hidden-city');
+                hiddenCities.forEach(c => c.classList.toggle('hidden'));
+                
+                const isExpanded = !hiddenCities[0].classList.contains('hidden');
+                const span = toggleCitiesBtn.querySelector('span');
+                const icon = document.getElementById('toggle-icon');
+                
+                if (isExpanded) {
+                    span.textContent = 'Show Less Cities';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    span.textContent = 'Show More Cities';
+                    icon.style.transform = 'rotate(0deg)';
+                    document.getElementById('cities-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
 
         // Scroll Animation
         const revealElements = document.querySelectorAll(".reveal");
@@ -581,6 +612,27 @@
         function resetTimer() { clearInterval(slideInterval); slideInterval = setInterval(nextSlide, 6000); }
         
         document.addEventListener('DOMContentLoaded', () => {
+            // Populate Year
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // JS Form Handling
+            const quoteForm = document.getElementById('quote-form');
+            if (quoteForm) {
+                quoteForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const firstName = this.querySelector('[name="FirstName"]').value;
+                    const lastName = this.querySelector('[name="LastName"]').value;
+                    const phone = this.querySelector('[name="Phone"]').value;
+                    const service = this.querySelector('[name="Service"]').value;
+                    const message = this.querySelector('[name="Message"]').value;
+                    
+                    const body = `Name: ${firstName} ${lastName}%0D%0APhone: ${phone}%0D%0AService: ${service}%0D%0AMessage: ${message}`;
+                    const mailtoLink = `mailto:chavezdarrel@yahoo.com;scott@kincaideroofrejuvenate.com?subject=Lincoln Park Roofing Lead&body=${body}`;
+                    
+                    window.location.href = mailtoLink;
+                });
+            }
+
             // Restore Swipe Logic
             const heroSlider = document.getElementById('hero-slider');
             if (heroSlider) {
