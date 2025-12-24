@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-15-MOBILE-SPEED-BOOST -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-16-AGGRESSIVE-OPTIMIZATION-FINAL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lincoln Park Roofing | Experienced Roofers Over 20 Years | (734) 224-5615</title>
+    <title>Lincoln Park Roofing</title>
     <meta name="description" content="Lincoln Park Roofing is a service-area roofing contractor in Lincoln Park, MI 48146. Roof replacement, roof repair, new roof construction, roof rejuvenation, siding, and gutters. Insurance claim help and financing available. Call (734) 224-5615.">
+    
+    <!-- SOCIAL SHARE METADATA -->
+    <meta property="og:title" content="Lincoln Park Roofing">
+    <meta property="og:description" content="Experienced Roofers Over 20 Years in Lincoln Park, MI. Roof replacement, repair, and rejuvenation.">
+    <meta property="og:image" content="lincoln park logo.png">
+    <meta property="og:url" content="https://lincolnparkroofing.com/">
+    <meta property="og:type" content="website">
+
+    <!-- FAVICON (Blue Roof Icon) -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%230056b3' d='M256 32L32 256h96v224h256V256h96L256 32z'/%3E%3C/svg%3E" type="image/svg+xml">
     
     <!-- PERFORMANCE: Preconnect -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- PERFORMANCE: Preload Hero Image (High Priority) -->
+    <!-- PERFORMANCE: Preload LCP Image -->
     <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
-    <!-- PERFORMANCE: Inline Critical CSS (Renders Header/Hero instantly before Tailwind loads) -->
+    <!-- CRITICAL CSS -->
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; background-color: #ffffff; color: #1f2937; overflow-x: hidden; }
         .critical-header { position: fixed; top: 0; width: 100%; z-index: 100; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
@@ -24,19 +34,24 @@
         .critical-logo { height: 48px; width: auto; }
         .critical-hero { position: relative; min-height: 600px; display: flex; align-items: center; background-color: #0f172a; overflow: hidden; }
         .critical-hero-content { position: relative; z-index: 50; padding: 20px; max-width: 1280px; margin: 0 auto; color: white; width: 100%; }
-        .critical-title { font-size: 40px; line-height: 1.1; font-weight: 700; margin-bottom: 24px; text-transform: uppercase; }
-        /* Smooth Scrolling */
-        html { scroll-behavior: smooth; }
-        /* Hide content until revealed to prevent FOUC/Jumps */
-        .reveal-pending { opacity: 0; transform: translateY(40px); }
         /* Utilities */
         .big-text { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+        html { scroll-behavior: smooth; }
+        .hidden-city { display: none; }
+        .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+        
+        /* Animation Classes */
+        .reveal { transition: all 0.8s ease-out; opacity: 1; transform: translateY(0); }
+        .reveal.reveal-pending { opacity: 0; transform: translateY(40px); }
+        
+        /* Icons */
+        .icon-svg { width: 1em; height: 1em; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
     </style>
 
-    <!-- Google Fonts: Reduced weights (400, 700) for speed -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS (Async loading is hard, keeping standard but relying on Critical CSS above for paint) -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -51,37 +66,26 @@
         }
     </script>
 
-    <!-- JSON-LD: Structured Data -->
+    <!-- JSON-LD -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
         { "@type": "WebSite", "@id": "https://lincolnparkroofing.com/#website", "url": "https://lincolnparkroofing.com/", "name": "Lincoln Park Roofing" },
         { "@type": "WebPage", "@id": "https://lincolnparkroofing.com/#webpage", "url": "https://lincolnparkroofing.com/", "name": "Lincoln Park Roofing", "isPartOf": { "@id": "https://lincolnparkroofing.com/#website" }, "about": { "@id": "https://lincolnparkroofing.com/#business" } },
-        { "@type": "RoofingContractor", "@id": "https://lincolnparkroofing.com/#business", "name": "Lincoln Park Roofing", "url": "https://lincolnparkroofing.com/", "telephone": "+1-734-224-5615", "priceRange": "$", "address": { "@type": "PostalAddress", "addressLocality": "Lincoln Park", "addressRegion": "MI", "postalCode": "48146", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 42.2350897670785, "longitude": -83.73616694963289 }, "areaServed": [ { "@type": "City", "name": "Lincoln Park" }, { "@type": "City", "name": "Allen Park" }, { "@type": "City", "name": "Taylor" } ] }
+        { "@type": "RoofingContractor", "@id": "https://lincolnparkroofing.com/#business", "name": "Lincoln Park Roofing", "url": "https://lincolnparkroofing.com/", "telephone": "+1-734-224-5615", "priceRange": "$", "address": { "@type": "PostalAddress", "addressLocality": "Lincoln Park", "addressRegion": "MI", "postalCode": "48146", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 42.2350897670785, "longitude": -83.73616694963289 }, "areaServed": [ { "@type": "City", "name": "Lincoln Park" }, { "@type": "City", "name": "Allen Park" } ] }
       ]
     }
     </script>
 
     <style>
-        /* Animation Classes */
-        .reveal { transition: all 0.8s ease-out; opacity: 1; transform: translateY(0); }
-        .reveal.reveal-pending { opacity: 0; transform: translateY(40px); }
-        
-        /* Hero Load Animation */
         @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
         .load-animate { opacity: 0; animation: fadeInUp 1s ease-out forwards; animation-delay: 0.1s; }
-
-        /* Button Polishing */
         .btn-primary-polished { background: linear-gradient(180deg, #3b82f6 0%, #0056b3 100%); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
         .btn-primary-polished:hover { background: linear-gradient(180deg, #60a5fa 0%, #1e40af 100%); transform: translateY(-2px); }
         .btn-white-polished { background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); color: #0056b3; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
-        
-        /* Mobile Menu */
         #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(-100%); }
         #mobile-menu.open { transform: translateX(0); }
-        
-        /* Video */
         .video-embed { position: relative; width: 100%; padding-top: 56.25%; }
         .video-embed iframe, .video-embed img { position: absolute; inset: 0; width: 100%; height: 100%; }
     </style>
@@ -89,51 +93,40 @@
 
 <body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[104px] md:pt-[152px]">
 
-    <!-- HEADER / NAVIGATION -->
+    <!-- HEADER -->
     <header class="critical-header flex flex-col">
-        <!-- Top Bar -->
         <div class="critical-top-bar">
+            <!-- Fixed contrast issue: Green-400 on Blue is hard to read. Switched to accent yellow/gold for better readability on blue. -->
             <p class="big-text tracking-wide text-xs md:text-sm">
-                <span class="text-green-400">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
+                <span class="text-brand-accent">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
             </p>
         </div>
-
-        <!-- Navigation Bar -->
         <div class="bg-white w-full">
             <div class="critical-nav">
-                <!-- Logo with explicit dimensions for CLS prevention -->
                 <a href="#" class="flex items-center gap-2 z-50 shrink-0">
                     <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
                 </a>
-
-                <!-- Desktop Nav -->
                 <nav class="hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
                     <a href="#services" class="hover:text-brand-primary transition duration-300">Services</a>
                     <a href="#about" class="hover:text-brand-primary transition duration-300">About Us</a>
                     <a href="#areas" class="hover:text-brand-primary transition duration-300">Service Area</a>
                     <a href="#faq" class="hover:text-brand-primary transition duration-300">FAQ</a>
                 </nav>
-
-                <!-- CTA Buttons -->
                 <div class="hidden lg:flex items-center space-x-4">
                     <a href="tel:7342245615" class="flex flex-col items-end">
                         <span class="text-xs text-gray-500 font-bold uppercase">Call Now</span>
                         <span class="big-text text-xl font-bold text-brand-dark leading-none hover:text-brand-primary transition">(734) 224-5615</span>
                     </a>
-                    <a href="#contact" class="btn-primary-polished text-white font-bold py-3 px-6 rounded shadow-md uppercase tracking-wider">
-                        Get a Free Quote
-                    </a>
+                    <a href="#contact" class="btn-primary-polished text-white font-bold py-3 px-6 rounded shadow-md uppercase tracking-wider">Get a Free Quote</a>
                 </div>
-
-                <!-- Mobile Menu Button -->
                 <button id="menu-btn" class="lg:hidden text-2xl text-brand-dark focus:outline-none z-50 p-2" aria-label="Menu">
-                    <i class="fas fa-bars"></i>
+                    <svg class="icon-svg" viewBox="0 0 448 512"><path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"/></svg>
                 </button>
             </div>
         </div>
     </header>
 
-    <!-- MOBILE MENU OVERLAY -->
+    <!-- MOBILE MENU -->
     <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl">
         <a href="#services" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Services</a>
         <a href="#about" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">About Us</a>
@@ -141,47 +134,30 @@
         <a href="#faq" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">FAQ</a>
     </div>
 
-    <!-- HERO SLIDER SECTION -->
+    <!-- HERO -->
     <section id="hero-slider" class="critical-hero">
-        
-        <!-- SLIDE 1 -->
+        <!-- Slide 1 -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10" id="slide-0">
-            <!-- Fetch Priority High + Decode Async for Max Speed -->
             <div class="absolute inset-0 w-full h-full">
                 <img src="slide-1.jpg" alt="Lincoln Park Roofer" class="w-full h-full object-cover object-center" fetchpriority="high" decoding="async">
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
-
-            <!-- Explicit Dimensions on Graphic -->
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
                 <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full h-auto block align-bottom" fetchpriority="high" decoding="async">
             </div>
-
             <div class="critical-hero-content pt-20 md:pt-24 lg:pt-20 pb-24 md:pb-32 lg:pb-40">
                 <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left load-animate">
-                    <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">
-                        Over 20 Years
-                    </span>
-                    <h1 class="critical-title big-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
-                        Lincoln Park<br>
-                        <span class="text-brand-primary text-brand-accent">Roofer</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">
-                        Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.
-                    </p>
+                    <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Over 20 Years</span>
+                    <h1 class="critical-title big-text drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">Lincoln Park<br><span class="text-brand-primary text-brand-accent">Roofer</span></h1>
+                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.</p>
                     <div class="flex flex-row flex-wrap gap-4 justify-center md:justify-start">
-                        <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">
-                            Get Free Estimate
-                        </a>
-                        <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="bg-transparent hover:bg-white hover:text-brand-dark text-white border-2 border-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider transition shadow-2xl drop-shadow-xl text-center flex-1 sm:flex-none">
-                            Insurance Claims
-                        </a>
+                        <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Estimate</a>
+                        <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="bg-transparent hover:bg-white hover:text-brand-dark text-white border-2 border-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider transition shadow-2xl drop-shadow-xl text-center flex-1 sm:flex-none">Insurance Claims</a>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!-- SLIDE 2 -->
+        <!-- Slide 2 -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none" id="slide-1">
             <div class="absolute inset-0 w-full h-full">
                 <img src="slide-2.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
@@ -195,7 +171,7 @@
                     <div class="w-full lg:w-1/2 text-center lg:text-left">
                         <span class="inline-block bg-green-500 text-white font-bold px-3 py-1 mb-4 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Save Money</span>
                         <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">Roof<br><span class="text-white">Rejuvenation</span></h1>
-                        <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">Extend the life of your roof by 5-15 years with our advanced rejuvenation treatment.</p>
+                        <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">Extend the life of your roof by 5-15 years.</p>
                         <div class="flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
                             <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Quote</a>
                             <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="bg-transparent hover:bg-white hover:text-brand-dark text-white border-2 border-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider transition shadow-2xl drop-shadow-xl text-center flex-1 sm:flex-none">Learn More</a>
@@ -205,38 +181,48 @@
                         <div id="video-container" class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 cursor-pointer group" onclick="loadVideo()">
                             <img src="https://img.youtube.com/vi/zXRABs5AdOc/maxresdefault.jpg" alt="Play Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
                             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition duration-300"><i class="fas fa-play ml-1"></i></div>
+                                <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition duration-300">
+                                    <svg class="icon-svg" style="font-size: 30px; margin-left: 4px;" viewBox="0 0 448 512"><path d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"/></svg>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
         <div class="absolute bottom-16 md:bottom-24 left-0 w-full z-50 flex justify-center gap-3">
             <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-100 shadow-md transition-all duration-300 hover:scale-125" onclick="goToSlide(0)" aria-label="Go to slide 1"></button>
             <button class="slider-dot w-3 h-3 rounded-full bg-white opacity-40 shadow-md transition-all duration-300 hover:scale-125" onclick="goToSlide(1)" aria-label="Go to slide 2"></button>
         </div>
     </section>
 
-    <!-- TRUST BADGES STRIP -->
+    <!-- BADGES -->
     <div class="bg-white py-12 border-b border-gray-200 relative z-10 reveal">
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center">
                 <div class="flex items-center justify-center bg-gray-50 px-4 md:px-6 py-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 w-full md:w-auto">
-                    <i class="fab fa-google text-3xl md:text-4xl mr-4 text-brand-primary shrink-0"></i>
+                    <svg class="icon-svg text-3xl md:text-4xl mr-4 text-brand-primary shrink-0" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
                     <div class="text-left">
                         <div class="text-brand-accent text-lg md:text-xl flex gap-1" style="color: #fbbf24;">
-                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
                         </div>
                         <span class="font-bold text-gray-700 uppercase text-xs md:text-sm tracking-wide">5-Star Rated on Google</span>
                     </div>
                 </div>
+                <!-- Yelp Badge -->
                 <div class="flex items-center justify-center bg-gray-50 px-4 md:px-6 py-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 w-full md:w-auto">
-                    <i class="fab fa-yelp text-3xl md:text-4xl mr-4 text-red-600 shrink-0"></i>
+                    <svg class="icon-svg text-3xl md:text-4xl mr-4 text-red-600 shrink-0" viewBox="0 0 384 512"><path d="M31.6 228.3c-14.7-6.2-12.7-29.6 2.8-32.9L228.2 133c16-3.4 25.5 15.6 15.1 27.5L164.7 271.7c-9.5 10.9-32.6 14.1-42.2 4.9l-90.9-48.3zM157.4 340.7l-72.3 84.1c-12.6 14.7-36.1 10.7-41.9-7.7l-20.3-64.4c-6.1-19.4 5.9-38.3 24.3-43.1l102.7-26.8c16.3-4.3 29.5 11.2 24.2 27.2l-16.7 30.7zM326.8 300l-105.3-26.8c-18.4-4.7-27.1-26.6-16.7-41.8l16.7-24.3c5.3-16 29.5-19.2 39.7-5.3l61.7 84.1c11.3 15.4 6.6 37.1-9.9 44.1l-86.2 37zM292 64.9l-49.2 92.4c-8.2 15.4-30.7 16.5-40.3 1.9l-41-62.4c-10.7-16.2-4.1-38.1 13.7-45.7l86.5-37c17.8-7.6 38 7.3 30.3 25.8zM242.3 273l-35.1 29.2c-12.9 10.8-13.6 30.7-1.4 42.4l70.7 67.9c13.7 13.2 36.3 7 40.5-11.7l12.6-56.1c4.5-19.8-8.8-39.3-28.1-41.3l-59.2-10.4z"/></svg>
                     <div class="text-left">
                         <div class="text-brand-accent text-lg md:text-xl flex gap-1" style="color: #fbbf24;">
-                             <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
+                             <svg class="icon-svg" viewBox="0 0 576 512"><path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/></svg>
                         </div>
                         <span class="font-bold text-gray-700 uppercase text-xs md:text-sm tracking-wide">5-Star Rated on Yelp</span>
                     </div>
@@ -245,7 +231,7 @@
         </div>
     </div>
 
-    <!-- ABOUT / INTRO SECTION -->
+    <!-- ABOUT -->
     <section id="about" class="py-12 md:py-20 bg-white reveal">
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
@@ -253,14 +239,13 @@
                     <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" width="600" height="400" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy" decoding="async">
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
-                    <h4 class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base">About Us</h4>
+                    <!-- Corrected Heading Order: span -> h2 -->
+                    <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">About Us</span>
                     <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900 mb-4 md:mb-6">Reliable Roofing Done Right.</h2>
-                    <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">
-                        At <strong>Lincoln Park Roofing</strong>, we understand that a roof is more than just shingles—it's your home's first line of defense. With years of experience serving the Lincoln Park area, we bring professional craftsmanship and honest pricing to every job.
-                    </p>
+                    <p class="text-gray-600 text-base md:text-lg mb-4 md:mb-6 leading-relaxed">At <strong>Lincoln Park Roofing</strong>, we understand that a roof is more than just shingles—it's your home's first line of defense. With years of experience serving the Lincoln Park area, we bring professional craftsmanship and honest pricing to every job.</p>
                     <div class="flex items-center gap-4">
                         <div class="bg-brand-dark text-white p-3 md:p-4 rounded-full">
-                            <i class="fas fa-phone-alt text-xl md:text-2xl"></i>
+                            <svg class="icon-svg text-xl md:text-2xl" viewBox="0 0 512 512"><path d="M497.39 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.66 370.66 0 0 1 130.6 204.11l60.6-49.6a23.94 23.94 0 0 0 6.9-28l-48-112A24.16 24.16 0 0 0 122.6.61l-104 24A24 24 0 0 0 0 48c0 256.5 207.9 464 464 464a24 24 0 0 0 23.4-18.6l24-104a24.29 24.29 0 0 0-14.01-27.6z"/></svg>
                         </div>
                         <div>
                             <p class="text-xs md:text-sm text-gray-500 font-bold uppercase">Have Questions?</p>
@@ -272,12 +257,12 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION -->
+    <!-- SERVICES -->
     <section id="services" class="py-12 md:py-20 bg-gray-50 relative reveal">
         <div class="absolute top-0 right-0 w-1/3 h-full bg-gray-100 hidden lg:block skew-x-12 transform origin-top-right"></div>
         <div class="container mx-auto px-4 md:px-6 relative z-10">
             <div class="text-center mb-10 md:mb-16">
-                <h4 class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base">What We Do</h4>
+                <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">What We Do</span>
                 <h2 class="big-text text-3xl md:text-6xl font-bold text-gray-900">Our Premium Services</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -288,10 +273,12 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md"><i class="fas fa-home"></i></div>
+                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                            <svg class="icon-svg" viewBox="0 0 576 512"><path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31.02a12 12 0 0 0 16.9 1.6l210.37-173.1c4.09-3.57 10.13-3.78 14.4 0l262.61 216.12a12 12 0 0 0 16.92-1.59l25.66-31.02a12 12 0 0 0-1.7-16.93z"/></svg>
+                        </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">New Roof Construction</h2>
                         <p class="text-gray-600 mb-6 text-sm md:text-base">Complete installation services using top-tier materials.</p>
-                        <a href="https://lincolnparkroofing.com/new-roof-construction.html" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Learn More <i class="fas fa-arrow-right ml-1"></i></a>
+                        <a href="https://lincolnparkroofing.com/new-roof-construction.html" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Learn about New Roofs <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
                 <!-- Service 2 -->
@@ -301,7 +288,9 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md"><i class="fas fa-hammer"></i></div>
+                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                            <svg class="icon-svg" viewBox="0 0 512 512"><path d="M501.36 396.1l-65.71-65.71c-14.73-14.73-36.63-17.75-52.92-8.58L318.59 283.4l50.1-50.1c6.25-6.25 6.25-16.38 0-22.63l-22.63-22.63c-6.25-6.25-16.38-6.25-22.63 0l-50.1 50.1-38.41-64.13c9.17-16.3 6.15-38.2-8.58-52.92L160.63 55.37c-22.49-22.49-57.69-23.75-81.59-3.79l87.72 87.72c6.25 6.25 6.25 16.38 0 22.63l-22.63 22.63c-6.25 6.25-16.38 6.25-22.63 0L33.79 96.84c19.96-23.9 18.7-59.1-3.79-81.59-22.75-22.75-60.26-22.09-82.25 1.49L254.4 293.41 129.5 418.3c-15.35 15.35-17.61 39.46-5.59 57.2l-34.99 43.74c-8.91 11.14-7.23 27.46 3.91 38.6 11.14 11.14 27.46 12.82 38.6 3.91l43.74-34.99c17.74 12.02 41.85 9.76 57.2-5.59l124.89-124.89 276.67-202.16c23.59-21.99 24.25-59.5 1.5-82.25z"/></svg>
+                        </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Roof Repair</h2>
                         <p class="text-gray-600 mb-6 text-sm md:text-base">Leaks, missing shingles, or storm damage? We fix problems fast.</p>
                         <a href="#contact" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Get Quote <i class="fas fa-arrow-right ml-1"></i></a>
@@ -314,7 +303,9 @@
                         <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300"></div>
                     </div>
                     <div class="p-6 md:p-8">
-                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md"><i class="fas fa-spray-can"></i></div>
+                        <div class="w-14 h-14 bg-brand-primary text-white flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 border-4 border-white shadow-md">
+                            <svg class="icon-svg" viewBox="0 0 512 512"><path d="M224 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm-96 96a32 32 0 1 0 -64 0 32 32 0 1 0 64 0zm96 32a32 32 0 1 0 0-64 32 32 0 1 0 0 64zM432 208a48 48 0 1 1 0-96 48 48 0 1 1 0 96zM320 224h64V32c0-17.7-14.3-32-32-32s-32 14.3-32 32v192zm-96 0h64V64c0-17.7-14.3-32-32-32s-32 14.3-32 32v160zm-96 0h64V96c0-17.7-14.3-32-32-32s-32 14.3-32 32v128zm-29.7 160l62.3-178H74.3L12 384h86.3zM96 416h320c17.7 0 32 14.3 32 32v32c0 17.7-14.3 32-32 32H96c-17.7 0-32-14.3-32-32v-32c0-17.7 14.3-32 32-32z"/></svg>
+                        </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Roof Rejuvenation</h2>
                         <p class="text-gray-600 mb-6 text-sm md:text-base">Extend the life of your asphalt shingles with our advanced treatment.</p>
                         <a href="#contact" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Get Quote <i class="fas fa-arrow-right ml-1"></i></a>
@@ -324,7 +315,7 @@
         </div>
     </section>
 
-    <!-- NEW: EXPANDED SERVICE AREAS SECTION (Replaces Blue CTA) -->
+    <!-- AREAS (FULL LIST) -->
     <section class="relative py-24 md:py-32 bg-brand-dark text-white w-full z-30 shadow-[0_-20px_40px_-10px_rgba(0,0,0,0.6),0_20px_40px_-10px_rgba(0,0,0,0.6)] reveal">
         <div class="absolute inset-0 z-0">
             <img src="area-background.jpg" alt="Service Area Map" class="w-full h-full object-cover opacity-60" loading="lazy" decoding="async">
@@ -332,41 +323,71 @@
         </div>
         <div class="container mx-auto px-4 md:px-6 relative z-20">
             <div class="text-center mb-12">
-                <h4 class="text-brand-accent font-bold uppercase tracking-widest mb-2 text-sm md:text-base">Local Experts</h4>
+                <span class="text-brand-accent font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">Local Experts</span>
                 <h2 class="big-text text-3xl md:text-5xl font-bold text-white">Proudly Serving Metro Detroit</h2>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-8 gap-y-4 text-center sm:text-left reveal" id="cities-grid">
+                <!-- Visible Cities -->
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">Lincoln Park</a></div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Allen Park</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Taylor</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wyandotte</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southgate</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Melvindale</div>
-                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ecorse</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn Heights</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Livonia</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Westland</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Plymouth</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Northville</div>
+                <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Canton</div>
+
+                <!-- Hidden Cities -->
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Dearborn</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Garden City</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Inkster</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Wayne</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Redford</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Romulus</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Van Buren</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Woodhaven</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Brownstown</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Trenton</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Grosse Ile</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Flat Rock</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rockwood</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Farmington Hills</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Southfield</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Troy</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rochester Hills</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Pontiac</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Royal Oak</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Birmingham</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Ferndale</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Oak Park</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
             </div>
             <div class="text-center mt-10">
                 <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition">
                     <span>Show More Cities</span>
-                    <i class="fas fa-chevron-down ml-2 transition-transform duration-300" id="toggle-icon"></i>
+                    <svg class="icon-svg ml-2 transition-transform duration-300" id="toggle-icon" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- CONTACT / FOOTER FORM -->
+    <!-- CONTACT FORM -->
     <section id="contact" class="bg-gradient-to-br from-slate-900 to-blue-950 text-white py-12 md:py-20 relative overflow-hidden reveal">
         <div class="container mx-auto px-4 md:px-6 relative z-10">
             <div class="flex flex-col lg:flex-row gap-12">
                 <div class="w-full lg:w-1/2">
                     <h2 class="big-text text-3xl md:text-4xl font-bold mb-4">Contact Us Today</h2>
                     <p class="text-gray-400 mb-8 text-sm md:text-base">Fill out the form to request a free estimate.</p>
-                    
                     <div class="mt-10 rounded-2xl overflow-hidden shadow-2xl border border-white/10 w-full h-[260px] sm:h-[300px] bg-slate-800 relative">
                         <iframe class="lazy-map w-full h-full border-0" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378116.33302825416!2d-83.73616694963289!3d42.2350897670785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f44403c2903%3A0xe2300eacd6da54b0!2sLincoln%20Park%20Roofing!5e0!3m2!1sen!2sus!4v1766107467070!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="Lincoln Park Roofing Map"></iframe>
                     </div>
                 </div>
-
                 <div class="w-full lg:w-1/2 bg-white rounded-xl p-6 md:p-8 text-gray-800 shadow-2xl reveal">
                     <h3 class="big-text text-2xl font-bold mb-6 text-brand-dark">Request a Quote</h3>
                     <form action="mailto:chavezdarrel@yahoo.com;scott@kincaideroofrejuvenate.com?subject=lincoln park roofing lead" method="post" enctype="text/plain" class="space-y-4">
@@ -375,7 +396,8 @@
                             <input type="text" name="LastName" placeholder="Last Name" class="w-full bg-gray-100 border border-gray-300 p-3 rounded">
                         </div>
                         <input type="tel" name="Phone" placeholder="Phone Number" class="w-full bg-gray-100 border border-gray-300 p-3 rounded">
-                        <select name="Service" class="w-full bg-gray-100 border border-gray-300 p-3 rounded text-gray-500">
+                        <label for="service-select" class="sr-only">Service Needed</label>
+                        <select id="service-select" name="Service" class="w-full bg-gray-100 border border-gray-300 p-3 rounded text-gray-500">
                             <option>Service Needed?</option>
                             <option>New Roof</option>
                             <option>Roof Repair</option>
@@ -396,7 +418,7 @@
         </div>
     </footer>
 
-    <!-- MOBILE BOTTOM STICKY BAR -->
+    <!-- MOBILE STICKY -->
     <div class="fixed bottom-0 left-0 w-full z-50 bg-white border-t border-gray-200 flex lg:hidden shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
         <a href="tel:7342245615" class="flex-1 bg-brand-light text-brand-dark py-4 text-center font-bold uppercase text-sm border-r border-gray-200 flex items-center justify-center gap-2">Call</a>
         <a href="sms:+17342245615" class="flex-1 btn-primary-polished text-white py-4 text-center font-bold uppercase text-sm flex items-center justify-center gap-2">Text Us</a>
@@ -405,30 +427,31 @@
     <!-- Scripts -->
     <script src="https://www.youtube.com/iframe_api" defer></script>
     <script>
-        // Load Icons Deferred (After Page Load) to stop render blocking
-        window.addEventListener('load', function() {
-            var link = document.createElement('link');
-            link.rel = 'stylesheet';
-            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';
-            document.head.appendChild(link);
-        });
-
         // Mobile Menu
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
-        menuBtn.addEventListener("click", () => {
-            mobileMenu.classList.toggle("open");
-            const icon = menuBtn.querySelector("i");
-            if(icon) icon.classList.toggle("fa-times");
-            if(icon) icon.classList.toggle("fa-bars");
-        });
+        menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
         document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
 
-        // Service Area Toggle
+        // Service Area Toggle - Fixed Selector
         const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
         if (toggleCitiesBtn) {
             toggleCitiesBtn.addEventListener('click', () => {
-                document.querySelectorAll('.hidden-city').forEach(c => c.classList.toggle('hidden'));
+                const hiddenCities = document.querySelectorAll('.hidden-city');
+                hiddenCities.forEach(c => c.classList.toggle('hidden'));
+                
+                const isExpanded = !hiddenCities[0].classList.contains('hidden');
+                const span = toggleCitiesBtn.querySelector('span');
+                const icon = document.getElementById('toggle-icon');
+                
+                if (isExpanded) {
+                    span.textContent = 'Show Less Cities';
+                    icon.style.transform = 'rotate(180deg)';
+                } else {
+                    span.textContent = 'Show More Cities';
+                    icon.style.transform = 'rotate(0deg)';
+                    document.getElementById('cities-grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
             });
         }
 
@@ -466,7 +489,7 @@
             if(slideInterval) clearInterval(slideInterval);
         }
 
-        // Simple Slider Logic
+        // Slider
         let currentSlide = 0;
         let slideInterval;
         function showSlide(index) {
