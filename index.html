@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-18-LAYOUT-FONT-SWIPE-FIX -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-19-LINKS-ICONS-FIX -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,8 +57,9 @@
         .reveal { transition: all 0.8s ease-out; opacity: 1; transform: translateY(0); }
         .reveal.reveal-pending { opacity: 0; transform: translateY(40px); }
         
-        /* ICONS */
-        .icon-svg { width: 1em; height: 1em; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
+        /* ICONS - FIXED ASPECT RATIO */
+        /* Changed width from 1em to auto to prevent squashing rectangular icons */
+        .icon-svg { height: 1em; width: auto; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
     </style>
 
     <!-- Google Fonts -->
@@ -304,11 +305,21 @@
                     </li>
                     <li class="flex items-start gap-3 reveal">
                         <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
-                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">Insurance claim help — documentation, photos, and paperwork guidance</span>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">
+                            Insurance claim help — documentation, photos, and paperwork guidance
+                            <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="block mt-2 text-base md:text-lg font-bold text-brand-primary underline">
+                                Learn more about roofing insurance claims
+                            </a>
+                        </span>
                     </li>
                     <li class="flex items-start gap-3 reveal">
                         <svg class="icon-svg text-brand-primary text-xl mt-1" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628 0z"/></svg>
-                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">The only company offering roof rejuvenation in Wayne &amp; Oakland Counties</span>
+                        <span class="big-text text-lg md:text-xl font-bold text-gray-900">
+                            The only company offering roof rejuvenation in Wayne &amp; Oakland Counties
+                            <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="block mt-2 text-base md:text-lg font-bold text-brand-primary underline">
+                                Protect your roof and save thousands with roof rejuvenation
+                            </a>
+                        </span>
                     </li>
                 </ul>
                 <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -370,7 +381,8 @@
                         </div>
                         <h2 class="big-text text-xl md:text-2xl font-bold text-gray-900 mt-4 mb-3">Roof Rejuvenation</h2>
                         <p class="text-gray-600 mb-6 text-sm md:text-base">Extend the life of your asphalt shingles with our advanced treatment.</p>
-                        <a href="#contact" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Get Quote <i class="fas fa-arrow-right ml-1"></i></a>
+                        <!-- CHANGED LINK AND TEXT -->
+                        <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="text-brand-primary font-bold uppercase text-sm tracking-wide hover:underline">Learn more about roof rejuvenation <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -428,6 +440,12 @@
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Berkley</div>
                 <div class="city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
             </div>
+            <div class="text-center mt-10">
+                <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition">
+                    <span>Show More Cities</span>
+                    <svg class="icon-svg ml-2 transition-transform duration-300" id="toggle-icon" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -469,6 +487,19 @@
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
             <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
             <p class="footer-main text-sm md:text-base text-gray-300">© <span id="year"></span> Lincoln Park Roofing. All rights reserved.</p>
+            
+            <!-- RESTORED CREDIT -->
+            <div class="footer-credit flex flex-col sm:flex-row items-center gap-3 text-xs md:text-sm text-gray-400">
+                <span>Website Design and Chat GPT Marketing by</span>
+                <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center">
+                    <img
+                        src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png"
+                        alt="Get Local Maps"
+                        class="h-8 w-auto opacity-90 hover:opacity-100 transition"
+                        loading="lazy" decoding="async"
+                    />
+                </a>
+            </div>
         </div>
     </footer>
 
