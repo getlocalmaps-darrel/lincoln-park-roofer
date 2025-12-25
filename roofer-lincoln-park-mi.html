@@ -28,6 +28,13 @@
   <!-- PERFORMANCE: Preload LCP Image -->
   <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
+  <!-- PERFORMANCE: Preload FontAwesome Webfont (Fixes 170ms delay) -->
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- ICONS: FontAwesome (Optimized Async Load) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
   <!-- CRITICAL CSS (Inline for Speed & Stability) -->
   <style>
       /* GLOBAL SETTINGS & STRICT PRELOADER */
