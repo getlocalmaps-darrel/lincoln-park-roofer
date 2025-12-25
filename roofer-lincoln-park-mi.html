@@ -6,322 +6,196 @@
 
   <!-- SEO -->
   <title>Roofer Lincoln Park | (734) 224-5615 | Lincoln Park Roofing</title>
-    <link rel="canonical" href="https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html" />
-<meta name="description" content="Local roofer in Lincoln Park, MI for roof repair, roof replacement, new roof construction, roof rejuvenation, siding, and gutters. Call or text (734) 224-5615 for a free estimate." />
+  <link rel="canonical" href="https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html" />
+  <meta name="description" content="Local roofer in Lincoln Park, MI for roof repair, roof replacement, new roof construction, roof rejuvenation, siding, and gutters. Call or text (734) 224-5615 for a free estimate." />
 
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- SOCIAL SHARE METADATA -->
+  <meta property="og:title" content="Roofer Lincoln Park | Lincoln Park Roofing">
+  <meta property="og:description" content="Local roofer in Lincoln Park, MI. Roof repair, replacement, and rejuvenation.">
+  <meta property="og:image" content="lincoln park logo.png">
+  <meta property="og:url" content="https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html">
+  <meta property="og:type" content="website">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- FAVICON -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%230056b3' d='M256 32L32 256h96v224h256V256h96L256 32z'/%3E%3C/svg%3E" type="image/svg+xml">
 
-  <!-- FontAwesome for Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- PERFORMANCE: Preconnect -->
+  <link rel="preconnect" href="https://cdn.tailwindcss.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
-  <!-- Tailwind Theme -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: {
-              dark: "#0f172a",
-              primary: "#0056b3",
-              accent: "#fbbf24",
-              light: "#f1f5f9",
-            },
-          },
-          fontFamily: {
-            sans: ['"Open Sans"', "sans-serif"],
-            header: ['"Oswald"', "sans-serif"],
-          },
-        },
-      },
-    };
-  </script>
+  <!-- PERFORMANCE: Preload LCP Image -->
+  <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
+  <!-- CRITICAL CSS (Inline for Speed & Stability) -->
   <style>
-    html {
-      scroll-behavior: smooth;
-      overflow-x: hidden;
-      width: 100%;
-    }
+      /* GLOBAL SETTINGS & STRICT PRELOADER */
+      html { scroll-behavior: smooth; }
+      body { 
+          margin: 0; padding: 0; 
+          font-family: 'Open Sans', sans-serif;
+          background-color: #ffffff; 
+          color: #1f2937; 
+          overflow-x: hidden; 
+          width: 100%;
+          max-width: 100vw;
+          
+          /* HIDDEN INITIALLY - MATCHING INDEX PAGE STRATEGY */
+          opacity: 0; 
+          visibility: hidden;
+          transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      }
 
-    body {
-      overflow-x: hidden;
-      width: 100%;
-      max-width: 100%;
-      position: relative;
-    }
+      /* Class added by JS to reveal site smoothly */
+      body.site-loaded {
+          opacity: 1;
+          visibility: visible;
+      }
+      
+      /* TYPOGRAPHY */
+      h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+      p { margin: 0; font-size: 1.125rem; line-height: 1.75; } 
+      img { max-width: 100%; height: auto; display: block; }
 
-    .big-text {
-      font-family: "Oswald", sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+      /* BRAND COLORS */
+      .text-brand-primary { color: #0056b3 !important; }
+      .text-brand-accent { color: #fbbf24 !important; }
+      .bg-brand-primary { background-color: #0056b3 !important; }
+      .bg-brand-dark { background-color: #0f172a !important; }
+      .bg-brand-light { background-color: #f1f5f9 !important; }
+      .bg-brand-accent { background-color: #fbbf24 !important; }
+      .text-white { color: #ffffff !important; }
+      
+      /* HEADER */
+      .critical-header { position: fixed; top: 0; width: 100%; z-index: 1000; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      .critical-top-bar { background-color: #0056b3; color: white; text-align: center; padding: 8px; font-size: 12px; text-transform: uppercase; font-weight: bold; }
+      .critical-nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto; }
+      .critical-logo { height: 48px; width: auto; object-fit: contain; }
+      
+      /* NAV VISIBILITY */
+      .desktop-nav { display: none; }
+      .mobile-menu-btn { display: block; }
+      @media (min-width: 1024px) {
+          .desktop-nav { display: flex; gap: 2rem; align-items: center; }
+          .mobile-menu-btn { display: none; }
+      }
+      .nav-link { 
+          text-transform: uppercase; font-weight: 700; font-size: 0.875rem; letter-spacing: 0.05em; color: #374151; text-decoration: none; transition: color 0.3s;
+      }
+      .nav-link:hover { color: #0056b3; }
 
-    .btn-primary-polished {
-      background: linear-gradient(180deg, #3b82f6 0%, #0056b3 100%);
-      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-      transition: all 0.3s ease;
-    }
+      /* HERO */
+      .critical-hero { position: relative; min-height: 500px; display: flex; align-items: center; background-color: #0f172a; overflow: hidden; touch-action: pan-y; }
+      .hero-bg-img { width: 100%; height: 100%; object-fit: cover; background-color: #1a1a1a; } 
+      .hero-overlay { position: absolute; inset: 0; background-color: rgba(15, 23, 42, 0.45); }
+      
+      /* BUTTONS */
+      .btn-white-polished {
+          background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
+          color: #0056b3; border: 1px solid #e2e8f0; transition: all 0.3s ease;
+          text-decoration: none; display: inline-block; text-align: center;
+      }
+      .btn-primary-polished { 
+          background: linear-gradient(180deg, #3b82f6 0%, #0056b3 100%); 
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); 
+          transition: all 0.3s ease; color: white; text-decoration: none; display: inline-block; text-align: center;
+      }
+      
+      /* UTILITIES */
+      .big-text { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+      .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
+      .hidden { display: none; } 
+      
+      /* TEXT SHADOWS */
+      .hero-text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+      .text-outline { text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
 
-    .btn-primary-polished:hover {
-      background: linear-gradient(180deg, #60a5fa 0%, #1e40af 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
-    }
+      /* MOBILE MENU */
+      #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(-100%); }
+      #mobile-menu.open { transform: translateX(0); }
 
-    /* Mobile Menu Slide */
-    #mobile-menu {
-      transition: transform 0.3s ease-in-out;
-      transform: translateX(-100%);
-    }
-
-    #mobile-menu.open {
-      transform: translateX(0);
-    }
+      /* ICONS (Fixed Size) */
+      .icon-svg { height: 1em; width: auto; display: inline-block; fill: currentColor; vertical-align: -0.125em; }
   </style>
 
-  <!-- JSON-LD (Service + FAQ) -->
+  <!-- Google Fonts: Async -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
+  <!-- FontAwesome: Async -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+  <!-- Tailwind: Deferred -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <script type="tailwind-config">
     {
-      "@type": "WebSite",
-      "@id": "https://www.lincolnparkroofing.com/#website",
-      "url": "https://www.lincolnparkroofing.com/",
-      "name": "Lincoln Park Roofing"
-    },
-    {
-      "@type": [
-        "RoofingContractor",
-        "LocalBusiness"
-      ],
-      "@id": "https://www.lincolnparkroofing.com/#business",
-      "name": "Lincoln Park Roofing",
-      "url": "https://www.lincolnparkroofing.com/",
-      "telephone": "+1-734-224-5615",
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Lincoln Park"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Wayne County"
-        },
-        {
-          "@type": "AdministrativeArea",
-          "name": "Oakland County"
-        }
-      ],
-      "knowsAbout": [
-        "Roof repair",
-        "Roof replacement",
-        "New roof construction",
-        "Roof rejuvenation",
-        "Storm damage roofing",
-        "Roof insurance claims",
-        "Siding",
-        "Gutters"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Roofing & Exterior Services",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Roof Repair",
-              "url": "https://www.lincolnparkroofing.com/roof-repair.html"
-            }
+      "theme": {
+        "extend": {
+          "colors": {
+            "brand": { "dark": "#0f172a", "primary": "#0056b3", "accent": "#fbbf24", "light": "#f1f5f9" }
           },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Roof Replacement & New Roof Construction",
-              "url": "https://www.lincolnparkroofing.com/new-roof-construction.html"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Roof Rejuvenation",
-              "url": "https://www.lincolnparkroofing.com/roof-rejuvenation.html"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Roof Insurance Claim Help",
-              "url": "https://www.lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Siding",
-              "url": "https://www.lincolnparkroofing.com/siding.html"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Gutters",
-              "url": "https://www.lincolnparkroofing.com/gutters.html"
-            }
+          "fontFamily": {
+            "sans": ["Open Sans", "sans-serif"],
+            "header": ["Oswald", "sans-serif"]
           }
-        ]
+        }
       }
-    },
-    {
-      "@type": "WebPage",
-      "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#webpage",
-      "url": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html",
-      "name": "Roofer Lincoln Park | (734) 224-5615 | Lincoln Park Roofing",
-      "description": "Local roofing contractor serving Lincoln Park, Michigan. Roof repair, roof replacement, new roof construction, roof rejuvenation, siding, gutters, and storm damage help.",
-      "isPartOf": {
-        "@id": "https://www.lincolnparkroofing.com/#website"
-      },
-      "about": {
-        "@id": "https://www.lincolnparkroofing.com/#business"
-      },
-      "mainEntity": [
-        {
-          "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#service"
-        },
-        {
-          "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#faq"
-        }
-      ]
-    },
-    {
-      "@type": "Service",
-      "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#service",
-      "name": "Roofer in Lincoln Park, MI",
-      "serviceType": "Roofing",
-      "provider": {
-        "@id": "https://www.lincolnparkroofing.com/#business"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Lincoln Park"
-      },
-      "url": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html"
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#breadcrumbs",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.lincolnparkroofing.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Lincoln Park, MI",
-          "item": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html"
-        }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you offer free roof inspections in Lincoln Park?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We\u2019ll inspect your roof, explain what we found, and provide clear options with pricing."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you fix roof leaks and storm damage quickly?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In many cases, yes. We prioritize active leaks and storm damage and can often schedule quickly in the Lincoln Park area."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you help with roof insurance claims?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We can document damage, provide photos and scope details, and guide you through the process. Visit our insurance claim page for the full step-by-step guide."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What\u2019s the difference between roof replacement and roof rejuvenation?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Replacement installs a brand-new roof system. Roof rejuvenation is designed to extend roof life and improve performance when the roof qualifies\u2014often saving thousands compared to replacement."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you licensed and insured?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. We\u2019re fully insured, and we take safety and workmanship seriously on every project."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer financing for Lincoln Park homeowners?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Financing options are available for qualified homeowners\u2014call or text and we\u2019ll explain the next steps."
-          }
-        }
-      ],
-      "@id": "https://www.lincolnparkroofing.com/roofer-lincoln-park-mi.html#faq"
     }
-  ]
-}
-</script>
+  </script>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.lincolnparkroofing.com/#website",
+        "url": "https://www.lincolnparkroofing.com/",
+        "name": "Lincoln Park Roofing"
+      },
+      {
+        "@type": [ "RoofingContractor", "LocalBusiness" ],
+        "@id": "https://www.lincolnparkroofing.com/#business",
+        "name": "Lincoln Park Roofing",
+        "url": "https://www.lincolnparkroofing.com/",
+        "telephone": "+1-734-224-5615",
+        "areaServed": [ { "@type": "City", "name": "Lincoln Park" }, { "@type": "AdministrativeArea", "name": "Wayne County" }, { "@type": "AdministrativeArea", "name": "Oakland County" } ],
+        "knowsAbout": [ "Roof repair", "Roof replacement", "New roof construction", "Roof rejuvenation", "Storm damage roofing", "Roof insurance claims", "Siding", "Gutters" ]
+      }
+    ]
+  }
+  </script>
 </head>
 
-<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[128px]">
-  <!-- HEADER / NAVIGATION -->
-  <header class="fixed top-0 left-0 w-full z-[100] flex flex-col shadow-lg bg-white">
-    <div class="bg-brand-primary text-white py-2 text-center px-4 relative z-50">
-      <p class="big-text font-bold uppercase tracking-wide text-xs md:text-sm">
-        <span class="text-green-400">Save Thousands with Roof Rejuvenation</span> • Local Lincoln Park Roofers • Honest Pricing
+<body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[96px]">
+
+  <!-- HEADER -->
+  <header class="critical-header flex flex-col">
+    <div class="critical-top-bar">
+      <p class="big-text tracking-wide text-xs md:text-sm">
+        <span class="text-brand-accent">Save Thousands with Roof Rejuvenation</span> • Local Lincoln Park Roofers • Honest Pricing
       </p>
     </div>
-
     <div class="bg-white w-full">
-      <div class="container mx-auto px-4 md:px-6 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center gap-2 z-50 shrink-0" aria-label="Lincoln Park Roofing Home">
-          <img src="lincoln park logo.png" alt="Lincoln Park Roofing" class="h-12 md:h-24 w-auto object-contain" />
+      <div class="critical-nav">
+        <a href="index.html" class="flex items-center gap-2 z-50 shrink-0">
+          <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
         </a>
-
-        <nav class="hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
-          <a href="index.html" class="hover:text-brand-primary transition duration-300">Home</a>
-          <a href="#content" class="hover:text-brand-primary transition duration-300">Overview</a>
-          <a href="#service-list" class="hover:text-brand-primary transition duration-300">Services</a>
-          <a href="#faq" class="hover:text-brand-primary transition duration-300">FAQ</a>
-          <a href="#areas" class="hover:text-brand-primary transition duration-300">Service Area</a>
+        
+        <!-- Desktop Nav -->
+        <nav class="desktop-nav hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
+          <a href="index.html" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
+          <a href="#content" class="nav-link hover:text-brand-primary transition duration-300">Overview</a>
+          <a href="#service-list" class="nav-link hover:text-brand-primary transition duration-300">Services</a>
+          <a href="#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
+          <a href="#areas" class="nav-link hover:text-brand-primary transition duration-300">Service Area</a>
         </nav>
 
-        <div class="hidden lg:flex items-center space-x-4">
+        <div class="desktop-nav hidden lg:flex items-center space-x-4">
           <a href="tel:7342245615" class="flex flex-col items-end">
             <span class="text-xs text-gray-500 font-bold uppercase">Call Now</span>
             <span class="big-text text-xl font-bold text-brand-dark leading-none hover:text-brand-primary transition">(734) 224-5615</span>
@@ -329,7 +203,7 @@
           <a href="tel:7342245615" class="btn-primary-polished text-white font-bold py-3 px-6 rounded shadow-md uppercase tracking-wider">Get a Free Quote</a>
         </div>
 
-        <button id="menu-btn" class="lg:hidden text-2xl text-brand-dark focus:outline-none z-50 p-2" aria-label="Open menu">
+        <button id="menu-btn" class="mobile-menu-btn lg:hidden text-2xl text-brand-dark focus:outline-none z-50 p-2" aria-label="Menu">
           <i class="fas fa-bars"></i>
         </button>
       </div>
@@ -346,30 +220,30 @@
   </div>
 
   <!-- HERO -->
-  <section class="relative min-h-[420px] lg:h-[560px] flex flex-col justify-center overflow-hidden">
+  <section class="critical-hero relative min-h-[420px] lg:h-[560px] flex flex-col justify-center overflow-hidden">
     <div class="absolute inset-0 w-full h-full">
-      <img src="slide-1.jpg" alt="Roofer in Lincoln Park, Michigan" class="w-full h-full object-cover object-center" fetchpriority="high" />
+      <img src="slide-1.jpg" alt="Roofer in Lincoln Park, Michigan" class="hero-bg-img" fetchpriority="high" decoding="async">
       <div class="absolute inset-0 bg-brand-dark opacity-45"></div>
     </div>
 
     <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 lg:pb-36 pt-20 z-50">
       <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left">
-        <span class="inline-block bg-brand-accent text-brand-dark font-bold px-4 py-2 rounded shadow-lg">Local Lincoln Park • 20+ Years Experience</span>
+        <span class="inline-block bg-brand-accent text-brand-dark font-bold px-4 py-2 rounded shadow-lg mb-4">Local Lincoln Park • 20+ Years Experience</span>
 
-        <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-5 leading-tight drop-shadow-[0_4px_4px_rgba(0,0,0,0.9)]">
+        <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-5 leading-tight hero-text-shadow">
           Roofer in<br />
-          <span class="text-brand-primary">Lincoln Park, MI</span>
+          <span class="text-brand-primary text-outline" style="text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; color: #0056b3;">Lincoln Park, MI</span>
         </h1>
 
-        <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">
-          Need roof repair, a full replacement, or something that can extend roof life and save thousands? We’re local, insured, and we make the process simple—from the first inspection to the final clean-up.
+        <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl font-bold mx-auto md:mx-0 hero-text-shadow leading-relaxed">
+          Need roof repair, a full replacement, or something that can extend roof life and save thousands? We’re local, insured, and we make the process simple.
         </p>
 
         <div class="flex flex-row flex-wrap gap-4 justify-center md:justify-start">
-          <a href="tel:7342245615" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-8 rounded-full text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">
+          <a href="tel:7342245615" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">
             <i class="fas fa-phone-alt mr-2"></i> Call Us
           </a>
-          <a href="sms:7342245615" class="btn-white-polished text-brand-dark border-2 border-white font-bold py-3 md:py-4 px-8 rounded-full text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">
+          <a href="sms:7342245615" class="btn-white-polished font-bold py-3 md:py-4 px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">
             <i class="fas fa-comment-dots mr-2"></i> Text Us
           </a>
         </div>
@@ -381,29 +255,22 @@
   <div class="bg-white py-12 border-b border-gray-200 relative z-10">
     <div class="container mx-auto px-4 md:px-6">
       <div class="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-center">
+        <!-- Google Badge -->
         <div class="flex items-center justify-center bg-gray-50 px-4 md:px-6 py-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 w-full md:w-auto">
           <i class="fab fa-google text-3xl md:text-4xl mr-4 text-brand-primary shrink-0"></i>
           <div class="text-left">
             <div class="text-brand-accent text-lg md:text-xl flex gap-1" style="color: #fbbf24;">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
             <span class="font-bold text-gray-700 uppercase text-xs md:text-sm tracking-wide">5-Star Rated on Google</span>
           </div>
         </div>
-
+        <!-- Yelp Badge -->
         <div class="flex items-center justify-center bg-gray-50 px-4 md:px-6 py-4 rounded-lg shadow-md border border-gray-100 transform hover:scale-105 transition duration-300 w-full md:w-auto">
           <i class="fab fa-yelp text-3xl md:text-4xl mr-4 text-red-600 shrink-0"></i>
           <div class="text-left">
             <div class="text-brand-accent text-lg md:text-xl flex gap-1" style="color: #fbbf24;">
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 0 00.951-.69l1.07-3.292z"/></svg>
-              <svg class="w-5 h-5 fill-current" viewBox="0 0 20 20" width="20" height="20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 0 00-.364-1.118L2.98 8.72c-.783-.57-.380-1.81.588-1.81h3.461a1 0 00.951-.69l1.07-3.292z"/></svg>
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
             <span class="font-bold text-gray-700 uppercase text-xs md:text-sm tracking-wide">5-Star Rated on Yelp</span>
           </div>
@@ -412,13 +279,13 @@
     </div>
   </div>
 
-  <!-- MAIN CONTENT: 2 Columns -->
+  <!-- MAIN CONTENT -->
   <section id="content" class="py-12 md:py-20 bg-white">
     <div class="container mx-auto px-4 md:px-6">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-        <!-- LEFT -->
+        <!-- LEFT COLUMN -->
         <div class="lg:col-span-8">
-          <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900 mb-4">Local Roofing Company Serving Lincoln Park, Michigan</h2>
+          <h2 class="big-text text-3xl md:text-5xl font-bold text-brand-primary mb-4">Local Roofing Company Serving Lincoln Park, Michigan</h2>
 
           <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
             If you live in Lincoln Park, you know Michigan weather can be rough on a roof—wind, heavy rain, ice, and freeze/thaw cycles.
@@ -452,46 +319,44 @@
             </div>
           </div>
 
-          <h3 class="big-text text-2xl md:text-3xl font-bold text-gray-900 mb-4">Roofing Services in Lincoln Park</h3>
+          <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Roofing Services in Lincoln Park</h3>
 
           <ul class="space-y-3 text-gray-800">
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-              <div class="big-text text-lg md:text-xl">
-                <a href="roof-repair.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary">Roof Repair</a> – leaks, missing shingles, flashing issues, storm damage, and emergency fixes.
+              <div class="text-lg md:text-xl">
+                <a href="roof-repair.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-bold">Roof Repair</a> – leaks, missing shingles, flashing issues, storm damage, and emergency fixes.
               </div>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-              <div class="big-text text-lg md:text-xl">
-                <a href="new-roof-construction.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary">Roof Replacement &amp; New Roof Construction</a> – full tear-offs, new systems, ventilation, and clean installs.
+              <div class="text-lg md:text-xl">
+                <a href="new-roof-construction.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-bold">Roof Replacement &amp; New Roof Construction</a> – full tear-offs, new systems, ventilation, and clean installs.
               </div>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-              <div class="big-text text-lg md:text-xl">
-                <a href="roof-rejuvenation.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary">Roof Rejuvenation</a> – <strong>the only company offering roof rejuvenation in Wayne County and Oakland County</strong>. Extend roof life and save thousands vs. replacement when your roof qualifies.
+              <div class="text-lg md:text-xl">
+                <a href="roof-rejuvenation.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-bold">Roof Rejuvenation</a> – <strong>the only company offering roof rejuvenation in Wayne County and Oakland County</strong>. Extend roof life and save thousands vs. replacement when your roof qualifies.
               </div>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-              <div class="big-text text-lg md:text-xl">
-                <a href="siding.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary">Siding</a> – durable exterior upgrades that improve curb appeal and protect your home.
+              <div class="text-lg md:text-xl">
+                <a href="siding.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-bold">Siding</a> – durable exterior upgrades that improve curb appeal and protect your home.
               </div>
             </li>
             <li class="flex items-start gap-3">
               <i class="fas fa-check-circle text-brand-primary mt-1"></i>
-              <div class="big-text text-lg md:text-xl">
-                <a href="gutters.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary">Gutters</a> – replacements, repairs, and water control to protect fascia, landscaping, and foundations.
+              <div class="text-lg md:text-xl">
+                <a href="gutters.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-bold">Gutters</a> – replacements, repairs, and water control to protect fascia, landscaping, and foundations.
               </div>
             </li>
           </ul>
 
-          <div class="mt-10">
-            
-          <!-- QUICK COMPARISON -->
+          <!-- QUICK COMPARISON TABLE -->
           <div class="mt-10 mb-10">
-            <h3 class="big-text text-2xl md:text-3xl font-bold text-gray-900 mb-4">Repair vs. Replacement vs. Roof Rejuvenation</h3>
+            <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Repair vs. Replacement vs. Roof Rejuvenation</h3>
             <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
               Not sure which option makes sense for your home in Lincoln Park? Here’s a simple way to think about it.
               We’ll inspect your roof and recommend the best path based on condition, budget, and long-term value.
@@ -536,7 +401,8 @@
               </p>
             </div>
           </div>
-<h3 class="big-text text-2xl md:text-3xl font-bold text-gray-900 mb-4">Insurance Claims &amp; Storm Damage Help</h3>
+          
+          <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Insurance Claims &amp; Storm Damage Help</h3>
             <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-4">
               When storms hit Lincoln Park, roof damage can be stressful. We help you document what happened, explain your options clearly,
               and guide you through the claim process so you’re not doing it alone.
@@ -544,10 +410,9 @@
             <a href="roof-insurance-claim-lincoln-park-mi.html" class="inline-flex items-center font-bold uppercase tracking-wider text-brand-primary">
               Roof insurance claim help in Lincoln Park (learn more) <i class="fas fa-arrow-right ml-2"></i>
             </a>
-          </div>
 
           <div class="mt-10">
-            <h3 class="big-text text-2xl md:text-3xl font-bold text-gray-900 mb-4">What to Expect When You Hire Us</h3>
+            <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">What to Expect When You Hire Us</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-md">
@@ -589,7 +454,7 @@
         <div class="lg:col-span-4">
           <div class="sticky top-28 space-y-6">
             <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-md">
-              <p class="big-text text-xl font-bold text-gray-900 mb-4">Popular Roofing Pages</p>
+              <p class="big-text text-xl font-bold text-brand-primary mb-4">Popular Roofing Pages</p>
 
               <div id="service-list" class="space-y-3">
                 <a href="roof-repair.html" class="flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-brand-light border border-gray-200 hover:border-brand-primary transition">
@@ -641,44 +506,62 @@
     </div>
   </section>
 
-<!-- FAQ -->
-  <section id="faq" class="py-12 md:py-20 bg-white">
+  <!-- FAQ -->
+  <section id="faq" class="py-12 md:py-20 bg-brand-light">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-10">
-        <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900">Lincoln Park Roofing FAQs</h2>
+        <h2 class="big-text text-3xl md:text-5xl font-bold text-brand-primary">Lincoln Park Roofing FAQs</h2>
         <p class="text-gray-600 text-base md:text-lg mt-3 max-w-3xl mx-auto">
           Quick answers to the questions we hear most from Lincoln Park homeowners.
         </p>
       </div>
 
       <div class="max-w-4xl mx-auto space-y-4">
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">Do you offer free roof inspections in Lincoln Park?</summary>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Do you offer free roof inspections in Lincoln Park?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
           <p class="text-gray-600 mt-3">Yes. We’ll inspect your roof, explain what we found, and provide clear options with pricing.</p>
         </details>
 
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">Can you fix roof leaks and storm damage quickly?</summary>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Can you fix roof leaks and storm damage quickly?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
           <p class="text-gray-600 mt-3">In many cases, yes. We prioritize active leaks and storm damage and can often schedule quickly in the Lincoln Park area.</p>
         </details>
 
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">Do you help with roof insurance claims?</summary>
-          <p class="text-gray-600 mt-3">Yes. We can document damage, provide photos and scope details, and guide you through the process. See our full guide on the insurance claim page.</p>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Do you help with roof insurance claims?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
+          <p class="text-gray-600 mt-3">Yes. We can document damage, provide photos and scope details, and guide you through the process. Visit our insurance claim page for the full step-by-step guide.</p>
         </details>
 
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">What’s the difference between roof replacement and roof rejuvenation?</summary>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            What’s the difference between roof replacement and roof rejuvenation?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
           <p class="text-gray-600 mt-3">Replacement installs a brand-new roof system. Roof rejuvenation is designed to extend roof life and improve performance when the roof qualifies—often saving thousands compared to replacement.</p>
         </details>
 
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">Are you licensed and insured?</summary>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Are you licensed and insured?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
           <p class="text-gray-600 mt-3">Yes. We’re fully insured, and we take safety and workmanship seriously on every project.</p>
         </details>
 
-        <details class="bg-brand-light border border-gray-200 rounded-2xl p-6 shadow-sm">
-          <summary class="cursor-pointer font-bold text-gray-900 text-lg">Do you offer financing for Lincoln Park homeowners?</summary>
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Do you offer financing for Lincoln Park homeowners?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
           <p class="text-gray-600 mt-3">Yes. Financing options are available for qualified homeowners—call or text and we’ll explain the next steps.</p>
         </details>
       </div>
@@ -686,24 +569,27 @@
   </section>
 
   <!-- SERVICE AREAS -->
-  <section id="areas" class="py-12 md:py-16 bg-brand-light">
-    <div class="container mx-auto px-4 md:px-6">
+  <section id="areas" class="py-12 md:py-16 bg-white relative overflow-hidden">
+     <!-- Dark Overlay Bg -->
+     <div class="absolute inset-0 z-0 bg-brand-dark opacity-95"></div>
+
+    <div class="container mx-auto px-4 md:px-6 relative z-20">
       <div class="text-center mb-8">
-        <h2 class="big-text text-3xl md:text-5xl font-bold text-gray-900">Serving Lincoln Park &amp; Nearby Downriver Cities</h2>
-        <p class="text-gray-600 text-base md:text-lg mt-3 max-w-3xl mx-auto">
+        <h2 class="big-text text-3xl md:text-5xl font-bold text-white">Serving Lincoln Park &amp; Nearby Downriver Cities</h2>
+        <p class="text-gray-200 text-base md:text-lg mt-3 max-w-3xl mx-auto">
           We’re based locally and routinely work across Downriver. If you’re near Lincoln Park, we can usually schedule quickly.
         </p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Lincoln Park</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Allen Park</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Southgate</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Wyandotte</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Taylor</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Melvindale</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Dearborn Heights</div>
-        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-4 text-center font-semibold">Riverview</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Lincoln Park</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Allen Park</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Southgate</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Wyandotte</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Taylor</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Melvindale</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Dearborn Heights</div>
+        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Riverview</div>
       </div>
     </div>
   </section>
@@ -711,7 +597,7 @@
   <!-- FOOTER -->
   <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20">
     <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
-      <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" class="h-16 md:h-20 w-auto opacity-95" />
+      <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async" />
 
       <p class="footer-main text-sm md:text-base text-gray-300">
         © <span id="year"></span> Lincoln Park Roofing. All rights reserved.
@@ -720,7 +606,7 @@
       <div class="footer-credit flex flex-col sm:flex-row items-center gap-3 text-xs md:text-sm text-gray-400">
         <span>Website Design and Chat GPT Marketing by</span>
         <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center">
-          <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" class="h-8 w-auto opacity-90 hover:opacity-100 transition" />
+          <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" class="h-8 w-auto opacity-90 hover:opacity-100 transition" loading="lazy" decoding="async" />
         </a>
       </div>
     </div>
@@ -738,6 +624,14 @@
 
   <!-- Scripts -->
   <script>
+    // PRELOADER - Strictly reveals site after load to prevent reflows/glitches
+    window.addEventListener('load', () => {
+        document.body.classList.add('site-loaded');
+    });
+
+    // FAILSAFE in case window load hangs
+    setTimeout(() => { document.body.classList.add('site-loaded'); }, 3000);
+
     // Mobile Menu Toggle
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -753,26 +647,30 @@
     function toggleMenu() {
       mobileMenu.classList.toggle("open");
       const isOpen = mobileMenu.classList.contains("open");
-      icon.classList.toggle("fa-bars", !isOpen);
-      icon.classList.toggle("fa-times", isOpen);
+      if (isOpen) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-times");
+      } else {
+          icon.classList.remove("fa-times");
+          icon.classList.add("fa-bars");
+      }
     }
 
     menuBtn.addEventListener("click", toggleMenu);
     mobileLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-    // FAQ Accordion
-    const faqBtns = document.querySelectorAll(".faq-btn");
+    // FAQ Accordion Icons
+    const faqBtns = document.querySelectorAll("details summary");
     faqBtns.forEach((btn) => {
       btn.addEventListener("click", () => {
-        const content = btn.nextElementSibling;
         const i = btn.querySelector("i");
-        content.classList.toggle("hidden");
-        if (content.classList.contains("hidden")) {
-          i.classList.remove("fa-minus");
-          i.classList.add("fa-plus");
+        // Toggle icon class on click
+        if (i.classList.contains("fa-plus")) {
+            i.classList.remove("fa-plus");
+            i.classList.add("fa-minus");
         } else {
-          i.classList.remove("fa-plus");
-          i.classList.add("fa-minus");
+            i.classList.remove("fa-minus");
+            i.classList.add("fa-plus");
         }
       });
     });
