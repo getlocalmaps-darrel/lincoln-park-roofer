@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-30-SPEED-RESTORED -->
+<!-- SOURCE OF TRUTH: index-live-version.html | version: 2025-12-19-46-CLEAN-SLATE-FINAL -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -24,7 +24,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
-    <!-- PERFORMANCE: Preload LCP Image (Keep Hero High Priority) -->
+    <!-- PERFORMANCE: Preload LCP Image -->
     <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
     <!-- ICONS: FontAwesome (Optimized Async Load) -->
@@ -33,50 +33,136 @@
 
     <!-- CRITICAL CSS -->
     <style>
-        /* FIXED: Scrolling on Mobile */
+        /* 1. GLOBAL SETTINGS & STRICT PRELOADER */
         html { scroll-behavior: smooth; }
         body { 
             margin: 0; padding: 0; 
-            font-family: sans-serif; 
+            font-family: 'Open Sans', sans-serif;
             background-color: #ffffff; 
             color: #1f2937; 
             overflow-x: hidden; 
             width: 100%;
-            max-width: 100vw; 
+            max-width: 100vw;
+            
+            /* HIDDEN INITIALLY - NO ANIMATION STARTING AUTOMATICALLY */
+            opacity: 0; 
+            visibility: hidden;
+            transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
         }
 
-        /* BRAND COLORS (Hardcoded for stability) */
+        /* Class added by JS to reveal site smoothly */
+        body.site-loaded {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* 2. BASIC RESETS */
+        h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; margin: 0; }
+        p { margin: 0; font-size: 1.125rem; line-height: 1.75; } 
+        img { max-width: 100%; height: auto; display: block; }
+
+        /* BRAND COLORS */
         .text-brand-primary { color: #0056b3 !important; }
         .text-brand-accent { color: #fbbf24 !important; }
         .bg-brand-primary { background-color: #0056b3 !important; }
         .bg-brand-dark { background-color: #0f172a !important; }
+        .bg-brand-accent { background-color: #fbbf24 !important; }
         .text-white { color: #ffffff !important; }
         
-        /* HEADER */
-        .critical-header { position: fixed; top: 0; width: 100%; z-index: 100; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        /* HEADER - Ensuring Visibility and Z-Index */
+        .critical-header { position: fixed; top: 0; width: 100%; z-index: 1000; background: white; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .critical-top-bar { background-color: #0056b3; color: white; text-align: center; padding: 8px; font-size: 12px; text-transform: uppercase; font-weight: bold; }
         .critical-nav { display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto; }
         .critical-logo { height: 48px; width: auto; object-fit: contain; }
         
+        /* Nav Visibility Logic */
+        .desktop-nav { display: none; }
+        .mobile-menu-btn { display: block; }
+        @media (min-width: 1024px) {
+            .desktop-nav { display: flex; gap: 2rem; align-items: center; }
+            .mobile-menu-btn { display: none; }
+        }
+        .nav-link { 
+            text-transform: uppercase; 
+            font-weight: 700; 
+            font-size: 0.875rem; 
+            letter-spacing: 0.05em; 
+            color: #374151;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-link:hover { color: #0056b3; }
+
         /* HERO */
         .critical-hero { position: relative; min-height: 600px; display: flex; align-items: center; background-color: #0f172a; overflow: hidden; touch-action: pan-y; }
         .critical-hero-content { position: relative; z-index: 50; padding: 20px; max-width: 1280px; margin: 0 auto; color: white; width: 100%; }
         
+        /* SLIDER STABILITY & ANIMATION */
+        .hero-slide { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            transition: opacity 1s ease-in-out; /* Smooth Fade */
+        }
+        /* Initial states (Removed !important so JS can toggle them) */
+        #slide-0 { z-index: 10; opacity: 1; }
+        #slide-1 { z-index: 0; opacity: 0; pointer-events: none; }
+        
+        /* FIXED: Background color dark ONLY for bg image, NOT transparent graphic */
+        .hero-bg-img { width: 100%; height: 100%; object-fit: cover; background-color: #1a1a1a; } 
+        .hero-graphic { width: 100%; height: auto; display: block; background-color: transparent !important; }
+
+        /* BUTTONS */
+        .btn-white-polished {
+            background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
+            color: #0056b3;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-white-polished:hover {
+            background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1);
+        }
+
+        /* PRIMARY BUTTON (Blue) */
+        .btn-primary-polished { 
+            background: linear-gradient(180deg, #3b82f6 0%, #0056b3 100%); 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); 
+            transition: all 0.3s ease;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+        .btn-primary-polished:hover { 
+            background: linear-gradient(180deg, #60a5fa 0%, #1e40af 100%); 
+            transform: translateY(-2px); 
+        }
+        
         /* UTILITIES */
         .big-text { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
         .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0; }
-        .hidden { display: none !important; }
+        .hidden { display: none; } 
         
-        /* ANIMATION */
+        /* ANIMATION CLASSES */
         .reveal { transition: all 0.8s ease-out; opacity: 1; transform: translateY(0); }
         .reveal.reveal-pending { opacity: 0; transform: translateY(40px); }
         
-        /* VIDEO FACADE */
-        .video-embed { position: relative; width: 100%; padding-top: 56.25%; cursor: pointer; }
-        .video-embed iframe, .video-embed img { position: absolute; inset: 0; width: 100%; height: 100%; }
-        
-        /* OVERLAY FIX */
+        /* OVERLAYS */
         .overlay-dark { background-color: rgba(15, 23, 42, 0.9); }
+        .service-overlay { position: absolute; inset: 0; background-color: transparent; transition: background-color 0.3s; z-index: 10; }
+        .group:hover .service-overlay { background-color: rgba(0, 86, 179, 0.2); }
+
+        /* Hero Text Shadows */
+        .hero-text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .text-outline { text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
     </style>
 
     <!-- Google Fonts: Async Loading -->
@@ -118,15 +204,13 @@
     <style>
         @keyframes fadeInUp { 0% { opacity: 0; transform: translateY(30px); } 100% { opacity: 1; transform: translateY(0); } }
         .load-animate { opacity: 0; animation: fadeInUp 1s ease-out forwards; animation-delay: 0.1s; }
-        .btn-primary-polished { background: linear-gradient(180deg, #3b82f6 0%, #0056b3 100%); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2); transition: all 0.3s ease; }
-        .btn-primary-polished:hover { background: linear-gradient(180deg, #60a5fa 0%, #1e40af 100%); transform: translateY(-2px); }
-        .btn-white-polished { background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%); box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); color: #0056b3; border: 1px solid #e2e8f0; transition: all 0.3s ease; }
+        
         #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(-100%); }
         #mobile-menu.open { transform: translateX(0); }
-        img { max-width: 100%; }
-        /* Hero Text Shadow to ensure blue text reads on dark bg */
-        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.8); }
-        .text-outline { text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; }
+        
+        /* Video Sizing Fix */
+        .video-embed { position: relative; width: 100%; padding-top: 56.25%; }
+        .video-embed iframe, .video-embed img { position: absolute; inset: 0; width: 100%; height: 100%; }
     </style>
 </head>
 
@@ -145,20 +229,26 @@
                 <a href="#" class="flex items-center gap-2 z-50 shrink-0">
                     <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
                 </a>
-                <nav class="hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
-                    <a href="#services" class="hover:text-brand-primary transition duration-300">Services</a>
-                    <a href="#about" class="hover:text-brand-primary transition duration-300">About Us</a>
-                    <a href="#areas" class="hover:text-brand-primary transition duration-300">Service Area</a>
-                    <a href="#faq" class="hover:text-brand-primary transition duration-300">FAQ</a>
+                
+                <!-- Desktop Nav -->
+                <nav class="desktop-nav hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
+                    <a href="#services" class="nav-link hover:text-brand-primary transition duration-300">Services</a>
+                    <a href="#about" class="nav-link hover:text-brand-primary transition duration-300">About Us</a>
+                    <a href="#areas" class="nav-link hover:text-brand-primary transition duration-300">Service Area</a>
+                    <a href="#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
                 </nav>
-                <div class="hidden lg:flex items-center space-x-4">
+
+                <!-- CTA Buttons -->
+                <div class="desktop-nav hidden lg:flex items-center space-x-4">
                     <a href="tel:7342245615" class="flex flex-col items-end">
                         <span class="text-xs text-gray-500 font-bold uppercase">Call Now</span>
                         <span class="big-text text-xl font-bold text-brand-dark leading-none hover:text-brand-primary transition">(734) 224-5615</span>
                     </a>
                     <a href="#contact" class="btn-primary-polished text-white font-bold py-3 px-6 rounded shadow-md uppercase tracking-wider">Get a Free Quote</a>
                 </div>
-                <button id="menu-btn" class="lg:hidden text-2xl text-brand-dark focus:outline-none z-50 p-2" aria-label="Menu">
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="mobile-menu-btn lg:hidden text-2xl text-brand-dark focus:outline-none z-50 p-2" aria-label="Menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -178,23 +268,30 @@
         <!-- Slide 1 -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10" id="slide-0">
             <div class="absolute inset-0 w-full h-full">
-                <img src="slide-1.jpg" alt="Lincoln Park Roofer" class="w-full h-full object-cover object-center" fetchpriority="high" decoding="async">
+                <!-- ADDED CLASS hero-bg-img -->
+                <img src="slide-1.jpg" alt="Lincoln Park Roofer" class="hero-bg-img" fetchpriority="high" decoding="async">
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full max-w-full h-auto block align-bottom" fetchpriority="high" decoding="async">
+                <!-- ADDED CLASS hero-graphic -->
+                <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" fetchpriority="high" decoding="async">
             </div>
-            <div class="critical-hero-content pt-20 md:pt-24 lg:pt-20 pb-24 md:pb-32 lg:pb-40">
+            <!-- FIXED ALIGNMENT: Added h-full and flex column centering -->
+            <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
                 <div class="md:w-3/4 lg:w-2/3 mx-auto md:mx-0 text-center md:text-left load-animate">
+                    <!-- RESTORED BADGE -->
                     <span class="inline-block bg-brand-accent text-brand-dark font-bold px-3 py-1 mb-2 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Over 20 Years</span>
-                    <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-md">
+                    <!-- REMOVED WHITE BORDER, ADDED SHADOW -->
+                    <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight hero-text-shadow">
                         <span class="text-brand-primary text-outline" style="text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff; color: #0056b3;">Lincoln Park</span><br>
                         <span class="text-brand-accent">Roofer</span>
                     </h1>
-                    <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl font-light mx-auto md:mx-0 drop-shadow-md">Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.</p>
+                    <!-- UPDATED PARAGRAPH: Larger & Bolder -->
+                    <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl font-bold mx-auto md:mx-0 hero-text-shadow leading-relaxed">Professional roofing services in Lincoln Park. From minor repairs to complete new roof construction, we've got you covered.</p>
                     <div class="flex flex-row flex-wrap gap-4 justify-center md:justify-start">
                         <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Estimate</a>
-                        <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="bg-transparent hover:bg-white hover:text-brand-dark text-white border-2 border-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider transition shadow-2xl drop-shadow-xl text-center flex-1 sm:flex-none">Insurance Claims</a>
+                        <!-- RESTORED WHITE POLISHED BUTTON STYLE -->
+                        <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="btn-white-polished font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Insurance Claims</a>
                     </div>
                 </div>
             </div>
@@ -202,26 +299,31 @@
         <!-- Slide 2 -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none" id="slide-1">
             <div class="absolute inset-0 w-full h-full">
-                <img src="slide-2.jpg" alt="Roof Rejuvenation" class="w-full h-full object-cover object-center" loading="lazy" decoding="async">
+                <!-- ADDED CLASS hero-bg-img TO TARGET ONLY THIS IMAGE -->
+                <img src="slide-2.jpg" alt="Roof Rejuvenation" class="hero-bg-img" loading="lazy" decoding="async">
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
-                <img src="white-graphic3.png" alt="" width="1920" height="150" class="w-full max-w-full h-auto block align-bottom" loading="lazy" decoding="async">
+                <!-- ADDED CLASS hero-graphic TO ENSURE TRANSPARENCY -->
+                <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" loading="lazy" decoding="async">
             </div>
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
-                <div class="flex flex-col lg:flex-row items-center w-full gap-10 lg:gap-16">
+                <div class="flex flex-col lg:flex-row items-center w-full gap-8 lg:gap-16">
                     <div class="w-full lg:w-1/2 text-center lg:text-left">
                         <span class="inline-block bg-green-500 text-white font-bold px-3 py-1 mb-4 uppercase text-xs md:text-sm tracking-widest rounded shadow-lg">Save Money</span>
-                        <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-md">Roof<br><span class="text-white">Rejuvenation</span></h1>
-                        <p class="text-lg md:text-xl text-gray-200 mb-8 font-light drop-shadow-md">Extend the life of your roof by 5-15 years.</p>
+                        <!-- ADDED SHADOW -->
+                        <h1 class="big-text text-4xl sm:text-5xl md:text-7xl lg:text-7xl font-bold text-white mb-6 leading-tight hero-text-shadow">Roof<br><span class="text-white">Rejuvenation</span></h1>
+                        <!-- UPDATED PARAGRAPH: Larger & Bolder -->
+                        <p class="text-xl md:text-2xl text-white mb-8 font-bold hero-text-shadow leading-relaxed">Extend the life of your roof by 5-15 years.</p>
                         <div class="flex flex-row flex-wrap gap-4 justify-center lg:justify-start">
                             <a href="#contact" class="btn-primary-polished text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Get Free Quote</a>
-                            <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="bg-transparent hover:bg-white hover:text-brand-dark text-white border-2 border-white font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider transition shadow-2xl drop-shadow-xl text-center flex-1 sm:flex-none">Learn More</a>
+                            <!-- RESTORED WHITE POLISHED BUTTON STYLE -->
+                            <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="btn-white-polished font-bold py-3 md:py-4 px-6 md:px-8 rounded text-base md:text-lg uppercase tracking-wider text-center flex-1 sm:flex-none">Learn More</a>
                         </div>
                     </div>
                     
-                    <!-- VIDEO FACADE -->
-                    <div class="w-full lg:w-5/12 max-w-xl">
+                    <!-- VIDEO FACADE - CONSTRAINED WIDTH ON MOBILE, LARGER ON DESKTOP -->
+                    <div class="w-11/12 sm:w-3/4 lg:w-1/2 max-w-sm lg:max-w-2xl mx-auto lg:mx-0">
                         <div id="video-container" class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 cursor-pointer group" onclick="loadVideo()">
                             <img src="https://img.youtube.com/vi/zXRABs5AdOc/maxresdefault.jpg" alt="Play Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
                             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -362,7 +464,8 @@
                     <div class="h-56 md:h-64 overflow-hidden relative bg-gray-200">
                         <!-- Re-added lazy loading for performance -->
                         <img src="IMG_2155.jpg" alt="New Roof Construction" width="400" height="300" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
-                        <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 z-10"></div>
+                        <!-- FIXED OVERLAY to use explicit custom class instead of Tailwind for instant render -->
+                        <div class="service-overlay z-10"></div>
                     </div>
                     <div class="p-6 md:p-8">
                         <!-- INVERTED ICON COLORS: Blue Icon on White -->
@@ -378,7 +481,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative bg-gray-200">
                         <img src="IMG_2153.jpg" alt="Roof Repair" width="400" height="300" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
-                        <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 z-10"></div>
+                        <div class="service-overlay z-10"></div>
                     </div>
                     <div class="p-6 md:p-8">
                         <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
@@ -393,7 +496,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative bg-gray-200">
                         <img src="IMG_1911.jpg" alt="Roof Rejuvenation" width="400" height="300" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
-                        <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 z-10"></div>
+                        <div class="service-overlay z-10"></div>
                     </div>
                     <div class="p-6 md:p-8">
                         <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
@@ -407,8 +510,9 @@
                 <!-- Service 4 -->
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative bg-gray-200">
-                        <img src="IMG_2140.jpg" alt="Siding Services" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
-                        <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 z-10"></div>
+                        <!-- Updated Image -->
+                        <img src="siding-job-in brownstown-mi.jpg" alt="Siding Services" width="400" height="300" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
+                        <div class="service-overlay z-10"></div>
                     </div>
                     <div class="p-6 md:p-8">
                         <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
@@ -423,7 +527,7 @@
                 <div class="bg-white rounded-xl shadow-lg hover:shadow-2xl transition duration-300 overflow-hidden group border-b-4 border-transparent hover:border-brand-primary reveal">
                     <div class="h-56 md:h-64 overflow-hidden relative bg-gray-200">
                         <img src="IMG_0240.jpg" alt="Gutters" width="400" height="300" class="w-full h-full object-cover transition duration-500 group-hover:scale-110 relative z-0" loading="lazy">
-                        <div class="absolute inset-0 bg-brand-primary bg-opacity-0 group-hover:bg-opacity-20 transition duration-300 z-10"></div>
+                        <div class="service-overlay z-10"></div>
                     </div>
                     <div class="p-6 md:p-8">
                         <div class="w-14 h-14 bg-white border-2 border-brand-primary text-brand-primary flex items-center justify-center rounded-full text-2xl -mt-14 md:-mt-16 relative z-10 shadow-md">
@@ -494,7 +598,7 @@
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Madison Heights</div>
             </div>
             <div class="text-center mt-10">
-                <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition">
+                <button id="toggle-cities-btn" class="inline-flex items-center text-brand-accent font-bold uppercase tracking-widest text-sm hover:text-white transition cursor-pointer" type="button">
                     <span>Show More Cities</span>
                     <i class="fas fa-chevron-down ml-2 transition-transform duration-300" id="toggle-icon"></i>
                 </button>
@@ -567,6 +671,20 @@
     <!-- Scripts -->
     <script src="https://www.youtube.com/iframe_api" defer></script>
     <script>
+        // ADD THIS: Reveal site ONLY when fully ready to prevent glitching
+        window.addEventListener('load', () => {
+            document.body.classList.add('site-loaded');
+            
+            // Start Slider after site is visible
+            showSlide(0);
+            resetTimer();
+        });
+
+        // ADD THIS: Failsafe (in case a connection is slow, show site anyway after 3s)
+        setTimeout(() => {
+            document.body.classList.add('site-loaded');
+        }, 3000);
+
         // ... mobile menu logic ...
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
@@ -576,7 +694,8 @@
         // Service Area Toggle
         const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
         if (toggleCitiesBtn) {
-            toggleCitiesBtn.addEventListener('click', () => {
+            toggleCitiesBtn.addEventListener('click', (e) => {
+                e.preventDefault();
                 const hiddenCities = document.querySelectorAll('.hidden-city');
                 hiddenCities.forEach(c => c.classList.toggle('hidden'));
                 const isExpanded = !hiddenCities[0].classList.contains('hidden');
@@ -641,11 +760,13 @@
             currentSlide = index;
             slides.forEach((slide, i) => {
                 if(i === index) {
-                    slide.classList.remove('opacity-0', 'z-0', 'pointer-events-none');
-                    slide.classList.add('opacity-100', 'z-10');
+                    slide.style.opacity = '1';
+                    slide.style.zIndex = '10';
+                    slide.style.pointerEvents = 'auto';
                 } else {
-                    slide.classList.remove('opacity-100', 'z-10');
-                    slide.classList.add('opacity-0', 'z-0', 'pointer-events-none');
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '0';
+                    slide.style.pointerEvents = 'none';
                 }
             });
             dots.forEach((dot, i) => {
@@ -682,9 +803,6 @@
                     }
                 }, { passive: true });
             }
-
-            showSlide(0);
-            resetTimer();
 
             // Populate Year
             const yearEl = document.getElementById('year');
