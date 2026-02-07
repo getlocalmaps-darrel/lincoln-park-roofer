@@ -3,3 +3,5 @@ RewriteEngine On
 # Redirect index.html to the root domain to prevent duplicate content
 RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
 RewriteRule ^index\.html$ https://lincolnparkroofing.com/ [R=301,L]
+# Prevent public access to the .git directory
+RedirectMatch 404 /\.git
