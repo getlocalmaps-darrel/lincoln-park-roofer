@@ -99,3 +99,7 @@ ai.txt: NAP definition and explicit instructions for AI search agents.
 Schema Suite: Inject full LocalBusiness, Service, and FAQPage.
 
 knowsAbout: Set schema properties to "Residential Roofing Systems, Asphalt Shingle Restoration, Storm Damage Mitigation, and Seamless Gutter Engineering."
+
+## 11. Developer Workflow Hooks
+- **Completion Notification:** After finishing a multi-page batch or a long `npm run build`, use a terminal bell or audio cue.
+- **Command:** `powershell -c "[Console]::Beep(800, 500)"`
