@@ -26,6 +26,7 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- PERFORMANCE: Preload LCP Image -->
+    <link rel="preload" as="image" href="slide-1.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
     <!-- ICONS: FontAwesome (Optimized Async Load) -->
@@ -539,7 +540,10 @@
         <div class="bg-white w-full">
             <div class="critical-nav">
                 <a href="#" class="flex items-center gap-2 z-50 shrink-0">
-                    <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+                    <picture>
+                        <source srcset="lincoln-park-logo.webp" type="image/webp">
+                        <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+                    </picture>
                 </a>
                 
                 <!-- Desktop Nav -->
@@ -548,6 +552,7 @@
                     <a href="#about" class="nav-link hover:text-brand-primary transition duration-300">About Us</a>
                     <a href="#areas" class="nav-link hover:text-brand-primary transition duration-300">Service Area</a>
                     <a href="#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
+                    <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
                 </nav>
 
                 <!-- CTA Buttons -->
@@ -573,6 +578,7 @@
         <a href="#about" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">About Us</a>
         <a href="#areas" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Service Areas</a>
         <a href="#faq" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">FAQ</a>
+        <a href="/blog/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Blog</a>
     </div>
 
     <!-- HERO SLIDER -->
@@ -581,12 +587,18 @@
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10" id="slide-0">
             <div class="absolute inset-0 w-full h-full">
                 <!-- ADDED: width/height attributes for performance -->
+                <picture>
+                <source srcset="slide-1.webp" type="image/webp">
                 <img src="slide-1.jpg" alt="Lincoln Park Roofer" width="1920" height="1080" class="hero-bg-img" fetchpriority="high" decoding="async">
+            </picture>
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
                 <!-- ADDED CLASS hero-graphic -->
+                <picture>
+                <source srcset="white-graphic3.webp" type="image/webp">
                 <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" fetchpriority="high" decoding="async">
+            </picture>
             </div>
             <!-- FIXED ALIGNMENT: Added h-full and flex column centering -->
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
@@ -612,12 +624,18 @@
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none" id="slide-1">
             <div class="absolute inset-0 w-full h-full">
                 <!-- ADDED CLASS hero-bg-img TO TARGET ONLY THIS IMAGE -->
+                <picture>
+                <source srcset="slide-2.webp" type="image/webp">
                 <img src="slide-2.jpg" alt="Roof rejuvenation treatment on a Lincoln Park, MI home" width="1920" height="1080" class="hero-bg-img" loading="lazy" decoding="async">
+            </picture>
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
                 <!-- ADDED CLASS hero-graphic TO ENSURE TRANSPARENCY -->
+                <picture>
+                <source srcset="white-graphic3.webp" type="image/webp">
                 <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" loading="lazy" decoding="async">
+            </picture>
             </div>
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
                 <div class="flex flex-col lg:flex-row items-center w-full gap-8 lg:gap-16">
@@ -637,7 +655,7 @@
                     <!-- VIDEO FACADE - CONSTRAINED WIDTH ON MOBILE, LARGER ON DESKTOP -->
                     <div class="w-11/12 sm:w-3/4 lg:w-1/2 max-w-sm lg:max-w-2xl mx-auto lg:mx-0">
                         <div id="video-container" class="video-embed w-full rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 cursor-pointer group" onclick="loadVideo()">
-                            <img src="https://img.youtube.com/vi/zXRABs5AdOc/maxresdefault.jpg" alt="Play Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
+                            <img src="https://img.youtube.com/vi/zXRABs5AdOc/sddefault.jpg" alt="Play Video" class="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition duration-300" loading="lazy" decoding="async">
                             <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
                                 <div class="w-20 h-20 bg-red-600 rounded-full flex items-center justify-center text-white text-3xl shadow-lg group-hover:scale-110 transition duration-300">
                                     <i class="fas fa-play ml-1"></i>
@@ -685,7 +703,10 @@
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
                 <div class="w-full lg:w-1/2 order-2 lg:order-1 reveal">
+                    <picture>
+                    <source srcset="truck-wrap.webp" type="image/webp">
                     <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" width="600" height="400" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy" decoding="async">
+                </picture>
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
                     <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">About Us</span>
@@ -972,8 +993,9 @@
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Van Buren</div>
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Woodhaven</div>
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Brownstown</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Trenton</div>
-                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Grosse Ile</div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="trenton-roofer.html" class="hover:text-brand-accent">Trenton</a></div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="grosse-ile-roofer.html" class="hover:text-brand-accent">Grosse Ile</a></div>
+                <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1"><a href="ypsilanti-roofer.html" class="hover:text-brand-accent">Ypsilanti</a></div>
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Flat Rock</div>
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Rockwood</div>
                 <div class="hidden-city hidden city-item big-text text-lg font-bold hover:text-brand-accent transition cursor-default border-b border-gray-700 pb-1">Novi</div>
@@ -1037,7 +1059,10 @@
     <!-- FOOTER -->
     <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
-            <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
+            <picture>
+          <source srcset="lincoln-park-logo-footer.webp" type="image/webp">
+          <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
+        </picture>
             <p class="footer-main text-sm md:text-base text-gray-300">© <span id="year"></span> Lincoln Park Roofing. All rights reserved.</p>
             
             <div class="footer-credit flex flex-col sm:flex-row items-center gap-3 text-xs md:text-sm text-gray-400">
