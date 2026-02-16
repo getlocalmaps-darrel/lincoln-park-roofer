@@ -26,7 +26,6 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     
     <!-- PERFORMANCE: Preload LCP Image -->
-    <link rel="preload" as="image" href="slide-1.webp" type="image/webp" fetchpriority="high">
     <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
     <!-- ICONS: FontAwesome (Optimized Async Load) -->
@@ -540,10 +539,7 @@
         <div class="bg-white w-full">
             <div class="critical-nav">
                 <a href="#" class="flex items-center gap-2 z-50 shrink-0">
-                    <picture>
-                        <source srcset="lincoln-park-logo.webp" type="image/webp">
-                        <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
-                    </picture>
+                    <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
                 </a>
                 
                 <!-- Desktop Nav -->
@@ -587,18 +583,12 @@
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10" id="slide-0">
             <div class="absolute inset-0 w-full h-full">
                 <!-- ADDED: width/height attributes for performance -->
-                <picture>
-                <source srcset="slide-1.webp" type="image/webp">
                 <img src="slide-1.jpg" alt="Lincoln Park Roofer" width="1920" height="1080" class="hero-bg-img" fetchpriority="high" decoding="async">
-            </picture>
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
                 <!-- ADDED CLASS hero-graphic -->
-                <picture>
-                <source srcset="white-graphic3.webp" type="image/webp">
                 <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" fetchpriority="high" decoding="async">
-            </picture>
             </div>
             <!-- FIXED ALIGNMENT: Added h-full and flex column centering -->
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
@@ -624,18 +614,12 @@
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-0 z-0 pointer-events-none" id="slide-1">
             <div class="absolute inset-0 w-full h-full">
                 <!-- ADDED CLASS hero-bg-img TO TARGET ONLY THIS IMAGE -->
-                <picture>
-                <source srcset="slide-2.webp" type="image/webp">
                 <img src="slide-2.jpg" alt="Roof rejuvenation treatment on a Lincoln Park, MI home" width="1920" height="1080" class="hero-bg-img" loading="lazy" decoding="async">
-            </picture>
                 <div class="absolute inset-0 bg-brand-dark opacity-40"></div>
             </div>
             <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none leading-none">
                 <!-- ADDED CLASS hero-graphic TO ENSURE TRANSPARENCY -->
-                <picture>
-                <source srcset="white-graphic3.webp" type="image/webp">
                 <img src="white-graphic3.png" alt="" width="1920" height="150" class="hero-graphic" loading="lazy" decoding="async">
-            </picture>
             </div>
             <div class="container mx-auto px-4 md:px-6 relative h-full flex flex-col justify-center pb-28 md:pb-36 lg:pb-40 pt-28 md:pt-24 lg:pt-20 z-50">
                 <div class="flex flex-col lg:flex-row items-center w-full gap-8 lg:gap-16">
@@ -703,10 +687,7 @@
         <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
                 <div class="w-full lg:w-1/2 order-2 lg:order-1 reveal">
-                    <picture>
-                    <source srcset="truck-wrap.webp" type="image/webp">
                     <img src="truck-wrap.jpg" alt="Lincoln Park Roofing Truck" width="600" height="400" class="w-full rounded-lg shadow-2xl h-auto" loading="lazy" decoding="async">
-                </picture>
                 </div>
                 <div class="w-full lg:w-1/2 order-1 lg:order-2 reveal">
                     <span class="text-brand-primary font-bold uppercase tracking-widest mb-2 text-sm md:text-base block">About Us</span>
@@ -1059,10 +1040,7 @@
     <!-- FOOTER -->
     <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
-            <picture>
-          <source srcset="lincoln-park-logo-footer.webp" type="image/webp">
-          <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
-        </picture>
+            <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
             <p class="footer-main text-sm md:text-base text-gray-300">© <span id="year"></span> Lincoln Park Roofing. All rights reserved.</p>
             
             <div class="footer-credit flex flex-col sm:flex-row items-center gap-3 text-xs md:text-sm text-gray-400">
