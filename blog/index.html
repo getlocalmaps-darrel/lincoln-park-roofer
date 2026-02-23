@@ -4,6 +4,14 @@
   ========================================================
   Lists all published blog articles as cards.
   All {{PLACEHOLDER}} values populated by html_generator.py generate_blog_index()
+
+  STYLE MATCHING NOTE (for operators):
+  - Header, footer, and nav styles here should visually match the client's
+    existing website (colors, font weights, layout, mobile menu behavior).
+  - Blog templates use self-contained inline styles because /blog/ pages may
+    not have access to the parent site's styles.css.
+  - When building blogs for static HTML sites, review the client's nav/footer
+    and match colors, font weights, and layout in the branding config.
 -->
 <html lang="en">
 <head>
