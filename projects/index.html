@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recent Projects | Lincoln Park Roofing</title>
+  <meta name="description" content="Browse recent projects completed by Lincoln Park Roofing in Lincoln Park. See our work in roofing.">
+  <link rel="canonical" href="">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%230056b3' d='M256 32L32 256h96v224h256V256h96L256 32z'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700;800&family=Open%20Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0056b3;
+      --accent: #fbbf24;
+      --dark: #0f172a;
+      --heading-font: 'Oswald', sans-serif;
+      --body-font: 'Open Sans', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--body-font); color: #1a1a1a; line-height: 1.7; background: #fff; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .top-bar { background: var(--dark); color: #fff; text-align: center; padding: 8px 16px; font-size: 14px; }
+    .top-bar a { color: var(--accent); font-weight: 600; }
+
+    .nav { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
+    .nav-logo img { height: 48px; }
+    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links a { color: #374151; font-weight: 600; font-size: 15px; }
+    .nav-phone { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; }
+
+    .page-header { max-width: 1200px; margin: 40px auto 32px; padding: 0 24px; }
+    .page-header h1 { font-family: var(--heading-font); font-size: 40px; font-weight: 800; color: var(--dark); margin-bottom: 8px; }
+    .page-header p { font-size: 18px; color: #6b7280; }
+
+    /* Filter Tabs */
+    .filter-bar { max-width: 1200px; margin: 0 auto 32px; padding: 0 24px; display: flex; gap: 8px; flex-wrap: wrap; }
+    .filter-btn { padding: 8px 20px; border-radius: 20px; border: 2px solid #e5e7eb; background: #fff; font-size: 14px; font-weight: 600; color: #374151; cursor: pointer; }
+    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
+    /* Masonry Grid */
+    .projects-grid { max-width: 1200px; margin: 0 auto; padding: 0 24px; columns: 3; column-gap: 20px; }
+    .project-card { break-inside: avoid; margin-bottom: 20px; border-radius: 16px; overflow: hidden; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: transform 0.2s, box-shadow 0.2s; }
+    .project-card:hover { transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,0,0,0.12); }
+    .project-card img { width: 100%; display: block; }
+    .project-card-body { padding: 16px 20px; }
+    .project-card-category { display: inline-block; background: var(--accent); color: var(--dark); padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .project-card-title { font-family: var(--heading-font); font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 4px; }
+    .project-card-title a { color: inherit; }
+    .project-card-location { font-size: 14px; color: #6b7280; }
+
+    .footer { background: var(--dark); color: #9ca3af; padding: 40px 24px; text-align: center; font-size: 14px; margin-top: 60px; }
+    .footer a { color: var(--accent); }
+
+    @media (max-width: 900px) { .projects-grid { columns: 2; } }
+    @media (max-width: 600px) { .projects-grid { columns: 1; } .nav-links { display: none; } }
+  </style>
+</head>
+<body>
+
+  <div class="top-bar"><span style="color:#fbbf24">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.</div>
+
+  <nav class="nav">
+    <a href="https://lincolnparkroofing.com/" class="nav-logo"><img src="../lincoln park logo.png" alt="Lincoln Park Roofing"></a>
+    <ul class="nav-links"><li><a href="https://lincolnparkroofing.com/">Home</a></li>
+<li><a href="https://lincolnparkroofing.com/#services">Services</a></li>
+<li><a href="https://lincolnparkroofing.com/#about">About Us</a></li>
+<li><a href="https://lincolnparkroofing.com/#areas">Service Area</a></li>
+<li><a href="https://lincolnparkroofing.com/#faq">FAQ</a></li>
+<li><a href="https://lincolnparkroofing.com/blog/">Blog</a></li></ul>
+    <a href="tel:7342245615" class="nav-phone">(734) 224-5615</a>
+  </nav>
+
+  <div class="page-header">
+    <h1>Recent Projects</h1>
+    <p>See our latest roofing work across Lincoln Park</p>
+  </div>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="Landscape Architecture">Landscape Architecture</button>
+  </div>
+
+  <div class="projects-grid">
+    
+    <div class="project-card" data-category="Landscape Architecture">
+      <img src="projects/photos/2026-03-01-innovative-urban-park-design/project-photo-1.webp" alt="Innovative Urban Park Design" loading="lazy">
+      <div class="project-card-body">
+        <span class="project-card-category">Landscape Architecture</span>
+        <div class="project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-01-innovative-urban-park-design.html">Innovative Urban Park Design</a></div>
+        <div class="project-card-location">pick a neighborhood, gibraltar, MI</div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Lincoln Park Roofing &middot; <a href="https://lincolnparkroofing.com/">https://lincolnparkroofing.com/</a></p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
