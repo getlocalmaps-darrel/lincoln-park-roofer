@@ -1038,7 +1038,41 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">
+    <section id="ppf-recent-projects">
+<style>
+#ppf-recent-projects { max-width: 1200px; margin: 60px auto; padding: 20px 30px; }
+#ppf-recent-projects h2 { text-align: center; font-size: 32px; margin-bottom: 8px; }
+#ppf-recent-projects .ppf-subtitle { text-align: center; color: #6b7280; font-size: 16px; margin-bottom: 30px; }
+#ppf-recent-projects .ppf-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 24px; }
+#ppf-recent-projects .ppf-project-card { border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; background: #fff; }
+#ppf-recent-projects .ppf-project-card:hover { transform: translateY(-4px); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+#ppf-recent-projects .ppf-project-card img { width: 100%; height: 200px; object-fit: cover; }
+#ppf-recent-projects .ppf-project-card-body { padding: 16px; }
+#ppf-recent-projects .ppf-project-card-category { font-size: 12px; text-transform: uppercase; font-weight: 700; color: #6b7280; letter-spacing: 0.05em; }
+#ppf-recent-projects .ppf-project-card-title { font-size: 18px; font-weight: 700; margin: 8px 0 4px; }
+#ppf-recent-projects .ppf-project-card-title a { color: inherit; text-decoration: none; }
+#ppf-recent-projects .ppf-project-card-title a:hover { text-decoration: underline; }
+#ppf-recent-projects .ppf-project-card-location { font-size: 14px; color: #6b7280; }
+#ppf-recent-projects .ppf-view-all { text-align: center; margin-top: 24px; }
+#ppf-recent-projects .ppf-view-all a { display: inline-block; padding: 12px 32px; background: #2563eb; color: #fff; text-decoration: none; border-radius: 8px; font-weight: 600; }
+#ppf-recent-projects .ppf-view-all a:hover { background: #1d4ed8; }
+</style>
+<h2>See Our Recent Work</h2>
+<p class="ppf-subtitle">Quality work, proven results</p>
+<div class="ppf-grid">
+  <div class="ppf-project-card">
+    
+    <div class="ppf-project-card-body">
+      <span class="ppf-project-card-category">Residential Roofing</span>
+      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-03-roof-replacement-in-lincoln-park-mi.html">Roof Replacement in Lincoln Park, MI</a></div>
+      <div class="ppf-project-card-location">, , </div>
+    </div>
+  </div>
+</div>
+<div class="ppf-view-all"><a href="https://lincolnparkroofing.com/projects/">View All Projects &rarr;</a></div>
+</section><!-- /ppf-recent-projects -->
+
+<footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">
         <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
             <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async">
             <p class="footer-main text-sm md:text-base text-gray-300">© <span id="year"></span> Lincoln Park Roofing. All rights reserved.</p>
