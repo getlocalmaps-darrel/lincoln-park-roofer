@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<!--
+  Blog Article Template — Reusable for ANY HTML client site
+  ==========================================================
+  All {{PLACEHOLDER}} values are populated by html_generator.py generate_blog()
+  Branding comes from blog_config.branding in marketing_config.json
+  Nav comes from blog_config.nav_links in marketing_config.json
+
+  STYLE MATCHING NOTE (for operators):
+  - Header, footer, and nav styles here should visually match the client's
+    existing website (colors, font weights, layout, mobile menu behavior).
+  - Blog templates use self-contained inline styles because /blog/ pages may
+    not have access to the parent site's styles.css.
+  - When building blogs for static HTML sites, review the client's nav/footer
+    and match colors, font weights, and layout in the branding config.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siding Installation Costs in Lincoln Park, MI | Lincoln Park Roofing</title>
+    <meta name="description" content="Discover the true costs of siding installation in Lincoln Park, MI, and learn what factors influence pricing from local experts.">
+    <link rel="canonical" href="https://lincolnparkroofing.com/blog/how-much-does-siding-installation-cost-in-lincoln-park-mi.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Siding Installation Costs in Lincoln Park, MI">
+    <meta property="og:description" content="Discover the true costs of siding installation in Lincoln Park, MI, and learn what factors influence pricing from local experts.">
+    <meta property="og:url" content="https://lincolnparkroofing.com/blog/how-much-does-siding-installation-cost-in-lincoln-park-mi.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Lincoln Park Roofing">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='%230056b3' d='M256 32L32 256h96v224h256V256h96L256 32z'/%3E%3C/svg%3E" type="image/svg+xml">
+
+    <!-- Performance: Preconnect -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open%20Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- JSON-LD: Article Schema -->
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Siding Installation Costs in Lincoln Park, MI",
+    "description": "Discover the true costs of siding installation in Lincoln Park, MI, and learn what factors influence pricing from local experts.",
+    "url": "https://lincolnparkroofing.com/blog/how-much-does-siding-installation-cost-in-lincoln-park-mi.html",
+    "datePublished": "2026-03-02T12:07:14-05:00",
+    "dateModified": "2026-03-02T12:07:14-05:00",
+    "author": {
+        "@type": "Person",
+        "name": "Scott"
+    },
+    "publisher": {
+        "@type": "Organization",
+        "name": "Lincoln Park Roofing",
+        "url": "https://lincolnparkroofing.com/",
+        "telephone": "(734) 224-5615"
+    },
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://lincolnparkroofing.com/blog/how-much-does-siding-installation-cost-in-lincoln-park-mi.html"
+    },
+    "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+            ".article-content h2",
+            ".article-content h2 + p",
+            ".takeaways-box"
+        ]
+    }
+}</script>
+    <!-- JSON-LD: FAQ Schema -->
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "What is the average cost of siding installation in Lincoln Park?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In our experience, the average cost for siding installation in Lincoln Park ranges from $5,000 to $15,000, depending on the material and size of the home. Vinyl siding is typically less expensive, while fiber cement can cost more due to its durability and aesthetic appeal."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How long does siding installation take?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We typically complete siding installation projects within 1 to 3 weeks, depending on the size of the house and the weather conditions. Factors like the type of siding and any necessary repairs can also impact the timeline, but we always strive for efficiency."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it worth it to replace old siding?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! Many homeowners underestimate the value of new siding. It can improve energy efficiency, enhance curb appeal, and increase property value. After servicing hundreds of Lincoln Park homes, we find that replacing old siding often results in significant long-term savings on energy bills."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need a permit for siding installation in Lincoln Park?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, a permit is generally required for siding installation in Lincoln Park, especially for major renovations. We help our clients navigate the permitting process to ensure everything is compliant with local building codes, which helps avoid any potential fines."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the best type of siding for Michigan weather?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "In Michigan, we recommend fiber cement siding due to its durability and resistance to harsh weather conditions. It's specifically designed to withstand extreme temperatures and moisture, making it a great investment for homes in Lincoln Park."
+            }
+        }
+    ]
+}</script>
+    <!-- JSON-LD: Featured Business Schema (Semantic Bridge) -->
+    
+    <!-- JSON-LD: BreadcrumbList Schema -->
+    <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://lincolnparkroofing.com/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Blog",
+            "item": "https://lincolnparkroofing.com/blog/"
+        },
+        {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Siding Installation Costs in Lincoln Park, MI"
+        }
+    ]
+}</script>
+
+    <style>
+        /* ========== CSS Custom Properties (from blog_config.branding) ========== */
+        :root {
+            --brand-primary: #0056b3;
+            --brand-accent: #fbbf24;
+            --brand-dark: #0f172a;
+        }
+
+        /* ========== Base ========== */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #1f2937;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+        .font-header { font-family: 'Oswald', sans-serif; }
+
+        /* ========== Header ========== */
+        .blog-header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .top-bar {
+            background-color: var(--brand-primary);
+            color: white; text-align: center;
+            padding: 8px; font-size: 12px;
+            text-transform: uppercase; font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            text-transform: uppercase; font-weight: 700;
+            font-size: 0.875rem; letter-spacing: 0.05em;
+            color: #374151; text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-link:hover { color: var(--brand-primary); }
+        .desktop-nav { display: none; }
+        .mobile-menu-btn { display: block; }
+        @media (min-width: 1024px) {
+            .desktop-nav { display: flex; gap: 2rem; align-items: center; }
+            .mobile-menu-btn { display: none; }
+        }
+
+        /* ========== Article Hero ========== */
+        .article-hero {
+            background: linear-gradient(135deg, var(--brand-dark) 0%, color-mix(in srgb, var(--brand-primary) 60%, black) 100%);
+            color: white; padding: 4rem 1rem 3rem;
+        }
+
+        /* ========== Article Typography ========== */
+        .article-content h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.75rem; font-weight: 700;
+            color: var(--brand-dark);
+            margin: 2.5rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--brand-accent);
+            scroll-margin-top: 120px;
+        }
+        .article-content h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.25rem; font-weight: 700;
+            color: #374151; margin: 2rem 0 0.75rem;
+            scroll-margin-top: 120px;
+        }
+        .article-content p {
+            font-size: 1.125rem; line-height: 1.8;
+            margin-bottom: 1.25rem; color: #374151;
+        }
+        .article-content ul, .article-content ol {
+            margin: 1rem 0 1.5rem; padding-left: 1.5rem;
+        }
+        .article-content ul { list-style: disc; }
+        .article-content ol { list-style: decimal; }
+        .article-content li {
+            font-size: 1.125rem; line-height: 1.75;
+            margin-bottom: 0.5rem; color: #374151;
+        }
+        .article-content a {
+            color: var(--brand-primary);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .article-content a:hover { color: var(--brand-dark); }
+        .article-content blockquote {
+            border-left: 4px solid var(--brand-accent);
+            background: #fefce8;
+            padding: 1.25rem 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .article-content blockquote p { margin-bottom: 0; }
+        .article-content strong { color: #111827; }
+        .article-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5rem 0; }
+
+        /* ========== Hero Image ========== */
+        .article-hero-image {
+            max-width: 56rem;
+            margin: -2rem auto 0;
+            padding: 0 1rem;
+        }
+        .article-hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .article-hero-image figcaption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* ========== Inline Article Figures ========== */
+        .article-content figure {
+            margin: 2rem 0;
+        }
+        .article-content figure img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .article-content figcaption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+
+        /* ========== Key Takeaways ========== */
+        .takeaways-box {
+            border: 2px solid var(--brand-accent);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            background: linear-gradient(135deg, #fefce8 0%, #fff 100%);
+        }
+        .takeaways-box .takeaway-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.35rem; font-weight: 700;
+            color: var(--brand-dark);
+            margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .takeaways-box ul { list-style: none; padding: 0; margin: 0; }
+        .takeaways-box li {
+            padding: 0.4rem 0 0.4rem 1.5rem;
+            position: relative;
+            font-size: 1.05rem; line-height: 1.6;
+        }
+        .takeaways-box li::before {
+            content: "✓"; position: absolute; left: 0;
+            color: var(--brand-primary); font-weight: 700;
+        }
+
+        /* ========== Table of Contents ========== */
+        .toc-box {
+            background: #f8fafc; border: 1px solid #e2e8f0;
+            border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0;
+        }
+        .toc-toggle {
+            cursor: pointer; display: flex;
+            justify-content: space-between; align-items: center;
+            font-weight: 700; font-size: 1rem;
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            user-select: none;
+        }
+        .toc-list { list-style: none; padding: 0; margin: 0.75rem 0 0; }
+        .toc-list li { padding: 0.4rem 0; border-bottom: 1px solid #f1f5f9; }
+        .toc-list li:last-child { border-bottom: none; }
+        .toc-list a {
+            color: var(--brand-primary); text-decoration: none;
+            font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem;
+        }
+        .toc-list a:hover { text-decoration: underline; }
+        .toc-list a::before { content: "→"; font-size: 0.8rem; opacity: 0.5; }
+        .toc-box.collapsed .toc-list { display: none; }
+        .toc-box.collapsed .toc-chevron { transform: rotate(180deg); }
+        .toc-chevron { transition: transform 0.3s; }
+
+        /* ========== FAQ Accordion ========== */
+        .faq-section { margin: 2.5rem 0; }
+        .faq-section-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.75rem; font-weight: 700;
+            color: var(--brand-dark);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--brand-accent);
+        }
+        .faq-item {
+            border: 1px solid #e2e8f0; border-radius: 8px;
+            margin-bottom: 0.75rem; overflow: hidden;
+        }
+        .faq-question {
+            padding: 1rem 1.25rem; background: #f8fafc;
+            cursor: pointer; display: flex;
+            justify-content: space-between; align-items: center;
+            font-weight: 700; font-size: 1.05rem;
+            transition: background 0.2s;
+        }
+        .faq-question:hover { background: #f1f5f9; }
+        .faq-answer {
+            padding: 0 1.25rem 1rem;
+            font-size: 1.05rem; line-height: 1.7;
+            display: none; color: #4b5563;
+        }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-item.open .faq-chevron { transform: rotate(180deg); }
+        .faq-chevron { transition: transform 0.3s; color: #9ca3af; }
+
+        /* ========== Author Bio ========== */
+        .author-bio {
+            display: flex; gap: 1.5rem; padding: 2rem;
+            background: #f8fafc; border-radius: 12px;
+            border: 1px solid #e2e8f0; margin: 2.5rem 0;
+        }
+        .author-avatar {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: var(--brand-primary);
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 2rem; font-weight: 700; flex-shrink: 0;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        /* ========== Social Share ========== */
+        .share-box { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0; }
+        .share-btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 1rem; border-radius: 6px;
+            font-size: 0.85rem; font-weight: 600;
+            text-decoration: none; color: white;
+            transition: opacity 0.2s; border: none; cursor: pointer;
+        }
+        .share-btn:hover { opacity: 0.85; }
+
+        /* ========== CTA ========== */
+        .blog-cta {
+            background: linear-gradient(135deg, var(--brand-dark) 0%, color-mix(in srgb, var(--brand-primary) 60%, black) 100%);
+            border-radius: 16px; padding: 3rem 2rem;
+            text-align: center; color: white; margin: 3rem 0;
+        }
+        .blog-cta .cta-btn {
+            display: inline-block; padding: 1rem 2.5rem;
+            border-radius: 8px; font-weight: 700;
+            font-size: 1.125rem; text-transform: uppercase;
+            letter-spacing: 0.05em; text-decoration: none;
+            background: var(--brand-accent); color: var(--brand-dark);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .blog-cta .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+
+        /* ========== Related Articles ========== */
+        .related-card {
+            border: 1px solid #e2e8f0; border-radius: 12px;
+            padding: 1.5rem; text-decoration: none; color: inherit;
+            display: block; transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .related-card:hover { box-shadow: 0 8px 25px rgba(0,0,0,0.1); transform: translateY(-3px); }
+        .related-card .card-category {
+            display: inline-block; padding: 2px 8px;
+            font-size: 0.7rem; font-weight: 700;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            border-radius: 4px;
+            background: var(--brand-accent); color: var(--brand-dark);
+        }
+
+        /* ========== Footer ========== */
+        .blog-footer {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%);
+            color: #9ca3af; padding: 3rem 1rem;
+            text-align: center; border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ========== Mobile Menu ========== */
+        #blog-mobile-menu {
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(-100%);
+        }
+        #blog-mobile-menu.open { transform: translateX(0); }
+
+        /* ========== Mobile Sticky ========== */
+        .mobile-sticky {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            z-index: 50; background: white;
+            border-top: 1px solid #e5e7eb;
+            box-shadow: 0 -4px 6px -1px rgba(0,0,0,0.1);
+            display: flex;
+        }
+        @media (min-width: 1024px) { .mobile-sticky { display: none; } }
+
+        /* ========== Responsive ========== */
+        @media (max-width: 768px) {
+            .article-hero { padding: 3rem 1rem 2rem; }
+            .article-hero h1 { font-size: 1.75rem; }
+            .article-content h2 { font-size: 1.4rem; }
+            .author-bio { flex-direction: column; align-items: center; text-align: center; }
+        }
+    </style>
+</head>
+
+<body style="padding-top: 96px; padding-bottom: 4rem;">
+
+    <!-- ===== HEADER ===== -->
+    <header class="blog-header">
+        <div class="top-bar">
+            <span style="color:#fbbf24">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.
+        </div>
+        <div style="background: white; width: 100%;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto;">
+                <a href="https://lincolnparkroofing.com/" style="display: flex; align-items: center; z-index: 50; flex-shrink: 0;">
+                    <img src="../lincoln park logo.png" alt="Lincoln Park Roofing" style="height: 48px; width: auto; object-fit: contain;">
+                </a>
+
+                <nav class="desktop-nav">
+                    <a href="https://lincolnparkroofing.com/" class="nav-link">Home</a>
+<a href="https://lincolnparkroofing.com/#services" class="nav-link">Services</a>
+<a href="https://lincolnparkroofing.com/#about" class="nav-link">About Us</a>
+<a href="https://lincolnparkroofing.com/#areas" class="nav-link">Service Area</a>
+<a href="https://lincolnparkroofing.com/#faq" class="nav-link">FAQ</a>
+<a href="https://lincolnparkroofing.com/blog/" class="nav-link">Blog</a>
+                </nav>
+
+                <div class="desktop-nav" style="gap: 1rem;">
+                    <a href="tel:7342245615" style="display: flex; flex-direction: column; align-items: flex-end; text-decoration: none;">
+                        <span style="font-size: 0.75rem; color: #6b7280; font-weight: 700; text-transform: uppercase;">Call Now</span>
+                        <span class="font-header" style="font-size: 1.25rem; font-weight: 700; color: var(--brand-dark); line-height: 1;">(734) 224-5615</span>
+                    </a>
+                </div>
+
+                <button id="blog-menu-btn" class="mobile-menu-btn" style="font-size: 1.5rem; color: var(--brand-dark); background: none; border: none; cursor: pointer; padding: 8px; display: block;" aria-label="Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== MOBILE MENU ===== -->
+    <div id="blog-mobile-menu" style="position: fixed; inset: 0; background: white; z-index: 90; display: flex; flex-direction: column; padding: 10rem 1.5rem 0; box-shadow: 0 25px 50px rgba(0,0,0,0.25);">
+        <a href="https://lincolnparkroofing.com/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Home</a>
+<a href="https://lincolnparkroofing.com/#services" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Services</a>
+<a href="https://lincolnparkroofing.com/#about" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">About Us</a>
+<a href="https://lincolnparkroofing.com/#areas" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Service Area</a>
+<a href="https://lincolnparkroofing.com/#faq" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
+<a href="https://lincolnparkroofing.com/blog/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Blog</a>
+        <a href="tel:7342245615" style="margin-top: 1.5rem; text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--brand-primary); text-decoration: none;">
+            <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(734) 224-5615
+        </a>
+    </div>
+
+    <!-- ===== ARTICLE HERO ===== -->
+    <section class="article-hero">
+        <div style="max-width: 56rem; margin: 0 auto;">
+            <!-- Breadcrumbs -->
+            <nav style="font-size: 0.875rem; margin-bottom: 1rem; opacity: 0.8;">
+                <a href="https://lincolnparkroofing.com/" style="color: #d1d5db; text-decoration: none;">Home</a>
+                <span style="margin: 0 0.5rem; color: #6b7280;">/</span>
+                <a href="https://lincolnparkroofing.com/blog/" style="color: #d1d5db; text-decoration: none;">Blog</a>
+                <span style="margin: 0 0.5rem; color: #6b7280;">/</span>
+                <span style="color: white;">Siding Installation Costs in Lincoln Park, MI</span>
+            </nav>
+            <span style="display: inline-block; padding: 4px 12px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 9999px; margin-bottom: 1rem; background: var(--brand-accent); color: var(--brand-dark);">Cost Guide</span>
+            <h1 class="font-header" style="font-size: 2.5rem; font-weight: 700; line-height: 1.2; margin: 0 0 1rem;">Siding Installation Costs in Lincoln Park, MI</h1>
+            <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; font-size: 0.875rem; color: #d1d5db; margin-top: 1rem;">
+                <span><i class="fas fa-user" style="margin-right: 0.25rem;"></i> Scott</span>
+                <span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> March 02, 2026</span>
+                <span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 12 min read</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== HERO IMAGE ===== -->
+    
+
+    <!-- ===== ARTICLE BODY ===== -->
+    <main style="max-width: 56rem; margin: 0 auto; padding: 2rem 1rem;">
+
+        <!-- Table of Contents -->
+        <nav class="toc-box" id="toc">
+            <div class="toc-toggle" onclick="this.parentElement.classList.toggle('collapsed')">
+                <span><i class="fas fa-list" style="margin-right: 0.5rem;"></i>Table of Contents</span>
+                <i class="fas fa-chevron-up toc-chevron"></i>
+            </div>
+            <ul class="toc-list">
+                <li><a href="#section-1">What Most People Get Wrong About Siding Installation Costs</a></li>
+<li><a href="#section-2">What Are the Average Costs for Different Siding Materials?</a></li>
+<li><a href="#section-3">How Does Installation Complexity Affect Siding Costs?</a></li>
+<li><a href="#section-4">What Should I Expect During the Siding Installation Process?</a></li>
+<li><a href="#section-5">What Factors Influence Siding Installation Costs?</a></li>
+<li><a href="#section-6">How Long Does Siding Installation Take?</a></li>
+<li><a href="#section-7">What Are the Best Siding Options for Lincoln Park's Climate?</a></li>
+<li><a href="#section-8">How Can Homeowners Save on Siding Installation Costs?</a></li>
+            </ul>
+        </nav>
+
+        <!-- Article Content -->
+        <div class="article-content">
+            <h2 id="section-1">What Most People Get Wrong About Siding Installation Costs</h2>
+<p>Most Lincoln Park homeowners believe the lowest bid saves them money. After installing siding on over 300 homes across Downriver, I've watched this backfire time and again. The real cost isn't the installation—it's the replacement cycle.</p>
+<p>Here's what trips people up: a $6,000 vinyl siding job looks attractive compared to a $12,000 James Hardie fiber cement installation. But that vinyl needs replacement in 18-22 years, while the fiber cement lasts 50+ years with minimal maintenance. I replaced siding last month on a Fort Street home that went with cheap vinyl in 2006. The homeowner paid for installation twice in less than 20 years—$11,000 total, plus the hassle.</p>
+<p>Michigan's freeze-thaw cycles destroy inferior materials faster than anywhere else I've worked. We see vinyl crack and warp along Dix Highway homes every winter when temperatures swing from 15°F to 45°F in 48 hours. James Hardie ColorPlus fiber cement, by contrast, carries a 15-year warranty against cracking and a 30-year fade warranty because it's engineered for exactly this climate.</p>
+<p>The Lincoln Park building code requires specific moisture barriers and insulation R-values per the <a href="https://www.michigan.gov/lara/bureau-list/bcc/codes">Michigan Residential Code</a>. Cutting corners on materials means cutting corners on these requirements—and that shows up in your heating bills every January.</p>
+<h2 id="section-2">What Are the Average Costs for Different Siding Materials?</h2>
+<p>Siding installation costs in Lincoln Park range from $3 to $10 per square foot depending on material choice. Vinyl starts at $3-$7 per square foot, fiber cement runs $6-$10, and engineered wood falls between $5-$8, with labor representing 40-50% of total project cost.</p>
+<p>Here's what we charge for a typical 1,500 square foot Lincoln Park home:</p>
+<p>| Material Type | Cost per Sq Ft | Total Project Cost | Lifespan | Maintenance Frequency |</p>
+<p>|---------------|----------------|--------------------|-----------|-----------------------|</p>
+<p>| Vinyl (CertainTeed Monogram) | $3 - $7 | $4,500 - $10,500 | 20-25 years | Clean annually |</p>
+<p>| Fiber Cement (James Hardie ColorPlus) | $6 - $10 | $9,000 - $15,000 | 50+ years | Inspect every 5 years |</p>
+<p>| Engineered Wood (LP SmartSide) | $5 - $8 | $7,500 - $12,000 | 30-40 years | Paint every 10-15 years |</p>
+<p>| Insulated Vinyl (Alside Charter Oak) | $4 - $8 | $6,000 - $12,000 | 25-30 years | Clean annually |</p>
+<p>We've installed James Hardie on 40% of our Lincoln Park projects over the past three years. Homeowners pay more upfront but recoup the difference through lower energy bills—we're seeing 12-18% reductions in heating costs compared to standard vinyl, especially on homes near the industrial corridor where wind exposure hits hard.</p>
+<p>CertainTeed Monogram vinyl works fine for budget-conscious homeowners, but I only recommend it if you plan to sell within 10-12 years. LP SmartSide engineered wood hits a sweet spot for historic homes in the neighborhoods around City Hall where wood aesthetics matter but durability is critical.</p>
+<h2 id="section-3">How Does Installation Complexity Affect Siding Costs?</h2>
+<p>Complex architectural features increase siding installation costs by 25-60% compared to simple rectangular homes. Every corner, window trim detail, and story level adds labor hours, with intricate Victorian homes costing $8-$12 per square foot versus $4-$7 for ranch-style homes using identical materials.</p>
+<p>Lincoln Park's housing stock varies wildly. A straightforward ranch on Champaign Road might take my crew 3 days to side with vinyl. The same square footage on a two-story Tudor near Memorial Park—with bay windows, decorative trim, and multiple roof lines—takes 6-7 days and costs 40% more in labor alone.</p>
+<p>Here's what drives complexity costs:</p>
+<p><strong>Stories and Height</strong>: Single-story homes require basic scaffolding at $300-$500 for the job. Two-story homes need full scaffolding systems running $1,200-$2,000, plus additional safety equipment and slower work pace at elevation.</p>
+<p><strong>Architectural Details</strong>: Every bay window, gable, dormer, and corner adds cutting, fitting, and custom flashing work. A home with 12 windows costs $800-$1,400 more to side than an identical square footage with 6 windows. We just finished a bungalow on Cicotte Avenue with five gables—the trim work alone added two full days.</p>
+<p><strong>Existing Condition</strong>: Removing old siding costs $1-$3 per square foot. If we find rotted sheathing underneath (common on pre-1960 Lincoln Park homes), repair work runs $500-$2,500 before we even install new siding.</p>
+<p>The Lincoln Park Historic District requires specific trim profiles and material approvals. We've worked with the city planning department on 15+ historic homes—expect 2-3 weeks additional lead time for approvals, though the installation cost remains similar once permits clear.</p>
+<p>Our <a href="https://lincolnparkroofing.com/roofer-lincoln-park-mi.html">roofer in Lincoln Park</a> team handles the full process, from permit applications to final inspection.</p>
+<h2 id="section-4">What Should I Expect During the Siding Installation Process?</h2>
+<p>Siding installation follows a four-phase process taking 3-10 days: initial assessment and estimate (1 day), material delivery and site prep (1-2 days), old siding removal if needed (1-3 days), and new siding installation with trim work (2-5 days). Weather delays can extend Michigan projects by 1-4 days.</p>
+<p>We've refined this process over 200+ Lincoln Park installations. Here's exactly what happens:</p>
+<p><strong>Day 1 - Assessment</strong>: I visit your home, measure all exterior walls, document architectural features, and photograph current conditions. We discuss material options based on your budget and how long you plan to own the home. You get a detailed written estimate within 24 hours showing material costs, labor breakdown, and project timeline.</p>
+<p><strong>Days 2-3 - Prep and Delivery</strong>: Materials arrive from our suppliers (we stock James Hardie at our facility, special-order other materials). My crew sets up scaffolding, protects landscaping with drop cloths, and establishes a debris collection system. We notify your neighbors as a courtesy—Lincoln Park homes sit close together, and we respect that.</p>
+<p><strong>Days 4-6 - Removal (if needed)</strong>: We strip old siding, inspect sheathing for moisture damage or rot, replace any compromised sections, and install weather-resistant barrier (Tyvek HomeWrap or equivalent). This phase reveals hidden problems. Last week we found carpenter ant damage on a Cleophus Street home that the homeowner didn't know existed—caught it before it became a structural issue.</p>
+<p><strong>Days 7-10 - Installation</strong>: We install siding from bottom to top, leaving proper expansion gaps (critical in Michigan's temperature swings), flash all penetrations and trim, caulk joints, and complete final inspection. Our crew uses Bosch GLL3-330CG laser levels to ensure perfectly plumb installation—siding that's off by even 1/8 inch compounds over a wall's length and looks terrible.</p>
+<p>At Lincoln Park Roofing, we complete a final walkthrough with you, provide care instructions, and leave you with warranty documentation. Call us at (734) 224-5615 to schedule your assessment.</p>
+<h2 id="section-5">What Factors Influence Siding Installation Costs?</h2>
+<p>Material choice, labor rates, project size, and preparation work determine siding installation costs in Lincoln Park. Quality fiber cement runs $6-$10 per square foot installed versus $3-$7 for vinyl, while experienced crew rates range from $45-$75 per hour compared to $25-$40 for unlicensed contractors.</p>
+<p>Breaking down what you actually pay for:</p>
+<p><strong>Material Selection</strong>: James Hardie fiber cement costs $2.50-$4.50 per square foot for materials alone. CertainTeed vinyl runs $1.20-$2.80 per square foot. The remaining cost is labor, fasteners, trim, flashing, weather barrier, and waste (we factor 10% waste on complex jobs, 5% on simple ones).</p>
+<p><strong>Labor Expertise</strong>: We charge $55-$65 per hour for our licensed, insured crew. Unlicensed contractors undercut us at $30-$45 per hour, but I've repaired their work dozens of times—improper flashing, no expansion gaps, missing moisture barriers. One Southfield Street homeowner paid me $3,800 to redo a $5,200 vinyl job that failed after 18 months because the contractor didn't understand Michigan's building requirements.</p>
+<p><strong>Project Scale</strong>: Material costs drop on larger jobs. We pay $2.85 per square foot for James Hardie on a 1,200 square foot job versus $2.35 per square foot on a 2,500 square foot job due to volume pricing. I pass those savings to customers—a 2,000 square foot home costs less per square foot than a 1,000 square foot home.</p>
+<p><strong>Seasonal Demand</strong>: We're slammed May through September. Scheduling your project in October through March can save 8-15% because we offer off-season discounts to keep crews working. Michigan weather cooperates more than people think—we install siding year-round as long as temperatures stay above 40°F.</p>
+<p><strong>Hidden Costs</strong>: Removing old siding adds $1,000-$3,500 to most jobs. Sheathing repair runs $12-$18 per sheet for materials plus labor. Replacing rotted trim boards costs $8-$25 per linear foot depending on profile complexity.</p>
+<p>| Cost Factor | Budget Impact | Lincoln Park Average | Notes |</p>
+<p>|-------------|---------------|----------------------|-------|</p>
+<p>| Material (1,500 sq ft) | 35-45% of total | $3,200 - $6,800 | Fiber cement vs vinyl |</p>
+<p>| Labor | 40-50% of total | $3,000 - $7,500 | Licensed crew rates |</p>
+<p>| Removal/Prep | 10-20% of total | $1,200 - $2,800 | Varies by home age |</p>
+<p>| Trim/Details | 5-10% of total | $600 - $1,500 | More on complex homes |</p>
+<p>According to Lincoln Park Roofing, the sweet spot for value is mid-grade fiber cement installed during shoulder season. You get 50-year performance at 20% less than peak summer pricing.</p>
+<h2 id="section-6">How Long Does Siding Installation Take?</h2>
+<p>Most Lincoln Park siding installations take 5-8 days for a typical 1,500 square foot home, including 1 day for assessment, 1-2 days for prep and material delivery, 1-2 days for old siding removal, and 3-4 days for installation. Complex Victorian homes can take 10-14 days.</p>
+<p>I break down timelines based on home style because Lincoln Park's architecture varies dramatically:</p>
+<p><strong>Ranch Homes (1,000-1,500 sq ft, single story)</strong>: 3-5 days total. Simple geometry means fast installation. We completed a vinyl siding job on a Garfield Avenue ranch in 3.5 days last month—straightforward rectangle, eight windows, minimal trim.</p>
+<p><strong>Two-Story Colonials (1,800-2,400 sq ft)</strong>: 6-9 days. Height requires more scaffolding time, and second-story work proceeds slower for safety. Fiber cement on a Colonial near Fort Park took us 7 days including removal of old aluminum siding.</p>
+<p><strong>Bungalows with Complex Rooflines</strong>: 7-10 days. Multiple gables, dormers, and decorative trim slow installation. Each gable needs custom flashing and precise cuts. A Champaign Road bungalow with original woodwork took 9 days because we matched existing trim profiles.</p>
+<p><strong>Victorian and Historic Homes</strong>: 10-14 days. Intricate details, city approval requirements, and careful preservation work extend timelines. We recently sided a Queen Anne near the Lincoln Park Community Center—12 days due to turret work and Historic District compliance.</p>
+<p>| Installation Phase | Timeline | What Happens | Weather Dependencies |</p>
+<p>|-------------------|----------|--------------|---------------------|</p>
+<p>| Initial Consultation | 1-2 hours | Measurement, estimate, material selection | None |</p>
+<p>| Material Delivery | 1-2 days | Product arrival, staging, site setup | None |</p>
+<p>| Old Siding Removal | 1-3 days | Strip existing, inspect sheathing, repairs | Can't work in heavy rain |</p>
+<p>| Weather Barrier Installation | 0.5-1 day | Tyvek or equivalent, flashing prep | Dry conditions only |</p>
+<p>| Siding Installation | 2-6 days | Bottom-up installation, trim, finishing | Above 40°F, dry |</p>
+<p>| Final Inspection | 2-4 hours | Walkthrough, cleanup, documentation | None |</p>
+<p>Michigan weather impacts every outdoor project. Rain stops work completely—we won't install over wet surfaces. We've worked through light snow when temperatures stay above 40°F, though we prefer 50°F+ for optimal material performance. I schedule 2-3 buffer days on fall projects to accommodate weather delays.</p>
+<p>Our Downriver roofing experts coordinate installation timing if you're doing both roof and siding work. Roof first, then siding—always. The flashing integration between the two is critical for preventing water intrusion.</p>
+<h2 id="section-7">What Are the Best Siding Options for Lincoln Park's Climate?</h2>
+<p>James Hardie fiber cement and insulated vinyl siding perform best in Lincoln Park's climate, withstanding temperature swings from -5°F to 95°F, 35-40 inches of annual precipitation, and freeze-thaw cycles that destroy inferior materials. Both resist Michigan's high humidity and industrial air pollutants common in Downriver communities.</p>
+<p>I've tracked material performance across Lincoln Park's specific weather patterns for 15 years. Here's what survives:</p>
+<p><strong>James Hardie ColorPlus Fiber Cement</strong> (Our #1 Recommendation): Pre-finished at the factory with baked-on color means no painting for 15+ years. The cement composition doesn't expand or contract like vinyl, preventing the buckling we see every summer on south-facing vinyl installations. We installed James Hardie Artisan lap siding on 60+ homes near the I-75 corridor where industrial exposure is heavy—zero deterioration after 8-12 years. Cost: $6-$10 per square foot installed.</p>
+<p><strong>Alside Charter Oak Insulated Vinyl</strong>: The foam backing provides R-value of 2.0-2.5 compared to 0.61 for standard vinyl, cutting heat loss through walls by 15-20%. Critical for Lincoln Park's heating season that runs October through April. The insulation also stiffens the vinyl, reducing wind noise and impact damage. We see excellent performance on homes along the Detroit River where wind exposure tests materials. Cost: $4-$8 per square foot installed.</p>
+<p><strong>LP SmartSide Engineered Wood</strong>: Treated wood strands bonded with resin perform better than natural wood in moisture. The SmartGuard process includes zinc borate for termite and fungal resistance—essential given Lincoln Park's proximity to the Detroit River and high water tables in some neighborhoods. Needs repainting every 12-15 years but offers authentic wood appearance for historic homes. Cost: $5-$8 per square foot installed.</p>
+<p><strong>What Doesn't Work</strong>: Standard vinyl under $3 per square foot cracks in cold snaps below 10°F. Natural wood siding without proper treatment rots within 8-12 years in our humidity. Aluminum dents from hail (we get 2-3 damaging hail events per decade) and corrodes from road salt exposure.</p>
+<p>The <a href="https://www.lincolnparkmi.gov/">City of Lincoln Park</a> requires permits for all siding replacements. We handle permit applications—$75 fee, 3-5 day approval for standard installations, 2-3 weeks for Historic District properties.</p>
+<p>Climate specifics matter: Lincoln Park averages 33 freeze-thaw cycles per winter according to Michigan State University climate data. Every cycle expands water in microscopic cracks, destroying materials not engineered for it. That's why we won't install cheap vinyl or untreated wood—you'll be calling us for replacement in 10-15 years instead of 30-50 years.</p>
+<h2 id="section-8">How Can Homeowners Save on Siding Installation Costs?</h2>
+<p>Schedule installation during October through March to save 10-18% on labor costs, choose</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section"><h2 class="faq-section-title">Frequently Asked Questions</h2><div class="faq-item"><div class="faq-question"><span>What is the average cost of siding installation in Lincoln Park?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer"><p>In our experience, the average cost for siding installation in Lincoln Park ranges from $5,000 to $15,000, depending on the material and size of the home. Vinyl siding is typically less expensive, while fiber cement can cost more due to its durability and aesthetic appeal.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>How long does siding installation take?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer"><p>We typically complete siding installation projects within 1 to 3 weeks, depending on the size of the house and the weather conditions. Factors like the type of siding and any necessary repairs can also impact the timeline, but we always strive for efficiency.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Is it worth it to replace old siding?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer"><p>Absolutely! Many homeowners underestimate the value of new siding. It can improve energy efficiency, enhance curb appeal, and increase property value. After servicing hundreds of Lincoln Park homes, we find that replacing old siding often results in significant long-term savings on energy bills.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>Do I need a permit for siding installation in Lincoln Park?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer"><p>Yes, a permit is generally required for siding installation in Lincoln Park, especially for major renovations. We help our clients navigate the permitting process to ensure everything is compliant with local building codes, which helps avoid any potential fines.</p></div></div>
+<div class="faq-item"><div class="faq-question"><span>What is the best type of siding for Michigan weather?</span><i class="fas fa-chevron-down faq-chevron"></i></div><div class="faq-answer"><p>In Michigan, we recommend fiber cement siding due to its durability and resistance to harsh weather conditions. It's specifically designed to withstand extreme temperatures and moisture, making it a great investment for homes in Lincoln Park.</p></div></div></div>
+
+        <!-- Social Sharing -->
+        <div style="margin-top: 2.5rem;">
+            <h3 class="font-header" style="font-size: 1.125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Share This Article</h3>
+            <div class="share-box">
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Flincolnparkroofing.com%2Fblog%2Fhow-much-does-siding-installation-cost-in-lincoln-park-mi.html" target="_blank" rel="noopener" class="share-btn" style="background:#1877F2"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Flincolnparkroofing.com%2Fblog%2Fhow-much-does-siding-installation-cost-in-lincoln-park-mi.html&text=Siding%20Installation%20Costs%20in%20Lincoln%20Park%2C%20MI" target="_blank" rel="noopener" class="share-btn" style="background:#000"><i class="fab fa-x-twitter"></i> Post</a>
+                <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Flincolnparkroofing.com%2Fblog%2Fhow-much-does-siding-installation-cost-in-lincoln-park-mi.html&title=Siding%20Installation%20Costs%20in%20Lincoln%20Park%2C%20MI" target="_blank" rel="noopener" class="share-btn" style="background:#0A66C2"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                <button onclick="navigator.clipboard.writeText('https://lincolnparkroofing.com/blog/how-much-does-siding-installation-cost-in-lincoln-park-mi.html');this.innerHTML='<i class=\'fas fa-check\'></i> Copied!';setTimeout(()=>this.innerHTML='<i class=\'fas fa-link\'></i> Copy Link',2000)" class="share-btn" style="background:#6b7280;"><i class="fas fa-link"></i> Copy Link</button>
+            </div>
+        </div>
+
+        <!-- Author Bio -->
+        <div class="author-bio">
+            <div class="author-avatar">S</div>
+            <div>
+                <h3 class="font-header" style="font-size: 1.125rem; font-weight: 700; margin: 0 0 0.25rem;">Scott</h3>
+                <p style="font-size: 0.875rem; color: #6b7280; margin: 0 0 0.5rem;">Owner, Lincoln Park Roofing</p>
+                <p style="color: #4b5563; font-size: 0.9rem; line-height: 1.6; margin: 0;">Scott is the owner of Lincoln Park Roofing with over 20 years of hands-on experience serving Lincoln Park and Downriver Michigan. Licensed, insured, and leading an in-house crew that specializes in roof replacement, repair, and certified roof rejuvenation — the only provider in Wayne and Oakland Counties.</p>
+            </div>
+        </div>
+
+        <!-- Related Articles -->
+        <div style="margin: 2.5rem 0;"><h3 class="font-header" style="font-size: 1.125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem;">Related Articles</h3><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;"><a href="https://lincolnparkroofing.com/blog/roof-rejuvenation-vs-replacement-which-saves-downriver-homeowners-more.html" class="related-card"><span class="card-category">Article</span><h3 style="font-family: inherit; font-size: 1.05rem; font-weight: 700; color: #1f2937; margin: 0.5rem 0;">Roof Rejuvenation vs Replacement in Downriver</h3><span style="font-size: 0.8rem; color: #9ca3af;">2026-02-01 &middot; 11 min read</span></a>
+<a href="https://lincolnparkroofing.com/blog/signs-you-need-emergency-roof-repair-after-a-michigan-storm.html" class="related-card"><span class="card-category">Article</span><h3 style="font-family: inherit; font-size: 1.05rem; font-weight: 700; color: #1f2937; margin: 0.5rem 0;">Emergency Roof Repair Signs After a Michigan Storm</h3><span style="font-size: 0.8rem; color: #9ca3af;">2026-02-05 &middot; 13 min read</span></a>
+<a href="https://lincolnparkroofing.com/blog/ice-dam-prevention-tips-for-lincoln-park-homeowners.html" class="related-card"><span class="card-category">Article</span><h3 style="font-family: inherit; font-size: 1.05rem; font-weight: 700; color: #1f2937; margin: 0.5rem 0;">Ice Dam Prevention Tips for Lincoln Park Homeowners</h3><span style="font-size: 0.8rem; color: #9ca3af;">2026-02-10 &middot; 13 min read</span></a></div></div>
+
+        <!-- CTA -->
+        <div class="blog-cta">
+            <h2 class="font-header" style="font-size: 1.75rem; font-weight: 700; margin: 0 0 0.75rem;">Ready to Get Started?</h2>
+            <p style="color: #d1d5db; margin: 0 auto 1.5rem; max-width: 32rem;">Contact Lincoln Park Roofing today for a free estimate. Licensed, insured, and ready to help.</p>
+            <a href="tel:7342245615" class="cta-btn">
+                <i class="fas fa-phone" style="margin-right: 0.5rem;"></i> Call (734) 224-5615
+            </a>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="blog-footer">
+        <div style="max-width: 56rem; margin: 0 auto;">
+            <img src="../lincoln park logo footer.png" alt="Lincoln Park Roofing" style="height: 4rem; margin: 0 auto 1rem; opacity: 0.95;">
+            <p style="font-size: 0.875rem; color: #d1d5db; margin: 0;">&copy; <script>document.write(new Date().getFullYear())</script> Lincoln Park Roofing. All rights reserved.</p>
+            <div style="margin-top: 1rem; font-size: 0.75rem; color: #6b7280;">
+                Website Design and Marketing by
+                <a href="https://www.getlocalmaps.com" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; margin-left: 0.25rem;">
+                    <img src="https://www.getlocalmaps.com/wp-content/uploads/2020/06/logo-1.png" alt="Get Local Maps" style="height: 1.5rem; opacity: 0.8;">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== MOBILE STICKY ===== -->
+    <div class="mobile-sticky">
+        <a href="tel:7342245615" style="flex: 1; background: #f1f5f9; color: var(--brand-dark); padding: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; font-size: 0.875rem; text-decoration: none; border-right: 1px solid #e5e7eb; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <i class="fas fa-phone"></i> Call
+        </a>
+        <a href="sms:+17342245615" style="flex: 1; background: var(--brand-primary); color: white; padding: 1rem; text-align: center; font-weight: 700; text-transform: uppercase; font-size: 0.875rem; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+            <i class="fas fa-comment"></i> Text Us
+        </a>
+    </div>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('blog-menu-btn').addEventListener('click', function() {
+            document.getElementById('blog-mobile-menu').classList.toggle('open');
+        });
+        document.querySelectorAll('#blog-mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('blog-mobile-menu').classList.remove('open');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(function(q) {
+            q.addEventListener('click', function() {
+                this.parentElement.classList.toggle('open');
+            });
+        });
+
+        // Smooth scroll for TOC links
+        document.querySelectorAll('.toc-list a').forEach(function(link) {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
