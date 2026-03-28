@@ -7,13 +7,13 @@
     <title>Roofer in Lincoln Park, MI | Lincoln Park Roofing | (734) 224-5615</title>
 
     <meta name="description" content="Lincoln Park Roofing — roof repair, replacement &amp; rejuvenation in Lincoln Park, MI. Licensed, insured, 20+ years experience. Free estimates. Call (734) 224-5615.">
-    <link rel="canonical" href="https://lincolnparkroofing.com/" />
+    <link rel="canonical" href="https://www.lincolnparkroofing.com/" />
     
     <!-- SOCIAL SHARE METADATA -->
     <meta property="og:title" content="Lincoln Park Roofing">
     <meta property="og:description" content="Experienced Roofers Over 20 Years in Lincoln Park, MI. Roof replacement, repair, and rejuvenation.">
     <meta property="og:image" content="lincoln park logo.png">
-    <meta property="og:url" content="https://lincolnparkroofing.com/">
+    <meta property="og:url" content="https://www.lincolnparkroofing.com/">
     <meta property="og:type" content="website">
 
     <!-- FAVICON (Blue Roof Icon) -->
@@ -202,6 +202,30 @@
         }
         .comparison-table th { background: #f1f5f9; padding: 12px 16px; text-align: left; font-weight: 700; }
         .comparison-table td { padding: 12px 16px; border-top: 1px solid #e2e8f0; }
+    
+      /* DROPDOWN NAV */
+      .nav-dropdown { position: relative; }
+      .nav-dropdown > a { cursor: pointer; }
+      .nav-dropdown-content {
+        display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+        background: white; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        border-radius: 8px; padding: 12px 0; z-index: 1100; border: 1px solid #e5e7eb;
+      }
+      .nav-dropdown:hover .nav-dropdown-content { display: block; }
+      .nav-dropdown-content a {
+        display: block; padding: 8px 20px; color: #374151; font-size: 13px;
+        font-weight: 600; text-transform: none; letter-spacing: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .nav-dropdown-content a:hover { background: #f0f7ff; color: #0056b3; }
+      .nav-dropdown-content .dd-divider { height: 1px; background: #e5e7eb; margin: 6px 0; }
+      .nav-dropdown-mega { min-width: 420px; display: none; padding: 16px; }
+      .nav-dropdown:hover .nav-dropdown-mega { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+      .nav-dropdown-mega a { padding: 6px 16px; font-size: 12px; }
+      .mobile-accordion-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; background: none; border: none; }
+      .mobile-accordion-content { display: none; padding-left: 16px; }
+      .mobile-accordion-content.open { display: block; }
+
     </style>
 
     <!-- Google Fonts: Async Loading -->
@@ -235,18 +259,18 @@
       "@graph": [
         {
           "@type": "WebSite",
-          "@id": "https://lincolnparkroofing.com/#website",
-          "url": "https://lincolnparkroofing.com/",
+          "@id": "https://www.lincolnparkroofing.com/#website",
+          "url": "https://www.lincolnparkroofing.com/",
           "name": "Lincoln Park Roofing",
-          "publisher": { "@id": "https://lincolnparkroofing.com/#business" }
+          "publisher": { "@id": "https://www.lincolnparkroofing.com/#business" }
         },
         {
           "@type": "WebPage",
-          "@id": "https://lincolnparkroofing.com/#webpage",
-          "url": "https://lincolnparkroofing.com/",
+          "@id": "https://www.lincolnparkroofing.com/#webpage",
+          "url": "https://www.lincolnparkroofing.com/",
           "name": "Roofer in Lincoln Park, MI | Lincoln Park Roofing",
-          "isPartOf": { "@id": "https://lincolnparkroofing.com/#website" },
-          "about": { "@id": "https://lincolnparkroofing.com/#business" },
+          "isPartOf": { "@id": "https://www.lincolnparkroofing.com/#website" },
+          "about": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "speakable": {
             "@type": "SpeakableSpecification",
             "cssSelector": [".speakable-hook"]
@@ -254,17 +278,18 @@
         },
         {
           "@type": ["RoofingContractor", "LocalBusiness"],
-          "@id": "https://lincolnparkroofing.com/#business",
+          "@id": "https://www.lincolnparkroofing.com/#business",
           "name": "Lincoln Park Roofing",
           "alternateName": "Lincoln Park Roofer",
-          "url": "https://lincolnparkroofing.com/",
+          "url": "https://www.lincolnparkroofing.com/",
           "telephone": "+1-734-224-5615",
           "priceRange": "$$",
-          "image": "https://lincolnparkroofing.com/lincoln park logo.png",
-          "logo": "https://lincolnparkroofing.com/lincoln park logo.png",
+          "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+          "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
           "description": "Lincoln Park Roofing is a licensed, insured roofing contractor with over 20 years of experience serving Lincoln Park and Downriver Michigan. We specialize in roof replacement, roof repair, roof rejuvenation, siding, gutters, and storm damage insurance claims.",
           "address": {
             "@type": "PostalAddress",
+            "streetAddress": "2026 Thomas St",
             "addressLocality": "Lincoln Park",
             "addressRegion": "MI",
             "postalCode": "48146",
@@ -322,8 +347,8 @@
                       "@type": "Service",
                       "name": "Roof Replacement",
                       "description": "Complete tear-off and new roof installation with architectural shingles, proper underlayment, ice and water shield, and ridge ventilation for Lincoln Park and Downriver Michigan homes.",
-                      "url": "https://lincolnparkroofing.com/roof-replacement.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+                      "url": "https://www.lincolnparkroofing.com/roof-replacement.html",
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
                       "areaServed": { "@type": "City", "name": "Lincoln Park" }
                     }
                   },
@@ -333,8 +358,8 @@
                       "@type": "Service",
                       "name": "Roof Repair",
                       "description": "Emergency and scheduled roof repair for leaks, missing shingles, storm damage, flashing failure, and ice dam issues in Lincoln Park, MI.",
-                      "url": "https://lincolnparkroofing.com/roof-repair.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+                      "url": "https://www.lincolnparkroofing.com/roof-repair.html",
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
                       "areaServed": { "@type": "City", "name": "Lincoln Park" }
                     }
                   },
@@ -345,7 +370,7 @@
                       "name": "Roof Rejuvenation",
                       "description": "Certified roof rejuvenation treatment that restores asphalt shingles, extends roof life by 5-15 years, and saves homeowners thousands compared to full replacement.",
                       "url": "roof-rejuvenation.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
                       "areaServed": { "@type": "City", "name": "Lincoln Park" }
                     }
                   },
@@ -356,7 +381,7 @@
                       "name": "New Roof Construction",
                       "description": "New construction roofing for residential builds, additions, and custom homes in Lincoln Park and Metro Detroit.",
                       "url": "new-roof-construction.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" }
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" }
                     }
                   }
                 ]
@@ -371,8 +396,8 @@
                       "@type": "Service",
                       "name": "Siding Installation",
                       "description": "Professional vinyl and fiber cement siding installation for improved curb appeal and energy efficiency.",
-                      "url": "https://lincolnparkroofing.com/siding.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" }
+                      "url": "https://www.lincolnparkroofing.com/siding.html",
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" }
                     }
                   },
                   {
@@ -381,8 +406,8 @@
                       "@type": "Service",
                       "name": "Seamless Gutter Installation",
                       "description": "Seamless gutter systems and gutter guards to protect foundations, fascia, and landscaping from water damage.",
-                      "url": "https://lincolnparkroofing.com/gutters.html",
-                      "provider": { "@id": "https://lincolnparkroofing.com/#business" }
+                      "url": "https://www.lincolnparkroofing.com/gutters.html",
+                      "provider": { "@id": "https://www.lincolnparkroofing.com/#business" }
                     }
                   }
                 ]
@@ -392,61 +417,61 @@
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-roof-replacement",
+          "@id": "https://www.lincolnparkroofing.com/#service-roof-replacement",
           "name": "Roof Replacement",
           "description": "Complete tear-off and new roof installation with architectural shingles, ice and water shield, and ridge ventilation for Lincoln Park and Downriver Michigan homes.",
-          "url": "https://lincolnparkroofing.com/roof-replacement.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/roof-replacement.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-roof-repair",
+          "@id": "https://www.lincolnparkroofing.com/#service-roof-repair",
           "name": "Roof Repair",
           "description": "Emergency and scheduled roof repair for leaks, missing shingles, storm damage, and ice dam issues in Lincoln Park, MI.",
-          "url": "https://lincolnparkroofing.com/roof-repair.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/roof-repair.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-roof-rejuvenation",
+          "@id": "https://www.lincolnparkroofing.com/#service-roof-rejuvenation",
           "name": "Roof Rejuvenation",
           "description": "Certified roof rejuvenation treatment that restores asphalt shingles, extends roof life by 5-15 years, and saves thousands compared to full replacement.",
-          "url": "https://lincolnparkroofing.com/roof-rejuvenation.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/roof-rejuvenation.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-new-roof",
+          "@id": "https://www.lincolnparkroofing.com/#service-new-roof",
           "name": "New Roof Construction",
           "description": "New construction roofing for residential builds, additions, and custom homes in Lincoln Park and Metro Detroit.",
-          "url": "https://lincolnparkroofing.com/new-roof-construction.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/new-roof-construction.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-siding",
+          "@id": "https://www.lincolnparkroofing.com/#service-siding",
           "name": "Siding Installation",
           "description": "Professional vinyl and fiber cement siding installation for improved curb appeal and energy efficiency in Lincoln Park, MI.",
-          "url": "https://lincolnparkroofing.com/siding.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/siding.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "Service",
-          "@id": "https://lincolnparkroofing.com/#service-gutters",
+          "@id": "https://www.lincolnparkroofing.com/#service-gutters",
           "name": "Seamless Gutter Installation",
           "description": "Seamless gutter systems and gutter guards to protect foundations, fascia, and landscaping from water damage in Lincoln Park and Downriver Michigan.",
-          "url": "https://lincolnparkroofing.com/gutters.html",
-          "provider": { "@id": "https://lincolnparkroofing.com/#business" },
+          "url": "https://www.lincolnparkroofing.com/gutters.html",
+          "provider": { "@id": "https://www.lincolnparkroofing.com/#business" },
           "areaServed": { "@type": "City", "name": "Lincoln Park", "containedInPlace": { "@type": "State", "name": "Michigan" } }
         },
         {
           "@type": "FAQPage",
-          "@id": "https://lincolnparkroofing.com/#faq",
+          "@id": "https://www.lincolnparkroofing.com/#faq",
           "mainEntity": [
             {
               "@type": "Question",
@@ -543,14 +568,46 @@
                 </a>
                 
                 <!-- Desktop Nav -->
-                <nav class="desktop-nav hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
-                    <a href="#services" class="nav-link hover:text-brand-primary transition duration-300">Services</a>
-                    <a href="#about" class="nav-link hover:text-brand-primary transition duration-300">About Us</a>
-                    <a href="#areas" class="nav-link hover:text-brand-primary transition duration-300">Service Area</a>
-                    <a href="#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
-                    <a href="/projects/" class="nav-link hover:text-brand-primary transition duration-300">Projects</a>
-                    <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
-                </nav>
+                        <nav class="desktop-nav hidden lg:flex items-center font-bold text-gray-700 uppercase tracking-wide text-sm" style="gap:1.5rem;">
+          <a href="/" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Services <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content">
+              <a href="/roof-repair.html">Roof Repair</a>
+              <a href="/roof-replacement.html">Roof Replacement</a>
+              <a href="/roof-rejuvenation.html">Roof Rejuvenation</a>
+              <a href="/new-roof-construction.html">New Roof Construction</a>
+              <a href="/roof-insurance-claim-lincoln-park-mi.html">Insurance Claims</a>
+              <div class="dd-divider"></div>
+              <a href="/siding.html">Siding</a>
+              <a href="/gutters.html">Gutters</a>
+              <a href="/dumpster-rental-lincoln-park.html">Dumpster Rental</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Areas We Serve <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content nav-dropdown-mega">
+              <a href="/roofer-lincoln-park-mi.html">Lincoln Park</a>
+              <a href="/allen-park-roofer.html">Allen Park</a>
+              <a href="/taylor-roofer.html">Taylor</a>
+              <a href="/southgate-roofer.html">Southgate</a>
+              <a href="/wyandotte-roofer.html">Wyandotte</a>
+              <a href="/dearborn-heights-roofer.html">Dearborn Heights</a>
+              <a href="/riverview-roofer.html">Riverview</a>
+              <a href="/trenton-roofer.html">Trenton</a>
+              <a href="/melvindale-roofer.html">Melvindale</a>
+              <a href="/ecorse-roofer.html">Ecorse</a>
+              <a href="/river-rouge-roofer.html">River Rouge</a>
+              <a href="/wayne-roofer.html">Wayne</a>
+              <a href="/plymouth-roofer.html">Plymouth</a>
+              <a href="/livonia-roofer.html">Livonia</a>
+              <a href="/grosse-ile-roofer.html">Grosse Ile</a>
+              <a href="/ypsilanti-roofer.html">Ypsilanti</a>
+            </div>
+          </div>
+          <a href="/projects/" class="nav-link hover:text-brand-primary transition duration-300">Projects</a>
+          <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
+        </nav>
 
                 <!-- CTA Buttons -->
                 <div class="desktop-nav hidden lg:flex items-center space-x-4">
@@ -570,16 +627,47 @@
     </header>
 
     <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl">
-        <a href="#services" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Services</a>
-        <a href="#about" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">About Us</a>
-        <a href="#areas" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Service Areas</a>
-        <a href="#faq" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">FAQ</a>
-        <a href="/projects/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Projects</a>
-        <a href="/blog/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Blog</a>
+      <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl" style="overflow-y:auto;">
+    <a href="/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Home</a>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Services <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roof-repair.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Repair</a>
+        <a href="/roof-replacement.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Replacement</a>
+        <a href="/roof-rejuvenation.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Rejuvenation</a>
+        <a href="/new-roof-construction.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">New Construction</a>
+        <a href="/roof-insurance-claim-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Insurance Claims</a>
+        <a href="/siding.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Siding</a>
+        <a href="/gutters.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Gutters</a>
+        <a href="/dumpster-rental-lincoln-park.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dumpster Rental</a>
+      </div>
     </div>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Service Areas <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roofer-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Lincoln Park</a>
+        <a href="/allen-park-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Allen Park</a>
+        <a href="/taylor-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Taylor</a>
+        <a href="/southgate-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Southgate</a>
+        <a href="/wyandotte-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wyandotte</a>
+        <a href="/dearborn-heights-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dearborn Heights</a>
+        <a href="/riverview-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Riverview</a>
+        <a href="/trenton-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Trenton</a>
+        <a href="/melvindale-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Melvindale</a>
+        <a href="/ecorse-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ecorse</a>
+        <a href="/river-rouge-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">River Rouge</a>
+        <a href="/wayne-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wayne</a>
+        <a href="/plymouth-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Plymouth</a>
+        <a href="/livonia-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Livonia</a>
+        <a href="/grosse-ile-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Grosse Ile</a>
+        <a href="/ypsilanti-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ypsilanti</a>
+      </div>
+    </div>
+    <a href="/projects/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Projects</a>
+    <a href="/blog/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Blog</a>
+  </div>
 
-    <!-- HERO SLIDER -->
+<!-- HERO SLIDER -->
     <section id="hero-slider" class="critical-hero">
         <!-- Slide 1 -->
         <div class="hero-slide absolute inset-0 w-full h-full transition-opacity duration-1000 ease-in-out opacity-100 z-10" id="slide-0">
@@ -1068,7 +1156,7 @@
     <img src="photos/2026-03-01-emergency-roof-repair-in-trenton-mi/project-photo-1-opt.jpg" alt="Emergency Roof Repair in Trenton, MI" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Roof Repair</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-01-emergency-roof-repair-in-trenton-mi.html">Emergency Roof Repair in Trenton, MI</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-01-emergency-roof-repair-in-trenton-mi.html">Emergency Roof Repair in Trenton, MI</a></div>
       <div class="ppf-project-card-location">Trenton, MI</div>
     </div>
   </div>
@@ -1076,7 +1164,7 @@
     <img src="photos/2026-03-01-roof-replacement-in-downtown-wyandotte-mi/project-photo-1-opt.jpg" alt="Roof Replacement in Downtown Wyandotte, MI" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Roof Replacement</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-01-roof-replacement-in-downtown-wyandotte-mi.html">Roof Replacement in Downtown Wyandotte, MI</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-01-roof-replacement-in-downtown-wyandotte-mi.html">Roof Replacement in Downtown Wyandotte, MI</a></div>
       <div class="ppf-project-card-location">Downtown Wyandotte, MI</div>
     </div>
   </div>
@@ -1084,7 +1172,7 @@
     <img src="photos/2026-03-01-roof-replacement-in-gibraltar-mi/project-photo-1-opt.jpg" alt="Roof Replacement in Gibraltar, MI" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Roof Replacement</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-01-roof-replacement-in-gibraltar-mi.html">Roof Replacement in Gibraltar, MI</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-01-roof-replacement-in-gibraltar-mi.html">Roof Replacement in Gibraltar, MI</a></div>
       <div class="ppf-project-card-location">Gibraltar, MI</div>
     </div>
   </div>
@@ -1092,7 +1180,7 @@
     <img src="videos/2026-03-03-roof-replacement-in-lincoln-park/submission_video_thumb.jpg" alt="Roof Replacement in Lincoln Park" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Roof Replacement</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-03-roof-replacement-in-lincoln-park.html">Roof Replacement in Lincoln Park</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-03-roof-replacement-in-lincoln-park.html">Roof Replacement in Lincoln Park</a></div>
       <div class="ppf-project-card-location">Lincoln Park, MI</div>
     </div>
   </div>
@@ -1100,7 +1188,7 @@
     <img src="videos/2026-03-03-roof-rejuvenation-project-in-new-boston-mi/submission_video_thumb.jpg" alt="Roof Rejuvenation Project in New Boston, MI" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Residential Roofing</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-03-roof-rejuvenation-project-in-new-boston-mi.html">Roof Rejuvenation Project in New Boston, MI</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-03-roof-rejuvenation-project-in-new-boston-mi.html">Roof Rejuvenation Project in New Boston, MI</a></div>
       <div class="ppf-project-card-location"></div>
     </div>
   </div>
@@ -1108,12 +1196,12 @@
     <img src="photos/2026-03-09-roof-replacement-in-riverview-mi/project-photo-1.webp" alt="Roof Replacement in Riverview, MI" loading="lazy">
     <div class="ppf-project-card-body">
       <span class="ppf-project-card-category">Residential Roofing</span>
-      <div class="ppf-project-card-title"><a href="https://lincolnparkroofing.com/projects/2026-03-09-roof-replacement-in-riverview-mi.html">Roof Replacement in Riverview, MI</a></div>
+      <div class="ppf-project-card-title"><a href="https://www.lincolnparkroofing.com/projects/2026-03-09-roof-replacement-in-riverview-mi.html">Roof Replacement in Riverview, MI</a></div>
       <div class="ppf-project-card-location">Riverview, MI</div>
     </div>
   </div>
 </div>
-<div class="ppf-view-all"><a href="https://lincolnparkroofing.com/projects/">View All Projects &rarr;</a></div>
+<div class="ppf-view-all"><a href="https://www.lincolnparkroofing.com/projects/">View All Projects &rarr;</a></div>
 </section><!-- /ppf-recent-projects -->
 
 <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20 reveal">

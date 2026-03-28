@@ -19,12 +19,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | Lincoln Park Roofing — Expert Tips & Guides</title>
     <meta name="description" content="Expert tips, guides, and insights from Lincoln Park Roofing. Read our latest articles on roofing topics.">
-    <link rel="canonical" href="https://lincolnparkroofing.com/blog/">
+    <link rel="canonical" href="https://www.lincolnparkroofing.com/blog/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Blog | Lincoln Park Roofing">
     <meta property="og:description" content="Expert tips, guides, and insights from Lincoln Park Roofing.">
-    <meta property="og:url" content="https://lincolnparkroofing.com/blog/">
+    <meta property="og:url" content="https://www.lincolnparkroofing.com/blog/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Lincoln Park Roofing">
 
@@ -52,7 +52,7 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://lincolnparkroofing.com/"},
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/"},
             {"@type": "ListItem", "position": 2, "name": "Blog"}
         ]
     }
@@ -64,9 +64,9 @@
         "@context": "https://schema.org",
         "@type": "CollectionPage",
         "name": "Blog | Lincoln Park Roofing",
-        "url": "https://lincolnparkroofing.com/blog/",
+        "url": "https://www.lincolnparkroofing.com/blog/",
         "description": "Expert tips, guides, and insights from Lincoln Park Roofing.",
-        "isPartOf": {"@type": "WebSite", "name": "Lincoln Park Roofing", "url": "https://lincolnparkroofing.com/"}
+        "isPartOf": {"@type": "WebSite", "name": "Lincoln Park Roofing", "url": "https://www.lincolnparkroofing.com/"}
     }
     </script>
 
@@ -190,6 +190,30 @@
         @media (max-width: 768px) {
             .index-hero h1 { font-size: 1.75rem; }
         }
+    
+      /* DROPDOWN NAV */
+      .nav-dropdown { position: relative; }
+      .nav-dropdown > a { cursor: pointer; }
+      .nav-dropdown-content {
+        display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+        background: white; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        border-radius: 8px; padding: 12px 0; z-index: 1100; border: 1px solid #e5e7eb;
+      }
+      .nav-dropdown:hover .nav-dropdown-content { display: block; }
+      .nav-dropdown-content a {
+        display: block; padding: 8px 20px; color: #374151; font-size: 13px;
+        font-weight: 600; text-transform: none; letter-spacing: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .nav-dropdown-content a:hover { background: #f0f7ff; color: #0056b3; }
+      .nav-dropdown-content .dd-divider { height: 1px; background: #e5e7eb; margin: 6px 0; }
+      .nav-dropdown-mega { min-width: 420px; display: none; padding: 16px; }
+      .nav-dropdown:hover .nav-dropdown-mega { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+      .nav-dropdown-mega a { padding: 6px 16px; font-size: 12px; }
+      .mobile-accordion-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; background: none; border: none; }
+      .mobile-accordion-content { display: none; padding-left: 16px; }
+      .mobile-accordion-content.open { display: block; }
+
     </style>
 </head>
 
@@ -200,15 +224,49 @@
         <div class="top-bar"><span style="color:#fbbf24">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.</div>
         <div style="background: white; width: 100%;">
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 8px 16px; max-width: 1280px; margin: 0 auto;">
-                <a href="https://lincolnparkroofing.com/" style="display: flex; align-items: center; z-index: 50; flex-shrink: 0;">
+                <a href="https://www.lincolnparkroofing.com/" style="display: flex; align-items: center; z-index: 50; flex-shrink: 0;">
                     <img src="../lincoln park logo.png" alt="Lincoln Park Roofing" style="height: 48px; width: auto; object-fit: contain;">
                 </a>
-                <nav class="desktop-nav"><a href="https://lincolnparkroofing.com/" class="nav-link">Home</a>
-<a href="https://lincolnparkroofing.com/#services" class="nav-link">Services</a>
-<a href="https://lincolnparkroofing.com/#about" class="nav-link">About Us</a>
-<a href="https://lincolnparkroofing.com/#areas" class="nav-link">Service Area</a>
-<a href="https://lincolnparkroofing.com/#faq" class="nav-link">FAQ</a>
-<a href="https://lincolnparkroofing.com/blog/" class="nav-link">Blog</a></nav>
+                        <nav class="desktop-nav hidden lg:flex items-center font-bold text-gray-700 uppercase tracking-wide text-sm" style="gap:1.5rem;">
+          <a href="/" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Services <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content">
+              <a href="/roof-repair.html">Roof Repair</a>
+              <a href="/roof-replacement.html">Roof Replacement</a>
+              <a href="/roof-rejuvenation.html">Roof Rejuvenation</a>
+              <a href="/new-roof-construction.html">New Roof Construction</a>
+              <a href="/roof-insurance-claim-lincoln-park-mi.html">Insurance Claims</a>
+              <div class="dd-divider"></div>
+              <a href="/siding.html">Siding</a>
+              <a href="/gutters.html">Gutters</a>
+              <a href="/dumpster-rental-lincoln-park.html">Dumpster Rental</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Areas We Serve <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content nav-dropdown-mega">
+              <a href="/roofer-lincoln-park-mi.html">Lincoln Park</a>
+              <a href="/allen-park-roofer.html">Allen Park</a>
+              <a href="/taylor-roofer.html">Taylor</a>
+              <a href="/southgate-roofer.html">Southgate</a>
+              <a href="/wyandotte-roofer.html">Wyandotte</a>
+              <a href="/dearborn-heights-roofer.html">Dearborn Heights</a>
+              <a href="/riverview-roofer.html">Riverview</a>
+              <a href="/trenton-roofer.html">Trenton</a>
+              <a href="/melvindale-roofer.html">Melvindale</a>
+              <a href="/ecorse-roofer.html">Ecorse</a>
+              <a href="/river-rouge-roofer.html">River Rouge</a>
+              <a href="/wayne-roofer.html">Wayne</a>
+              <a href="/plymouth-roofer.html">Plymouth</a>
+              <a href="/livonia-roofer.html">Livonia</a>
+              <a href="/grosse-ile-roofer.html">Grosse Ile</a>
+              <a href="/ypsilanti-roofer.html">Ypsilanti</a>
+            </div>
+          </div>
+          <a href="/projects/" class="nav-link hover:text-brand-primary transition duration-300">Projects</a>
+          <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
+        </nav>
                 <div class="desktop-nav" style="gap: 1rem;">
                     <a href="tel:7342245615" style="display: flex; flex-direction: column; align-items: flex-end; text-decoration: none;">
                         <span style="font-size: 0.75rem; color: #6b7280; font-weight: 700; text-transform: uppercase;">Call Now</span>
@@ -224,12 +282,12 @@
 
     <!-- ===== MOBILE MENU ===== -->
     <div id="blog-mobile-menu" style="position: fixed; inset: 0; background: white; z-index: 90; display: flex; flex-direction: column; padding: 10rem 1.5rem 0; box-shadow: 0 25px 50px rgba(0,0,0,0.25);">
-        <a href="https://lincolnparkroofing.com/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Home</a>
-<a href="https://lincolnparkroofing.com/#services" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Services</a>
-<a href="https://lincolnparkroofing.com/#about" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">About Us</a>
-<a href="https://lincolnparkroofing.com/#areas" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Service Area</a>
-<a href="https://lincolnparkroofing.com/#faq" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
-<a href="https://lincolnparkroofing.com/blog/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Blog</a>
+        <a href="https://www.lincolnparkroofing.com/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Home</a>
+<a href="https://www.lincolnparkroofing.com/#services" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Services</a>
+<a href="https://www.lincolnparkroofing.com/#about" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">About Us</a>
+<a href="https://www.lincolnparkroofing.com/#areas" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Service Area</a>
+<a href="https://www.lincolnparkroofing.com/#faq" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
+<a href="https://www.lincolnparkroofing.com/blog/" style="font-size: 1.5rem; font-weight: 700; padding: 1rem 0; border-bottom: 1px solid #f1f5f9; text-decoration: none; color: #1f2937; display: block; font-family: inherit; text-transform: uppercase; letter-spacing: 1px;">Blog</a>
         <a href="tel:7342245615" style="margin-top: 1.5rem; text-align: center; font-size: 1.25rem; font-weight: 700; color: var(--brand-primary); text-decoration: none;">
             <i class="fas fa-phone" style="margin-right: 0.5rem;"></i>(734) 224-5615
         </a>
@@ -239,7 +297,7 @@
     <section class="index-hero">
         <div style="max-width: 56rem; margin: 0 auto;">
             <nav style="font-size: 0.875rem; margin-bottom: 1rem; opacity: 0.8;">
-                <a href="https://lincolnparkroofing.com/" style="color: #d1d5db; text-decoration: none;">Home</a>
+                <a href="https://www.lincolnparkroofing.com/" style="color: #d1d5db; text-decoration: none;">Home</a>
                 <span style="margin: 0 0.5rem; color: #6b7280;">/</span>
                 <span style="color: white;">Blog</span>
             </nav>
@@ -250,12 +308,12 @@
 
     <!-- ===== ARTICLE GRID ===== -->
     <div class="article-grid">
-        <a href="https://lincolnparkroofing.com/blog/best-roofing-materials-for-michigan-winters.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Top Roofing Materials for Michigan Winters</h2><p class="card-excerpt">Best roofing materials for Michigan winters</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 24, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 12 min read</span></div></a>
-<a href="https://lincolnparkroofing.com/blog/how-to-file-a-roof-insurance-claim-in-michigan.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">How to File a Roof Insurance Claim in Michigan</h2><p class="card-excerpt">How to file a roof insurance claim in Michigan</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 19, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
-<a href="https://lincolnparkroofing.com/blog/how-much-does-a-roof-replacement-cost-in-lincoln-park-mi.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Roof Replacement Cost in Lincoln Park, MI</h2><p class="card-excerpt">How much does a roof replacement cost in Lincoln Park, MI?</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 15, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 12 min read</span></div></a>
-<a href="https://lincolnparkroofing.com/blog/ice-dam-prevention-tips-for-lincoln-park-homeowners.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Ice Dam Prevention Tips for Lincoln Park Homeowners</h2><p class="card-excerpt">Ice dam prevention tips for Lincoln Park homeowners</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 10, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
-<a href="https://lincolnparkroofing.com/blog/signs-you-need-emergency-roof-repair-after-a-michigan-storm.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Emergency Roof Repair Signs After a Michigan Storm</h2><p class="card-excerpt">Signs you need emergency roof repair after a Michigan storm</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 05, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
-<a href="https://lincolnparkroofing.com/blog/roof-rejuvenation-vs-replacement-which-saves-downriver-homeowners-more.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Roof Rejuvenation vs Replacement in Downriver</h2><p class="card-excerpt">Roof rejuvenation vs replacement: which saves Downriver homeowners more?</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 01, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 11 min read</span></div></a>
+        <a href="https://www.lincolnparkroofing.com/blog/best-roofing-materials-for-michigan-winters.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Top Roofing Materials for Michigan Winters</h2><p class="card-excerpt">Best roofing materials for Michigan winters</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 24, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 12 min read</span></div></a>
+<a href="https://www.lincolnparkroofing.com/blog/how-to-file-a-roof-insurance-claim-in-michigan.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">How to File a Roof Insurance Claim in Michigan</h2><p class="card-excerpt">How to file a roof insurance claim in Michigan</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 19, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
+<a href="https://www.lincolnparkroofing.com/blog/how-much-does-a-roof-replacement-cost-in-lincoln-park-mi.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Roof Replacement Cost in Lincoln Park, MI</h2><p class="card-excerpt">How much does a roof replacement cost in Lincoln Park, MI?</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 15, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 12 min read</span></div></a>
+<a href="https://www.lincolnparkroofing.com/blog/ice-dam-prevention-tips-for-lincoln-park-homeowners.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Ice Dam Prevention Tips for Lincoln Park Homeowners</h2><p class="card-excerpt">Ice dam prevention tips for Lincoln Park homeowners</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 10, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
+<a href="https://www.lincolnparkroofing.com/blog/signs-you-need-emergency-roof-repair-after-a-michigan-storm.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Emergency Roof Repair Signs After a Michigan Storm</h2><p class="card-excerpt">Signs you need emergency roof repair after a Michigan storm</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 05, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 13 min read</span></div></a>
+<a href="https://www.lincolnparkroofing.com/blog/roof-rejuvenation-vs-replacement-which-saves-downriver-homeowners-more.html" class="blog-card"><span class="card-category">Article</span><h2 class="card-title">Roof Rejuvenation vs Replacement in Downriver</h2><p class="card-excerpt">Roof rejuvenation vs replacement: which saves Downriver homeowners more?</p><span class="read-more">Read article <i class="fas fa-arrow-right" style="font-size: 0.75rem;"></i></span><div class="card-meta"><span><i class="fas fa-calendar" style="margin-right: 0.25rem;"></i> February 01, 2026</span><span><i class="fas fa-clock" style="margin-right: 0.25rem;"></i> 11 min read</span></div></a>
     </div>
 
     <!-- ===== CTA ===== -->

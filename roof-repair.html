@@ -26,7 +26,8 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- PERFORMANCE: Preload LCP Image -->
-  <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="slide-1.webp" type="image/webp" fetchpriority="high">
+    <link rel="preload" as="image" href="slide-1.jpg" fetchpriority="high">
 
   <!-- PERFORMANCE: Preload FontAwesome Webfont (Fixes 170ms delay) -->
   <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
@@ -140,7 +141,31 @@
       .comparison-table th { font-weight: 700; color: #111827; }
       .comparison-table td { color: #374151; }
       .comparison-table tbody tr:hover { background-color: #f8fafc; }
-  </style>
+  
+      /* DROPDOWN NAV */
+      .nav-dropdown { position: relative; }
+      .nav-dropdown > a { cursor: pointer; }
+      .nav-dropdown-content {
+        display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+        background: white; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        border-radius: 8px; padding: 12px 0; z-index: 1100; border: 1px solid #e5e7eb;
+      }
+      .nav-dropdown:hover .nav-dropdown-content { display: block; }
+      .nav-dropdown-content a {
+        display: block; padding: 8px 20px; color: #374151; font-size: 13px;
+        font-weight: 600; text-transform: none; letter-spacing: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .nav-dropdown-content a:hover { background: #f0f7ff; color: #0056b3; }
+      .nav-dropdown-content .dd-divider { height: 1px; background: #e5e7eb; margin: 6px 0; }
+      .nav-dropdown-mega { min-width: 420px; display: none; padding: 16px; }
+      .nav-dropdown:hover .nav-dropdown-mega { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+      .nav-dropdown-mega a { padding: 6px 16px; font-size: 12px; }
+      .mobile-accordion-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; background: none; border: none; }
+      .mobile-accordion-content { display: none; padding-left: 16px; }
+      .mobile-accordion-content.open { display: block; }
+
+    </style>
 
   <!-- Google Fonts: Async -->
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -185,6 +210,14 @@
         "name": "Lincoln Park Roofing",
         "url": "https://www.lincolnparkroofing.com/",
         "telephone": "+1-734-224-5615",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2026 Thomas St",
+          "addressLocality": "Lincoln Park",
+          "addressRegion": "MI",
+          "postalCode": "48146",
+          "addressCountry": "US"
+        },
         "knowsAbout": [
           "Residential Roofing Systems",
           "Asphalt Shingle Restoration",
@@ -262,6 +295,14 @@
               "@type": "Answer",
               "text": "Most roof repairs in Lincoln Park can be completed in a single day. Emergency tarping is often done the same day you call. More complex repairs involving structural decking or large flashing areas may take one to two days depending on scope and weather conditions."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Where can I find a roofer near me for emergency roof repair in Downriver Michigan?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Lincoln Park Roofing serves homeowners across Downriver Michigan including Lincoln Park, Allen Park, Taylor, Southgate, Wyandotte, and surrounding Wayne County communities. We prioritize emergency roof repair calls and can usually be on-site the same day. Call (734) 224-5615 for fast service from a licensed local roofer near you."
+            }
           }
         ]
       },
@@ -292,16 +333,52 @@
     <div class="bg-white w-full">
       <div class="critical-nav">
         <a href="index.html" class="flex items-center gap-2 z-50 shrink-0">
-          <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+          <picture>
+                        <source srcset="lincoln-park-logo.webp" type="image/webp">
+                        <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+                    </picture>
         </a>
 
         <!-- Desktop Nav -->
-        <nav class="desktop-nav hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
-          <a href="index.html" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
-          <a href="roof-repair.html" class="nav-link hover:text-brand-primary transition duration-300" style="color:#0056b3;">Roof Repair</a>
-          <a href="#service-list" class="nav-link hover:text-brand-primary transition duration-300">Services</a>
-          <a href="#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
-          <a href="#areas" class="nav-link hover:text-brand-primary transition duration-300">Service Area</a>
+                <nav class="desktop-nav hidden lg:flex items-center font-bold text-gray-700 uppercase tracking-wide text-sm" style="gap:1.5rem;">
+          <a href="/" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Services <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content">
+              <a href="/roof-repair.html">Roof Repair</a>
+              <a href="/roof-replacement.html">Roof Replacement</a>
+              <a href="/roof-rejuvenation.html">Roof Rejuvenation</a>
+              <a href="/new-roof-construction.html">New Roof Construction</a>
+              <a href="/roof-insurance-claim-lincoln-park-mi.html">Insurance Claims</a>
+              <div class="dd-divider"></div>
+              <a href="/siding.html">Siding</a>
+              <a href="/gutters.html">Gutters</a>
+              <a href="/dumpster-rental-lincoln-park.html">Dumpster Rental</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Areas We Serve <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content nav-dropdown-mega">
+              <a href="/roofer-lincoln-park-mi.html">Lincoln Park</a>
+              <a href="/allen-park-roofer.html">Allen Park</a>
+              <a href="/taylor-roofer.html">Taylor</a>
+              <a href="/southgate-roofer.html">Southgate</a>
+              <a href="/wyandotte-roofer.html">Wyandotte</a>
+              <a href="/dearborn-heights-roofer.html">Dearborn Heights</a>
+              <a href="/riverview-roofer.html">Riverview</a>
+              <a href="/trenton-roofer.html">Trenton</a>
+              <a href="/melvindale-roofer.html">Melvindale</a>
+              <a href="/ecorse-roofer.html">Ecorse</a>
+              <a href="/river-rouge-roofer.html">River Rouge</a>
+              <a href="/wayne-roofer.html">Wayne</a>
+              <a href="/plymouth-roofer.html">Plymouth</a>
+              <a href="/livonia-roofer.html">Livonia</a>
+              <a href="/grosse-ile-roofer.html">Grosse Ile</a>
+              <a href="/ypsilanti-roofer.html">Ypsilanti</a>
+            </div>
+          </div>
+          <a href="/projects/" class="nav-link hover:text-brand-primary transition duration-300">Projects</a>
+          <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
         </nav>
 
         <div class="desktop-nav hidden lg:flex items-center space-x-4">
@@ -320,18 +397,53 @@
   </header>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl">
-    <a href="index.html" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Home</a>
-    <a href="roof-repair.html" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text" style="color:#0056b3;">Roof Repair</a>
-    <a href="#service-list" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Services</a>
-    <a href="#faq" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">FAQ</a>
-    <a href="#areas" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Service Areas</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl" style="overflow-y:auto;">
+    <a href="/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Home</a>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Services <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roof-repair.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Repair</a>
+        <a href="/roof-replacement.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Replacement</a>
+        <a href="/roof-rejuvenation.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Rejuvenation</a>
+        <a href="/new-roof-construction.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">New Construction</a>
+        <a href="/roof-insurance-claim-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Insurance Claims</a>
+        <a href="/siding.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Siding</a>
+        <a href="/gutters.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Gutters</a>
+        <a href="/dumpster-rental-lincoln-park.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dumpster Rental</a>
+      </div>
+    </div>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Service Areas <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roofer-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Lincoln Park</a>
+        <a href="/allen-park-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Allen Park</a>
+        <a href="/taylor-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Taylor</a>
+        <a href="/southgate-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Southgate</a>
+        <a href="/wyandotte-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wyandotte</a>
+        <a href="/dearborn-heights-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dearborn Heights</a>
+        <a href="/riverview-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Riverview</a>
+        <a href="/trenton-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Trenton</a>
+        <a href="/melvindale-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Melvindale</a>
+        <a href="/ecorse-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ecorse</a>
+        <a href="/river-rouge-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">River Rouge</a>
+        <a href="/wayne-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wayne</a>
+        <a href="/plymouth-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Plymouth</a>
+        <a href="/livonia-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Livonia</a>
+        <a href="/grosse-ile-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Grosse Ile</a>
+        <a href="/ypsilanti-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ypsilanti</a>
+      </div>
+    </div>
+    <a href="/projects/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Projects</a>
+    <a href="/blog/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Blog</a>
   </div>
 
-  <!-- HERO -->
+<!-- HERO -->
   <section class="critical-hero relative min-h-[420px] lg:h-[560px] flex flex-col justify-center overflow-hidden">
     <div class="absolute inset-0 w-full h-full">
-      <img src="slide-1.jpg" alt="Roof repair in Lincoln Park, Michigan" class="hero-bg-img" fetchpriority="high" decoding="async">
+      <picture>
+                <source srcset="slide-1.webp" type="image/webp">
+                <img src="slide-1.jpg" alt="Roof repair in Lincoln Park, Michigan" class="hero-bg-img" fetchpriority="high" decoding="async">
+            </picture>
       <div class="absolute inset-0 bg-brand-dark opacity-45"></div>
     </div>
 
@@ -398,7 +510,7 @@
 
           <!-- INTRO PARAGRAPH — contains internal link to new-roof-construction -->
           <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-5">
-            Whether you're dealing with a sudden leak after a Downriver storm or shingles that have lifted near Council Point Park, <a href="index.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">Lincoln Park Roofing</a> provides fast and dependable roof repair for homes and businesses throughout Lincoln Park and surrounding communities. From minor patching to full leak diagnosis, we handle every job with care and transparency. If your roof is beyond repair, we also offer <a href="https://lincolnparkroofing.com/new-roof-construction.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">new construction roofing</a> for properties that need a fresh start.
+            Whether you're dealing with a sudden leak after a Downriver storm or shingles that have lifted near Council Point Park, <a href="index.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">Lincoln Park Roofing</a> provides fast and dependable roof repair for homes and businesses throughout Lincoln Park and surrounding communities. From minor patching to full leak diagnosis, we handle every job with care and transparency. If your roof is beyond repair, we also offer <a href="https://www.lincolnparkroofing.com/new-roof-construction.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">new construction roofing</a> for properties that need a fresh start.
           </p>
 
           <!-- SECOND PARAGRAPH — Authority Link placed in MIDDLE -->
@@ -434,7 +546,7 @@
           </div>
 
           <!-- ROOF REPAIR SERVICES LIST -->
-          <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Roof Repair Services We Provide</h3>
+          <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Roof Repair Services We Provide in Lincoln Park</h3>
 
           <ul id="service-list" class="space-y-3 text-gray-800 mb-8">
             <li class="flex items-start gap-3">
@@ -482,7 +594,7 @@
 
           <!-- BODY PARAGRAPH with internal link to roof-rejuvenation -->
           <p class="text-gray-600 text-base md:text-lg leading-relaxed mb-8">
-            For roofs that still have structural life remaining but show early signs of granule loss and brittleness, <a href="https://lincolnparkroofing.com/roof-rejuvenation.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">asphalt shingle restoration</a> can restore flexibility and extend performance at a fraction of the cost. We're the only company offering this certified treatment in Wayne County, and we'll tell you honestly whether your roof qualifies during the inspection.
+            For roofs that still have structural life remaining but show early signs of granule loss and brittleness, <a href="https://www.lincolnparkroofing.com/roof-rejuvenation.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">asphalt shingle restoration</a> can restore flexibility and extend performance at a fraction of the cost. We're the only company offering this certified treatment in Wayne County, and we'll tell you honestly whether your roof qualifies during the inspection.
           </p>
 
           <!-- FEATURED SNIPPET H3 — Speakable Hook -->
@@ -551,7 +663,7 @@
           <div class="pro-tip-card">
             <p class="font-bold text-brand-primary text-lg mb-2"><i class="fas fa-lightbulb mr-2"></i> Pro Tip: Document Damage Before You Call Your Insurer</p>
             <p class="text-gray-700 text-base leading-relaxed mb-3">
-              After a storm, take photos of visible damage from the ground before making any temporary repairs. This documentation strengthens your claim. Our team can provide a detailed inspection report and walk you through the process — learn more about our <a href="https://lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">storm damage claims assistance</a> to see how we help Lincoln Park homeowners.
+              After a storm, take photos of visible damage from the ground before making any temporary repairs. This documentation strengthens your claim. Our team can provide a detailed inspection report and walk you through the process — learn more about our <a href="https://www.lincolnparkroofing.com/roof-insurance-claim-lincoln-park-mi.html" class="underline decoration-brand-primary/40 hover:decoration-brand-primary font-semibold">storm damage claims assistance</a> to see how we help Lincoln Park homeowners.
             </p>
           </div>
 
@@ -563,9 +675,17 @@
             </p>
           </div>
 
+          <!-- NEAR ME VOICE HOOK -->
+          <div class="mt-10">
+            <h3 class="speakable-hook big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">Emergency Roof Repair Near Me in Lincoln Park &amp; Downriver</h3>
+            <p class="text-gray-700 text-base md:text-lg leading-relaxed mb-6">
+              If you're searching for emergency roof repair near me in Lincoln Park, Allen Park, Taylor, or anywhere across Downriver Michigan, we're the local crew homeowners call first. We respond fast to active leaks and storm damage — most emergency calls get same-day service. Whether you're near Council Point Park or off Dix Highway in Southgate, our team is just minutes away and ready to protect your home.
+            </p>
+          </div>
+
           <!-- WHAT TO EXPECT 4-CARD GRID -->
           <div class="mt-10">
-            <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">What to Expect When You Call for Roof Repair</h3>
+            <h3 class="big-text text-2xl md:text-3xl font-bold text-brand-primary mb-4">What to Expect When You Call Your Lincoln Park Roofer</h3>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div class="bg-white border border-gray-200 rounded-2xl p-6 shadow-md">
@@ -714,6 +834,14 @@
           </summary>
           <p class="text-gray-600 mt-3">Most homeowner insurance policies cover storm-related roof damage including wind, hail, and fallen debris. We document all damage with photos and a detailed scope report, and we can guide you through the claims process step by step. Call (734) 224-5615 and we'll explain your options.</p>
         </details>
+
+        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+          <summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">
+            Where can I find a roofer near me for emergency roof repair in Downriver Michigan?
+            <i class="fas fa-plus text-brand-primary ml-4"></i>
+          </summary>
+          <p class="text-gray-600 mt-3">Lincoln Park Roofing serves homeowners across Downriver Michigan including Lincoln Park, Allen Park, Taylor, Southgate, Wyandotte, and surrounding Wayne County communities. We prioritize emergency roof repair calls and can usually be on-site the same day. Call (734) 224-5615 for fast service from a licensed local roofer near you.</p>
+        </details>
       </div>
     </div>
   </section>
@@ -742,8 +870,8 @@
         <a href="riverview-roofer.html" class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white hover:bg-white/20 transition">Riverview</a>
         <a href="plymouth-roofer.html" class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white hover:bg-white/20 transition">Plymouth</a>
         <a href="livonia-roofer.html" class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white hover:bg-white/20 transition">Livonia</a>
-        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Trenton</div>
-        <div class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white">Grosse Ile</div>
+        <a href="trenton-roofer.html" class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white hover:bg-white/20 transition">Trenton</a>
+        <a href="grosse-ile-roofer.html" class="bg-white/10 rounded-xl border border-white/20 p-4 text-center font-semibold text-white hover:bg-white/20 transition">Grosse Ile</a>
       </div>
     </div>
   </section>
@@ -751,7 +879,10 @@
   <!-- FOOTER -->
   <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20">
     <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
-      <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async" />
+      <picture>
+          <source srcset="lincoln-park-logo-footer.webp" type="image/webp">
+          <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy" decoding="async" />
+        </picture>
 
       <div class="w-full h-64 rounded-2xl overflow-hidden shadow-lg mb-6">
         <iframe class="w-full h-full border-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d378116.33302825416!2d-83.73616694963289!3d42.2350897670785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883b3f44403c2903%3A0xe2300eacd6da54b0!2sLincoln%20Park%20Roofing!5e0!3m2!1sen!2sus!4v1766107467070!5m2!1sen!2sus" allowfullscreen="" loading="lazy" title="Lincoln Park Roofing Map"></iframe>

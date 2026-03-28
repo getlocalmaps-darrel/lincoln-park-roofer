@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://lincolnparkroofing.com/sitemap.xml
+Sitemap: https://www.lincolnparkroofing.com/sitemap.xml
 
 User-agent: GPTBot
 Allow: /

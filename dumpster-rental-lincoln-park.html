@@ -113,7 +113,31 @@
       
       #mobile-menu { transition: transform 0.3s ease-in-out; transform: translateX(-100%); }
       #mobile-menu.open { transform: translateX(0); }
-  </style>
+  
+      /* DROPDOWN NAV */
+      .nav-dropdown { position: relative; }
+      .nav-dropdown > a { cursor: pointer; }
+      .nav-dropdown-content {
+        display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+        background: white; min-width: 220px; box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        border-radius: 8px; padding: 12px 0; z-index: 1100; border: 1px solid #e5e7eb;
+      }
+      .nav-dropdown:hover .nav-dropdown-content { display: block; }
+      .nav-dropdown-content a {
+        display: block; padding: 8px 20px; color: #374151; font-size: 13px;
+        font-weight: 600; text-transform: none; letter-spacing: 0;
+        transition: background 0.15s, color 0.15s;
+      }
+      .nav-dropdown-content a:hover { background: #f0f7ff; color: #0056b3; }
+      .nav-dropdown-content .dd-divider { height: 1px; background: #e5e7eb; margin: 6px 0; }
+      .nav-dropdown-mega { min-width: 420px; display: none; padding: 16px; }
+      .nav-dropdown:hover .nav-dropdown-mega { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+      .nav-dropdown-mega a { padding: 6px 16px; font-size: 12px; }
+      .mobile-accordion-btn { display: flex; justify-content: space-between; align-items: center; width: 100%; cursor: pointer; background: none; border: none; }
+      .mobile-accordion-content { display: none; padding-left: 16px; }
+      .mobile-accordion-content.open { display: block; }
+
+    </style>
 
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"></noscript>
@@ -166,6 +190,7 @@
               "url": "https://www.dumpsterrentalsdetroit.com/lincoln-park/",
               "address": {
                   "@type": "PostalAddress",
+            "streetAddress": "2026 Thomas St",
                   "addressLocality": "Brownstown",
                   "addressRegion": "MI",
                   "postalCode": "48134"
@@ -209,15 +234,51 @@
     <div class="bg-white w-full">
       <div class="critical-nav">
         <a href="index.html" class="flex items-center gap-2 z-50 shrink-0">
-          <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+          <picture>
+                        <source srcset="lincoln-park-logo.webp" type="image/webp">
+                        <img src="lincoln park logo.png" alt="Lincoln Park Roofing" width="180" height="80" class="critical-logo object-contain">
+                    </picture>
         </a>
         
-        <nav class="desktop-nav hidden lg:flex space-x-8 items-center font-bold text-gray-700 uppercase tracking-wide text-sm">
-          <a href="index.html" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
-          <a href="index.html#content" class="nav-link hover:text-brand-primary transition duration-300">Overview</a>
-          <a href="index.html#service-list" class="nav-link hover:text-brand-primary transition duration-300">Services</a>
-          <a href="index.html#faq" class="nav-link hover:text-brand-primary transition duration-300">FAQ</a>
-          <a href="dumpster-rental-lincoln-park.html" class="nav-link text-brand-primary">Resources</a>
+                <nav class="desktop-nav hidden lg:flex items-center font-bold text-gray-700 uppercase tracking-wide text-sm" style="gap:1.5rem;">
+          <a href="/" class="nav-link hover:text-brand-primary transition duration-300">Home</a>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Services <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content">
+              <a href="/roof-repair.html">Roof Repair</a>
+              <a href="/roof-replacement.html">Roof Replacement</a>
+              <a href="/roof-rejuvenation.html">Roof Rejuvenation</a>
+              <a href="/new-roof-construction.html">New Roof Construction</a>
+              <a href="/roof-insurance-claim-lincoln-park-mi.html">Insurance Claims</a>
+              <div class="dd-divider"></div>
+              <a href="/siding.html">Siding</a>
+              <a href="/gutters.html">Gutters</a>
+              <a href="/dumpster-rental-lincoln-park.html">Dumpster Rental</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a class="nav-link hover:text-brand-primary transition duration-300">Areas We Serve <i class="fas fa-chevron-down" style="font-size:10px;margin-left:4px;"></i></a>
+            <div class="nav-dropdown-content nav-dropdown-mega">
+              <a href="/roofer-lincoln-park-mi.html">Lincoln Park</a>
+              <a href="/allen-park-roofer.html">Allen Park</a>
+              <a href="/taylor-roofer.html">Taylor</a>
+              <a href="/southgate-roofer.html">Southgate</a>
+              <a href="/wyandotte-roofer.html">Wyandotte</a>
+              <a href="/dearborn-heights-roofer.html">Dearborn Heights</a>
+              <a href="/riverview-roofer.html">Riverview</a>
+              <a href="/trenton-roofer.html">Trenton</a>
+              <a href="/melvindale-roofer.html">Melvindale</a>
+              <a href="/ecorse-roofer.html">Ecorse</a>
+              <a href="/river-rouge-roofer.html">River Rouge</a>
+              <a href="/wayne-roofer.html">Wayne</a>
+              <a href="/plymouth-roofer.html">Plymouth</a>
+              <a href="/livonia-roofer.html">Livonia</a>
+              <a href="/grosse-ile-roofer.html">Grosse Ile</a>
+              <a href="/ypsilanti-roofer.html">Ypsilanti</a>
+            </div>
+          </div>
+          <a href="/projects/" class="nav-link hover:text-brand-primary transition duration-300">Projects</a>
+          <a href="/blog/" class="nav-link hover:text-brand-primary transition duration-300">Blog</a>
         </nav>
 
         <div class="desktop-nav hidden lg:flex items-center space-x-4">
@@ -235,16 +296,52 @@
     </div>
   </header>
 
-  <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl">
-    <a href="index.html" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Home</a>
-    <a href="index.html#service-list" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Services</a>
-    <a href="dumpster-rental-lincoln-park.html" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text text-brand-primary">Dumpster Rental</a>
-    <a href="index.html#faq" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">FAQ</a>
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-[90] flex flex-col pt-40 px-6 lg:hidden shadow-2xl" style="overflow-y:auto;">
+    <a href="/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Home</a>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Services <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roof-repair.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Repair</a>
+        <a href="/roof-replacement.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Replacement</a>
+        <a href="/roof-rejuvenation.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Roof Rejuvenation</a>
+        <a href="/new-roof-construction.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">New Construction</a>
+        <a href="/roof-insurance-claim-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Insurance Claims</a>
+        <a href="/siding.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Siding</a>
+        <a href="/gutters.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Gutters</a>
+        <a href="/dumpster-rental-lincoln-park.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dumpster Rental</a>
+      </div>
+    </div>
+    <div class="border-b border-gray-100">
+      <button class="mobile-accordion-btn mobile-link text-2xl font-bold py-4 big-text" onclick="this.nextElementSibling.classList.toggle('open');this.querySelector('i').classList.toggle('fa-chevron-down');this.querySelector('i').classList.toggle('fa-chevron-up');">Service Areas <i class="fas fa-chevron-down" style="font-size:14px;"></i></button>
+      <div class="mobile-accordion-content">
+        <a href="/roofer-lincoln-park-mi.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Lincoln Park</a>
+        <a href="/allen-park-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Allen Park</a>
+        <a href="/taylor-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Taylor</a>
+        <a href="/southgate-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Southgate</a>
+        <a href="/wyandotte-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wyandotte</a>
+        <a href="/dearborn-heights-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Dearborn Heights</a>
+        <a href="/riverview-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Riverview</a>
+        <a href="/trenton-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Trenton</a>
+        <a href="/melvindale-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Melvindale</a>
+        <a href="/ecorse-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ecorse</a>
+        <a href="/river-rouge-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">River Rouge</a>
+        <a href="/wayne-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Wayne</a>
+        <a href="/plymouth-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Plymouth</a>
+        <a href="/livonia-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Livonia</a>
+        <a href="/grosse-ile-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Grosse Ile</a>
+        <a href="/ypsilanti-roofer.html" class="mobile-link text-lg font-semibold py-2 block text-gray-600">Ypsilanti</a>
+      </div>
+    </div>
+    <a href="/projects/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Projects</a>
+    <a href="/blog/" class="mobile-link text-2xl font-bold py-4 border-b border-gray-100 big-text">Blog</a>
   </div>
 
-  <section class="critical-hero relative min-h-[400px] flex flex-col justify-center overflow-hidden">
+<section class="critical-hero relative min-h-[400px] flex flex-col justify-center overflow-hidden">
     <div class="absolute inset-0 w-full h-full">
-      <img src="slide-1.jpg" alt="Dumpster Rental Lincoln Park" class="hero-bg-img opacity-50" fetchpriority="high">
+      <picture>
+                <source srcset="slide-1.webp" type="image/webp">
+                <img src="slide-1.jpg" alt="Dumpster Rental Lincoln Park" class="hero-bg-img opacity-50" fetchpriority="high">
+            </picture>
       <div class="absolute inset-0 bg-brand-dark opacity-80"></div>
     </div>
 
@@ -453,7 +550,10 @@
 
   <footer class="bg-gradient-to-br from-slate-900 to-blue-950 text-gray-400 py-12 border-t border-white/10 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] relative z-20">
     <div class="container mx-auto px-4 md:px-6 flex flex-col items-center gap-6 text-center relative z-10">
-      <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy">
+      <picture>
+          <source srcset="lincoln-park-logo-footer.webp" type="image/webp">
+          <img src="lincoln park logo footer.png" alt="Lincoln Park Roofing" width="180" height="80" class="h-16 md:h-20 w-auto opacity-95" loading="lazy">
+        </picture>
       
       <div class="text-gray-300 space-y-1">
         <p class="font-bold text-white text-lg">Lincoln Park Roofing</p>
