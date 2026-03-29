@@ -239,8 +239,8 @@
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "5",
-          "reviewCount": "47",
+          "ratingValue": "4.9",
+          "reviewCount": "33",
           "bestRating": "5"
         }
       },
@@ -316,6 +316,35 @@
     ]
   }
   </script>
+
+  <!-- Product Schema — triggers star rich results in Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Lincoln Park Roofing",
+    "description": "Licensed roofing contractor in Lincoln Park, MI. Roof repair, replacement, rejuvenation, siding, and gutters.",
+    "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+    "url": "https://www.lincolnparkroofing.com/",
+    "brand": { "@type": "Brand", "name": "Lincoln Park Roofing" },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "itemReviewed": { "@type": "Thing", "name": "Lincoln Park Roofing" },
+      "ratingValue": "4.9",
+      "ratingCount": "33",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "url": "https://www.lincolnparkroofing.com/",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free estimate"
+    }
+  }
+  </script>
 </head>
 
 <body class="font-sans text-gray-800 antialiased w-full overflow-x-hidden pb-16 lg:pb-0 pt-[96px]">
@@ -325,6 +354,7 @@
 
   <!-- HEADER -->
   <header class="critical-header flex flex-col">
+    <div id="review-bar" style="width:100%;background:#09090b;padding:6px 12px;border-bottom:1px solid rgba(251,191,36,0.2);display:flex;align-items:center;justify-content:center;gap:8px;"><span style="color:#eab308;font-size:14px;line-height:1;" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span style="color:#fff;font-size:12px;font-weight:700;letter-spacing:0.05em;">4.9 rating &middot; <a href="/reviews.html" style="color:#fff;text-decoration:underline;text-underline-offset:2px;">33 homeowner reviews</a></span></div>
     <div class="critical-top-bar">
       <p class="big-text tracking-wide text-xs md:text-sm">
         <span class="text-brand-accent">Save Thousands with Roof Rejuvenation</span> • Local Trenton Roofers • Honest Pricing
