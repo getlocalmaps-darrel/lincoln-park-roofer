@@ -45,7 +45,8 @@
     .nav { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; }
     .nav-logo { z-index: 50; }
     .nav-logo img { height: 48px; }
-    .nav-links { display: flex; gap: 24px; list-style: none; }
+    .nav-links { display: flex; gap: 24px; list-style: none; align-items: center; }
+    .nav-links li { position: relative; }
     .nav-links a { color: #374151; font-weight: 600; font-size: 15px; }
     .nav-links a:hover { color: var(--primary); text-decoration: none; }
     .nav-phone { background: var(--primary); color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 700; font-size: 15px; white-space: nowrap; }
@@ -496,13 +497,46 @@
     <div class="top-bar"><span style="color:#fbbf24">Save Thousands $$$ with Roof Rejuvenation</span>. Roofer Insurance Claim Specialist. Financing Available.</div>
     <nav class="nav">
       <a href="https://www.lincolnparkroofing.com/" class="nav-logo"><img src="../lincoln park logo.png" alt="Lincoln Park Roofing"></a>
-      <ul class="nav-links"><li><a href="https://www.lincolnparkroofing.com/">Home</a></li>
-<li><a href="https://www.lincolnparkroofing.com/#services">Services</a></li>
-<li><a href="https://www.lincolnparkroofing.com/#about">About Us</a></li>
-<li><a href="https://www.lincolnparkroofing.com/#areas">Service Area</a></li>
-<li><a href="https://www.lincolnparkroofing.com/#faq">FAQ</a></li>
-<li><a href="https://www.lincolnparkroofing.com/blog/">Blog</a></li>
-<li><a href="https://www.lincolnparkroofing.com/projects/">Projects</a></li></ul>
+      <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li class="nav-dropdown">
+        <a style="cursor:pointer;">Services <i class="fas fa-chevron-down" style="font-size:10px;margin-left:3px;"></i></a>
+        <div class="nav-dropdown-content">
+          <a href="/roof-repair.html">Roof Repair</a>
+          <a href="/roof-replacement.html">Roof Replacement</a>
+          <a href="/roof-rejuvenation.html">Roof Rejuvenation</a>
+          <a href="/new-roof-construction.html">New Roof Construction</a>
+          <a href="/roof-insurance-claim-lincoln-park-mi.html">Insurance Claims</a>
+          <div class="dd-divider"></div>
+          <a href="/siding.html">Siding</a>
+          <a href="/gutters.html">Gutters</a>
+          <a href="/dumpster-rental-lincoln-park.html">Dumpster Rental</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a style="cursor:pointer;">Areas We Serve <i class="fas fa-chevron-down" style="font-size:10px;margin-left:3px;"></i></a>
+        <div class="nav-dropdown-content nav-dropdown-mega">
+          <a href="/roofer-lincoln-park-mi.html">Lincoln Park</a>
+          <a href="/allen-park-roofer.html">Allen Park</a>
+          <a href="/taylor-roofer.html">Taylor</a>
+          <a href="/southgate-roofer.html">Southgate</a>
+          <a href="/wyandotte-roofer.html">Wyandotte</a>
+          <a href="/dearborn-heights-roofer.html">Dearborn Heights</a>
+          <a href="/riverview-roofer.html">Riverview</a>
+          <a href="/trenton-roofer.html">Trenton</a>
+          <a href="/melvindale-roofer.html">Melvindale</a>
+          <a href="/ecorse-roofer.html">Ecorse</a>
+          <a href="/river-rouge-roofer.html">River Rouge</a>
+          <a href="/wayne-roofer.html">Wayne</a>
+          <a href="/plymouth-roofer.html">Plymouth</a>
+          <a href="/livonia-roofer.html">Livonia</a>
+          <a href="/grosse-ile-roofer.html">Grosse Ile</a>
+          <a href="/ypsilanti-roofer.html">Ypsilanti</a>
+        </div>
+      </li>
+      <li><a href="/projects/">Projects</a></li>
+      <li><a href="/blog/">Blog</a></li>
+    </ul>
       <a href="tel:7342245615" class="nav-phone">(734) 224-5615</a>
       <button id="nav-menu-btn" class="nav-hamburger" aria-label="Menu"><i class="fas fa-bars"></i></button>
     </nav>
