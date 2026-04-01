@@ -1470,7 +1470,7 @@
         const menuBtn = document.getElementById("menu-btn");
         const mobileMenu = document.getElementById("mobile-menu");
         menuBtn.addEventListener("click", () => mobileMenu.classList.toggle("open"));
-        document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
+        document.querySelectorAll("#mobile-menu a.mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
 
         // Service Area Toggle
         const toggleCitiesBtn = document.getElementById('toggle-cities-btn');

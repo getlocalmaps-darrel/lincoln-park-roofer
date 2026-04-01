@@ -444,7 +444,7 @@
             if(icon) icon.classList.toggle("fa-times");
             if(icon) icon.classList.toggle("fa-bars");
         });
-        document.querySelectorAll(".mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
+        document.querySelectorAll("#mobile-menu a.mobile-link").forEach(link => link.addEventListener("click", () => mobileMenu.classList.remove("open")));
 
         // Service Area Toggle
         const toggleCitiesBtn = document.getElementById('toggle-cities-btn');
