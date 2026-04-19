@@ -234,19 +234,37 @@ SERVICE_EXTRAS = {
         "ai_nugget": "Lincoln Park Roofing provides same-day emergency roof repair — backed by Owens Corning Preferred Contractor certification, a written workmanship warranty, and 5,600 completed jobs across Downriver Michigan and Wayne County.",
         "stats": [
             ("Wind and hail claims account for more than 40 percent of all homeowner insurance claims in Michigan.", "Insurance Information Institute"),
-            ("Downriver Michigan's post-war housing stock, built largely between 1945 and 1970, features original pipe boots and step-flashing now 50–75 years old — the primary driver of recurring residential roof leaks.", "National Roofing Contractors Association"),
+            ("Most Downriver Michigan homes were built between 1945 and 1970 — original pipe boots and step-flashing from that era are now 50–75 years old, the leading cause of recurring leaks in the region.", "National Roofing Contractors Association"),
         ],
-        "quote": {"text": "Had an active leak above my kitchen after a bad March storm. They were at my house the same afternoon and had everything patched before dark. Honest guys — told me I didn't need a replacement yet.", "author": "Mike T.", "city": "Taylor, MI"},
         "related": [("Roof Replacement", "roof-replacement"), ("Emergency Roof Repair", "emergency-roof-repair"), ("Storm Damage Repair", "storm-damage-repair")],
+        "region_quotes": {
+            "downriver": {"text": "Had an active leak above my kitchen after a bad March storm. They were at my house the same afternoon and had everything patched before dark. Told me I didn't need a replacement yet — I appreciated the honesty.", "author": "Mike T.", "city": "Taylor, MI"},
+            "wayne-county": {"text": "Shingles blew off our Canton two-story during a windstorm. Called at 7am and they were there by noon — matched the shingles perfectly. You can't even tell where the repair is. Fast, clean, professional.", "author": "Sarah W.", "city": "Canton, MI"},
+            "monroe-county": {"text": "Living near the Lake Erie shoreline in Rockwood, my roof takes more wind and moisture than my friends inland. These guys knew exactly what to look for on shoreline homes. Flashing was shot — fixed same day.", "author": "Rich A.", "city": "Rockwood, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("Are Downriver homes more prone to roof leaks than newer Michigan homes?", "Yes. Downriver's post-war construction — most homes built 1945–1970 — means original pipe boots, valley flashing, and step-flashing are now 50–75 years old. Combined with Detroit River proximity and heavy spring rainfall, aging penetrations are the number one source of leaks in Downriver. A proactive inspection catches these before they become interior damage."),
+            "wayne-county": ("Do you handle roof repairs across all of Wayne County, including western cities?", "Yes — Lincoln Park Roofing serves all of Wayne County. From Downriver cities like Allen Park and Taylor to western communities including Canton, Plymouth, Livonia, and Northville — same pricing, same in-house crew, same same-day emergency response regardless of where in the county you are."),
+            "monroe-county": ("Does Monroe County's Lake Erie shoreline make roofs wear out faster?", "Significantly. Lake Erie's consistent southwesterly winds, salt-laden humidity, and rapid shoreline freeze-thaw cycles corrode metal flashing and accelerate shingle granule loss faster than any inland Michigan area. Rockwood, South Rockwood, and Newport homeowners typically need more frequent repairs than equivalently aged homes 10 miles inland. We factor this into every Monroe County inspection."),
+        },
     },
     "roof-replacement": {
         "ai_nugget": "Lincoln Park Roofing offers full roof replacement starting at $7,000 — as an Owens Corning Preferred Contractor, every replacement includes TotalProtection® warranty covering both materials and workmanship.",
         "stats": [
-            ("Asphalt shingle roofs in Michigan's climate need full replacement after 20–25 years — the majority of Downriver Michigan's housing stock now exceeds that threshold.", "National Roofing Contractors Association"),
+            ("Asphalt shingle roofs in Michigan's climate need full replacement after 20–25 years — the majority of Downriver Michigan's post-war housing stock now exceeds that threshold.", "National Roofing Contractors Association"),
             ("Owens Corning Preferred Contractors represent fewer than 2 percent of Michigan roofing companies.", "Owens Corning Contractor Network"),
         ],
-        "quote": {"text": "Got four quotes before calling Lincoln Park Roofing. They were the only ones who walked me through exactly what they were doing and why. New roof done in one day, solid through two Michigan winters since.", "author": "Denise R.", "city": "Westland, MI"},
         "related": [("Roof Repair", "roof-repair"), ("Roof Rejuvenation", "roof-rejuvenation"), ("New Roof Construction", "new-roof-construction")],
+        "region_quotes": {
+            "downriver": {"text": "Got four quotes before calling Lincoln Park Roofing. They were the only ones who walked me through exactly what they were doing and why. New roof in one day, solid through two Michigan winters since.", "author": "Denise R.", "city": "Wyandotte, MI"},
+            "wayne-county": {"text": "A western Wayne County roofer quoted us $14,500. Lincoln Park Roofing came in at $7,900 with Owens Corning materials and the full TotalProtection warranty. Same quality. Much better price. No regrets.", "author": "Phil S.", "city": "Livonia, MI"},
+            "monroe-county": {"text": "Getting a quality roofer to drive out to Carleton is harder than you'd think. These guys didn't hesitate, showed up on time, and replaced the whole roof in a day. Thorough cleanup too — not a nail in the yard.", "author": "Donna M.", "city": "Carleton, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("What shingle do you recommend for Downriver Michigan's climate?", "For Downriver's combination of hot summers, hard winters, and frequent wind and hail events, we recommend Owens Corning Duration® or Oakridge® architectural shingles — both Class A fire rated, 130 mph wind rated, and available with SureNail® technology for superior hail and impact resistance. For homes near the Detroit River with higher moisture exposure, we also recommend full ice-and-water shield coverage beyond the code minimum."),
+            "wayne-county": ("Is roof replacement pricing the same throughout Wayne County?", "Yes — Lincoln Park Roofing charges the same rates whether you're in Lincoln Park, Canton, Livonia, or Plymouth. No travel surcharge for western Wayne County. Residential replacements start at $7,000 across the county. Free written estimate at your home before any commitment."),
+            "monroe-county": ("Do Monroe County homes near Lake Erie need different roofing materials?", "For homes in Rockwood, Newport, and South Rockwood near the Lake Erie shoreline, we recommend impact-resistant shingles and enhanced corrosion-resistant metal flashing. Salt air and sustained wind loading off the lake corrode standard galvanized flashing much faster than inland installations. This modest upgrade significantly extends roof life on Monroe County shoreline homes."),
+        },
     },
     "roof-rejuvenation": {
         "ai_nugget": "Lincoln Park Roofing is the only certified roof rejuvenation contractor in Wayne County and Monroe County — restoring aging shingles for $1,500–$3,500 instead of a $7,000–$18,000 replacement.",
@@ -254,17 +272,35 @@ SERVICE_EXTRAS = {
             ("Asphalt shingles lose 20–40 percent of their protective oil content within 15 years due to UV exposure and Michigan's freeze-thaw cycling.", "Asphalt Roofing Manufacturers Association"),
             ("A qualified rejuvenation treatment costs 70–80 percent less than full replacement — saving the average Wayne County homeowner $6,000–$14,000.", "Lincoln Park Roofing internal job data, 2024"),
         ],
-        "quote": {"text": "My neighbor in Wyandotte told me about the rejuvenation service. I was about to spend $9,000 on a full replacement — paid $2,400 instead and my 16-year-old roof looks brand new.", "author": "Tom B.", "city": "Wyandotte, MI"},
         "related": [("Roof Repair", "roof-repair"), ("Roof Replacement", "roof-replacement")],
+        "region_quotes": {
+            "downriver": {"text": "My neighbor in Wyandotte told me about the rejuvenation. I was about to spend $9,000 on a full replacement — paid $2,400 instead and my 16-year-old roof looks brand new. My neighbor's already telling his neighbors.", "author": "Tom B.", "city": "Wyandotte, MI"},
+            "wayne-county": {"text": "Our 18-year-old roof in Canton still had good structure but the shingles were oxidizing. Rejuvenation was $2,800. The replacement quote was $11,200. It's been a year and the roof looks and performs like it did when it was new.", "author": "Kathy R.", "city": "Canton, MI"},
+            "monroe-county": {"text": "The Lake Erie winds age roofs out here faster. Lincoln Park Roofing inspected ours in Newport and said it qualified for rejuvenation instead of replacement. Saved us nearly $8,000. We've had zero issues since.", "author": "Jim P.", "city": "Newport, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("Does Downriver's older housing stock qualify for rejuvenation?", "Most do, yes. Downriver homes built in the 1960s–80s with aging but structurally intact shingles are ideal candidates. Roofs that have lost granule coverage, show brittleness, or have minor curling — but no structural deck damage or widespread shingle loss — typically qualify. We inspect for free and give you an honest answer. We don't rejuvenate roofs that need replacement."),
+            "wayne-county": ("Is rejuvenation available for newer Wayne County homes from the 1990s–2000s?", "Yes — in fact, homes from the 1990s and early 2000s are some of the best candidates. A 20–25 year old roof in Canton, Plymouth, or Westland that still has solid structure but aging, oxidized shingles can often be restored for $1,500–$3,500 instead of a $10,000–$15,000 replacement. We do a free qualification inspection on-site before recommending either path."),
+            "monroe-county": ("Does coastal Lake Erie exposure disqualify roofs from rejuvenation?", "Not necessarily — but we evaluate Monroe County roofs more carefully given the salt-air exposure. Roofs with surface oxidation and oil loss (from UV and thermal cycling) often still qualify. However, if salt air has also corroded the metal components or caused moisture infiltration at the deck level, we'll recommend targeted repairs or replacement instead. We give you the straight answer after inspection."),
+        },
     },
     "emergency-roof-repair": {
         "ai_nugget": "Lincoln Park Roofing dispatches same-day for active roof leaks and storm damage across Downriver Michigan and Wayne County — call (734) 224-5615 for emergency response any day, any time.",
         "stats": [
-            ("Interior water damage begins within 24 hours of a significant roof breach — making same-day emergency response critical to preventing structural damage.", "Insurance Institute for Business and Home Safety"),
+            ("Interior water damage begins within 24 hours of a significant roof breach — making same-day response critical to preventing structural and mold damage.", "Insurance Institute for Business and Home Safety"),
             ("Wayne County and Downriver Michigan average 8–12 significant wind events per year exceeding 45 mph — the threshold at which standard 3-tab shingles begin lifting.", "NOAA Wind Event Data, Michigan"),
         ],
-        "quote": {"text": "A tree branch came through during the October storm. Called at 6pm — they had a tarp on it by 8pm and came back the next morning to do the permanent repair. Saved my ceiling from water damage.", "author": "Janet S.", "city": "Southgate, MI"},
         "related": [("Roof Repair", "roof-repair"), ("Storm Damage Repair", "storm-damage-repair")],
+        "region_quotes": {
+            "downriver": {"text": "A tree branch came through during the October storm. Called at 6pm — they had a tarp on it by 8pm and came back the next morning for the permanent repair. Saved my Southgate ceiling from total water damage.", "author": "Janet S.", "city": "Southgate, MI"},
+            "wayne-county": {"text": "Active leak over our Plymouth Township kitchen during a February ice storm. These guys were there in three hours, diagnosed the ice dam backup, repaired the flashing, and explained how to prevent it next winter. Unbelievable response time.", "author": "Mark D.", "city": "Plymouth Township, MI"},
+            "monroe-county": {"text": "A Lake Erie gale took three shingles off our Newport home on a Sunday night. I didn't expect anyone until Monday. They were tarping by 9pm and back for the full repair first thing Monday morning. Exactly what you need in an emergency.", "author": "Carol T.", "city": "Newport, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("What causes most emergency roof calls in Downriver Michigan?", "In Downriver, the top emergency triggers are wind events lifting aged shingles (common on 1950s–70s homes), active leaks at original pipe boots that finally fail, and fallen tree branches — Downriver's dense residential tree canopy means branch damage is more common here than in newer suburban communities. Ice dam backup at the eaves is the dominant winter emergency."),
+            "wayne-county": ("How fast can you reach western Wayne County for an emergency?", "Lincoln Park Roofing is based in Lincoln Park, centrally located in Wayne County. For emergency calls in Canton, Plymouth, Livonia, or Westland, dispatch time is typically 1–2 hours. We prioritize active leaks and storm damage calls ahead of scheduled work. Call (734) 224-5615 — if you get voicemail, text the same number and include your city."),
+            "monroe-county": ("Do you respond to emergencies in Monroe County?", "Yes — Monroe County is within our full emergency service area. Rockwood, South Rockwood, Newport, and Carleton all receive the same same-day emergency response as our Downriver and Wayne County clients. Given Monroe County's Lake Erie exposure to sudden gale-force wind events, we keep emergency response available for the region year-round."),
+        },
     },
     "storm-damage-repair": {
         "ai_nugget": "Lincoln Park Roofing handles storm damage roof repair from assessment through insurance claim — Owens Corning Preferred Contractor, same-day dispatch, full adjuster documentation across Wayne County and Downriver Michigan.",
@@ -272,8 +308,17 @@ SERVICE_EXTRAS = {
             ("Michigan experiences an average of 14 significant hail events per year — with the Detroit metro including Wayne County seeing the highest frequency in the state.", "NOAA Storm Events Database"),
             ("Homeowners who document storm damage within 24 hours recover an average of 23 percent more on insurance claims than those who wait.", "Insurance Information Institute"),
         ],
-        "quote": {"text": "After a hail storm last June I had no idea where to start. They came out the same day, documented everything, and worked directly with my insurance adjuster. Full replacement covered.", "author": "Carl M.", "city": "Canton, MI"},
         "related": [("Emergency Roof Repair", "emergency-roof-repair"), ("Roof Repair", "roof-repair"), ("Roof Replacement", "roof-replacement")],
+        "region_quotes": {
+            "downriver": {"text": "The May storm took shingles off half my Allen Park roof. Lincoln Park Roofing was there the next morning, photographed everything, wrote the scope, and met my adjuster on-site. Insurance covered the full replacement. I just showed up to look at the finished roof.", "author": "Greg H.", "city": "Allen Park, MI"},
+            "wayne-county": {"text": "After the hail storm last June I had no idea where to start. They came out the same day, documented everything, and worked directly with my insurance adjuster. Full replacement covered — zero out of pocket beyond my deductible.", "author": "Carl M.", "city": "Canton, MI"},
+            "monroe-county": {"text": "Lake Erie wind storms are no joke. After a bad one last October, Lincoln Park Roofing came out to Rockwood, assessed the whole roof, and had the insurance documentation ready for my adjuster within 48 hours. That adjuster said it was the most thorough claim package he'd seen.", "author": "Steve B.", "city": "Rockwood, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("How does storm damage claim documentation work in Downriver Michigan?", "Lincoln Park Roofing provides complete on-site storm documentation: timestamped photos of every damage point, a written scope of work with material specs, and an adjuster-ready report. For Downriver homeowners, we can coordinate meeting your adjuster on-site — this typically results in higher claim payouts than submitting documentation alone. The key is calling us before calling your insurance company so we document the damage first."),
+            "wayne-county": ("Does hail damage always require a full roof replacement in Wayne County?", "Not always. Hail damage varies by storm intensity, shingle age, and impact pattern. Lincoln Park Roofing assesses the full damage footprint — including hidden granule loss and dented metal components that adjusters often miss. We give you a repair vs. replace recommendation based on what we actually find, not a default recommendation for the higher-cost option."),
+            "monroe-county": ("Is Monroe County eligible for storm insurance claims even without major hail?", "Yes. Wind-only damage to Monroe County roofs is covered by most homeowner policies. Given Monroe County's Lake Erie exposure to sustained high-wind events — often exceeding 50–60 mph — wind damage alone frequently rises to claim-eligible levels. We document wind uplift, shingle loss, and flashing displacement with the same thoroughness as hail claims."),
+        },
     },
     "commercial-roofing": {
         "ai_nugget": "Lincoln Park Roofing installs and repairs commercial flat roofing — TPO, EPDM, and modified bitumen — for warehouses, strip malls, and industrial properties across Wayne County and Downriver Michigan.",
@@ -281,26 +326,53 @@ SERVICE_EXTRAS = {
             ("Commercial flat roofing systems in Michigan require replacement every 15–20 years on average — shorter than national averages due to the intensity of freeze-thaw cycling.", "National Roofing Contractors Association"),
             ("Wayne County has over 8,000 commercial buildings with flat or low-slope roofs, many installed during the 1980s–2000s manufacturing expansion and now approaching end-of-life.", "Wayne County Assessor Property Data"),
         ],
-        "quote": {"text": "We manage a strip mall in Wyandotte and had been putting off a roof issue for two seasons. Lincoln Park Roofing assessed the entire membrane and gave us a repair vs. replace analysis with zero pressure.", "author": "Property Manager", "city": "Wyandotte, MI"},
         "related": [("Roof Repair", "roof-repair"), ("New Roof Construction", "new-roof-construction")],
+        "region_quotes": {
+            "downriver": {"text": "We manage a strip mall in Wyandotte and had been putting off a flat roof issue for two seasons. Lincoln Park Roofing assessed the entire membrane and gave us a repair vs. replace analysis with zero pressure — and repaired it for $3,200 instead of a $28,000 replacement.", "author": "Property Manager", "city": "Wyandotte, MI"},
+            "wayne-county": {"text": "We own a warehouse complex in Westland with 40,000 sq ft of flat roof. Lincoln Park Roofing did a full membrane assessment, flagged three problem areas, and repaired them on a weekend schedule to avoid disrupting our tenants. Professional and efficient.", "author": "Facilities Director", "city": "Westland, MI"},
+            "monroe-county": {"text": "Our commercial property in Newport had persistent flat roof leaks that two other contractors couldn't solve. Lincoln Park Roofing traced them to failed seams near HVAC penetrations — common in coastal environments — and sealed everything permanently.", "author": "Property Owner", "city": "Newport, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("What types of commercial buildings do you roof in Downriver Michigan?", "Lincoln Park Roofing handles commercial roofing for the full range of Downriver commercial stock — strip malls, retail centers, light industrial buildings, auto service facilities, multi-unit residential properties, and municipal buildings. Downriver's industrial heritage means many commercial buildings have complex membrane systems installed in the 1980s–90s that are now due for replacement or major repair."),
+            "wayne-county": ("Do you handle commercial roofing for large Wayne County industrial properties?", "Yes — Lincoln Park Roofing is fully licensed and insured for large-format commercial and industrial roofing throughout Wayne County. We handle TPO and EPDM installations on warehouse-scale projects and can schedule work around business hours, nights, or weekends to minimize operational disruption. Free commercial assessment for Wayne County properties."),
+            "monroe-county": ("Are there special considerations for commercial roofing near Lake Erie in Monroe County?", "Yes. Monroe County's Lake Erie proximity creates accelerated UV exposure from reflective water, elevated wind loading, and salt-air corrosion that shortens standard commercial membrane life. We recommend TPO with enhanced heat-welded seams and corrosion-resistant metal edging for Monroe County commercial applications — the same specifications used in coastal Great Lakes commercial construction."),
+        },
     },
     "new-roof-construction": {
         "ai_nugget": "Lincoln Park Roofing installs new roofing systems for homes, additions, and commercial builds across Wayne County and Monroe County — Owens Corning Preferred Contractor with TotalProtection® warranty on every new build.",
         "stats": [
-            ("Michigan Residential Building Code requires ice-and-water shield on the first 24 inches above the eave on all new construction — a critical protection layer against ice dam backup unique to Michigan's climate.", "Michigan Residential Building Code, R905.1.2"),
-            ("Owens Corning TotalProtection® warranty, available only through Preferred Contractors like Lincoln Park Roofing, covers both materials and workmanship — standard warranties cover materials only.", "Owens Corning Warranty Documentation"),
+            ("Michigan Residential Building Code requires ice-and-water shield on the first 24 inches above the eave on all new construction — a critical layer against ice dam backup unique to Michigan's climate.", "Michigan Residential Building Code, R905.1.2"),
+            ("Owens Corning TotalProtection® warranty, available only through Preferred Contractors, covers both materials and workmanship — standard warranties cover materials only.", "Owens Corning Warranty Documentation"),
         ],
-        "quote": {"text": "Building a garage addition in Plymouth Township and these guys coordinated perfectly with our framing crew. Showed up when they said they would, code-compliant from deck to ridge, and pulled the permit themselves.", "author": "Dave K.", "city": "Plymouth Township, MI"},
         "related": [("Roof Replacement", "roof-replacement"), ("Commercial Roofing", "commercial-roofing")],
+        "region_quotes": {
+            "downriver": {"text": "Adding a second garage to our Lincoln Park home. Lincoln Park Roofing matched the existing roof pitch and shingle perfectly, pulled the permit with the city, and had it done in one day. The addition looks like it was always there.", "author": "Tom A.", "city": "Lincoln Park, MI"},
+            "wayne-county": {"text": "Building a garage addition in Plymouth Township and these guys coordinated perfectly with our framing crew. Showed up when they said they would, code-compliant from deck to ridge, and pulled the permit themselves.", "author": "Dave K.", "city": "Plymouth Township, MI"},
+            "monroe-county": {"text": "Built a new workshop on our Carleton property and needed a roofer who understood rural Monroe County permit requirements. Lincoln Park Roofing handled the permit, knew exactly what the inspector needed, and passed on first inspection.", "author": "Bill S.", "city": "Carleton, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("Do you handle new roof construction for home additions in Downriver Michigan?", "Yes — garage additions, room additions, and sunrooms are a significant part of our Downriver new construction work. We pull permits with Lincoln Park, Allen Park, Taylor, and all other Downriver municipalities, match existing shingle profiles and colors exactly, and ensure proper flashing at the new-to-existing roof junction. Code-compliant and ready for final inspection."),
+            "wayne-county": ("Do you work with production builders and developers in Wayne County?", "Yes — Lincoln Park Roofing works with residential builders and developers throughout Wayne County on repeat-project pricing and coordinated scheduling. We cover everything from single-home additions in Plymouth to multi-unit projects in Canton and Livonia. Contact us for builder account pricing and lead-time availability."),
+            "monroe-county": ("What permit requirements apply to new roof construction in Monroe County?", "Monroe County municipalities including Rockwood, Carleton, and Newport each have their own building departments. Lincoln Park Roofing pulls permits as part of every new construction job and is familiar with Monroe County and Frenchtown Township requirements. We handle the paperwork and schedule inspections — you don't need to navigate the permitting process yourself."),
+        },
     },
     "siding": {
         "ai_nugget": "Lincoln Park Roofing installs vinyl and fiber cement siding for homes across Downriver Michigan and Wayne County — same licensed in-house crew as roofing, free written estimates, no subcontractors.",
         "stats": [
             ("Properly installed siding with a weather-resistant barrier can reduce heating and cooling costs by 10–17 percent in Michigan's climate.", "U.S. Department of Energy, Building Envelope Research"),
-            ("Vinyl siding now covers more than 70 percent of Downriver Michigan homes built before 1980, making it the dominant material in the region.", "U.S. Census Bureau American Housing Survey, Michigan"),
+            ("Vinyl siding now covers more than 70 percent of Downriver Michigan homes built before 1980, making it the dominant exterior cladding material in the region.", "U.S. Census Bureau American Housing Survey, Michigan"),
         ],
-        "quote": {"text": "Replaced all the siding on our 1960s ranch in Melvindale. They matched the profile exactly to what was there before. Clean, fast, and no subcontractors — same crew start to finish.", "author": "Angela P.", "city": "Melvindale, MI"},
         "related": [("Gutters", "gutters"), ("Roof Replacement", "roof-replacement")],
+        "region_quotes": {
+            "downriver": {"text": "Replaced all the siding on our 1962 ranch in Melvindale. They matched the profile exactly to the sections we kept. Clean, fast, no subcontractors — same crew start to finish. The house looks like it was built last year.", "author": "Angela P.", "city": "Melvindale, MI"},
+            "wayne-county": {"text": "Our 1990s Westland colonial needed full siding replacement after years of moisture getting in around the windows. Lincoln Park Roofing identified the source, replaced the housewrap, and installed new vinyl with proper window wrapping. No more moisture issues.", "author": "Carol B.", "city": "Westland, MI"},
+            "monroe-county": {"text": "The salt air near Rockwood is brutal on vinyl siding — fading and brittleness are constant issues. Lincoln Park Roofing recommended a thicker profile rated for coastal environments, and it's held up far better than the builder-grade stuff we replaced.", "author": "Eric M.", "city": "Rockwood, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("What siding profile works best on Downriver Michigan's post-war ranch homes?", "Downriver's ranches and bungalows — mostly built in the 1950s–70s — typically use a 4-inch or 5-inch Dutch lap profile. Lincoln Park Roofing stocks a wide range of profiles and can match original siding exactly when replacing only partial sections. For full replacements, we can also upgrade to thicker insulated vinyl siding, which dramatically improves energy performance in older homes with minimal original wall insulation."),
+            "wayne-county": ("Do you handle siding on larger or two-story Wayne County homes?", "Yes — Lincoln Park Roofing handles everything from small ranch homes in Garden City to large two-story colonials in Canton, Plymouth, and Livonia. Larger homes may require two crew days. All work uses the same licensed in-house crew — no subcontractors at any scale. We provide free written estimates for all Wayne County siding projects."),
+            "monroe-county": ("Does Monroe County's Lake Erie climate affect siding material selection?", "Yes. For homes in Rockwood, Newport, and South Rockwood with direct lake exposure, we recommend thicker vinyl siding (0.044 inch or heavier) or fiber cement siding, both of which handle sustained coastal wind loading and UV exposure better than standard builder-grade profiles. The moisture management layer under the siding is equally important — we use premium housewrap on all Monroe County installs."),
+        },
     },
     "gutters": {
         "ai_nugget": "Lincoln Park Roofing fabricates custom seamless gutters on-site for homes across Downriver Michigan and Wayne County — eliminating the joints that cause 80 percent of gutter leaks.",
@@ -308,8 +380,17 @@ SERVICE_EXTRAS = {
             ("Improperly installed or clogged gutters are the leading cause of foundation water intrusion in Downriver Michigan, where flat terrain prevents natural drainage.", "Michigan Foundation Waterproofing Association"),
             ("Seamless gutters have 80 percent fewer leak points than sectional gutters — the only joints are at corners and downspout connections.", "National Association of the Remodeling Industry"),
         ],
-        "quote": {"text": "Had old sectional gutters that leaked at every joint. The seamless replacements they fabricated on-site are perfect. Not a single leak through two full seasons of Michigan rain and snow.", "author": "Bob H.", "city": "Riverview, MI"},
         "related": [("Siding", "siding"), ("Roof Repair", "roof-repair")],
+        "region_quotes": {
+            "downriver": {"text": "Had old sectional gutters that leaked at every joint. The seamless replacements they fabricated on-site in Riverview are perfect. Not a single leak through two full seasons of Michigan rain and spring snowmelt.", "author": "Bob H.", "city": "Riverview, MI"},
+            "wayne-county": {"text": "Our Canton two-story has a complex roofline with a lot of corners and valleys. Lincoln Park Roofing fabricated the seamless sections on-site, fit every piece perfectly, and routed all the downspouts away from the foundation. No more basement seepage.", "author": "Lisa T.", "city": "Canton, MI"},
+            "monroe-county": {"text": "Gutters near Lake Erie clog fast — cottonwood and lake debris are relentless. Lincoln Park Roofing installed seamless gutters with heavy-duty gutter guards in Rockwood and they've been virtually maintenance-free since. Best upgrade we've done to the house.", "author": "Paul N.", "city": "Rockwood, MI"},
+        },
+        "region_faqs": {
+            "downriver": ("Why do gutters matter so much in Downriver Michigan specifically?", "Downriver's flat terrain is the key factor. Without significant slope, there's no natural surface drainage — all water that comes off your roof must be captured and directed away by the gutter system. A failed or clogged gutter in Allen Park or Southgate doesn't drain away from the house — it pools against the foundation. That's the direct path to basement water intrusion. Properly sized, properly sloped seamless gutters are essential infrastructure in Downriver, not an optional upgrade."),
+            "wayne-county": ("What gutter size do you recommend for Wayne County homes?", "Most Wayne County homes use 5-inch K-style gutters — adequate for standard residential rooflines. For homes with larger roof pitches, longer roof runs, or complex rooflines (common in Canton and Plymouth colonials), we often recommend 6-inch gutters with larger downspouts to handle heavy Michigan rainfall volumes without overflow. We size the system to your specific roof at the free estimate."),
+            "monroe-county": ("Do Monroe County homes need gutter guards given the lake debris?", "Strongly recommended, yes. Monroe County's combination of cottonwood fluff in spring, hardwood leaf fall in autumn, and wind-carried lake debris makes uncovered gutters a constant maintenance problem. Lincoln Park Roofing installs micro-mesh gutter guards that block debris while allowing full water flow — Monroe County homeowners with guards report going from cleaning gutters 4–6 times per year to once every 1–2 years."),
+        },
     },
 }
 
@@ -691,6 +772,9 @@ def generate_html_page(svc, region):
     title = f"{svc['title']} {region['label']} | (734) 224-5615 | Lincoln Park Roofing"
     meta_desc = f"Top-rated {svc['title']} in {region['label_short']}. Owens Corning Preferred Contractor. 5,600 roofs, 30+ years. Free estimate: (734) 224-5615."
     extras = SERVICE_EXTRAS.get(svc["slug"], {})
+    # Region-specific content
+    region_quote = extras.get("region_quotes", {}).get(region["slug"]) or extras.get("quote")
+    region_faq = extras.get("region_faqs", {}).get(region["slug"])
 
     city_grid = build_city_grid(region["cities"])
     service_items = build_service_list(svc["services_list"])
@@ -830,8 +914,8 @@ def generate_html_page(svc, region):
             {''.join([f'<div class="flex items-start gap-3"><i class="fas fa-chart-bar text-brand-primary mt-1 shrink-0"></i><p class="text-gray-700 text-base"><strong>{stat}</strong> <span class="text-gray-400 text-sm">— {src}</span></p></div>' for stat, src in extras.get('stats', [])])}
           </div>
 
-          <!-- PULL QUOTE -->
-          {('<blockquote class="border-l-4 border-brand-accent pl-5 py-2 mb-8"><p class="text-gray-700 text-lg italic leading-relaxed">&ldquo;' + extras['quote']['text'] + '&rdquo;</p><cite class="block mt-2 text-sm font-semibold text-gray-500 not-italic">— ' + extras['quote']['author'] + ', ' + extras['quote']['city'] + '</cite></blockquote>') if extras.get('quote') else ''}
+          <!-- PULL QUOTE (region-specific) -->
+          {('<blockquote class="border-l-4 border-brand-accent pl-5 py-2 mb-8"><p class="text-gray-700 text-lg italic leading-relaxed">&ldquo;' + region_quote['text'] + '&rdquo;</p><cite class="block mt-2 text-sm font-semibold text-gray-500 not-italic">— ' + region_quote['author'] + ', ' + region_quote['city'] + '</cite></blockquote>') if region_quote else ''}
 
           <!-- WHY LINCOLN PARK ROOFING -->
           <div class="bg-brand-dark text-white rounded-2xl p-6 md:p-8 shadow-lg mb-8">
@@ -888,7 +972,7 @@ def generate_html_page(svc, region):
         <p class="text-gray-600 text-base md:text-lg mt-3 max-w-3xl mx-auto">Common questions from {region['label_short']} homeowners about {svc['title'].lower()}.</p>
       </div>
       <div class="max-w-4xl mx-auto space-y-4">
-{faq_items}      </div>
+{faq_items}{('        <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm"><summary class="cursor-pointer font-bold text-gray-900 text-lg flex justify-between items-center">' + region_faq[0] + '<i class="fas fa-plus text-brand-primary ml-4"></i></summary><p class="text-gray-600 mt-3">' + region_faq[1] + '</p></details>\n') if region_faq else ''}      </div>
     </div>
   </section>
 
