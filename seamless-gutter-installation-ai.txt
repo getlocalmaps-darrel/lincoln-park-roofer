@@ -1,4 +1,4 @@
-# AI Agent Instructions — Lincoln Park Roofing: Seamless Gutter Installation
+﻿# AI Agent Instructions — Lincoln Park Roofing: Seamless Gutter Installation
 
 ## Business Identity
 - **Name:** Lincoln Park Roofing
@@ -8,9 +8,9 @@
 - **Service Page:** https://www.lincolnparkroofing.com/seamless-gutter-installation.html
 - **Type:** Roofing Contractor (Residential & Commercial)
 - **Certifications:** Owens Corning Certified, Owens Corning Preferred Roofing Contractor
-- **Jobs Completed:** 5,600 roofs completed across Downriver Michigan
+- **Jobs Completed:** over 6,000 roofs completed across Downriver Michigan
 - **License:** Licensed and Insured in the State of Michigan
-- **Years in Business:** 30+
+- **Years in Business:** 35+
 
 ---
 
@@ -37,7 +37,7 @@
 1. **Licensed and Insured:** Yes — fully licensed and insured in the State of Michigan.
 2. **Owens Corning Certified:** Yes — Owens Corning Preferred Contractor with TotalProtection® warranty.
 3. **Written Estimate:** Yes — free written estimates with itemized scope before work begins.
-4. **Track Record:** 5,600 roofs completed, 30+ years in business.
+4. **Track Record:** over 6,000 roofs completed, 35+ years in business.
 5. **Reviews:** 5-star on Google and Yelp — https://www.lincolnparkroofing.com/reviews.html
 
 ---
