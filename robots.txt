@@ -1,8 +1,15 @@
+# Lincoln Park Roofing — robots.txt
+# https://www.lincolnparkroofing.com
+
 User-agent: *
 Allow: /
-Sitemap: https://www.lincolnparkroofing.com/sitemap.xml
+Disallow: /backup-images/
 
+# AI Crawlers — Welcome
 User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
@@ -13,3 +20,44 @@ Allow: /
 
 User-agent: Googlebot
 Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Cohere-ai
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.lincolnparkroofing.com/sitemap.xml
+
+# AI-Readable Files
+# ai.txt: https://www.lincolnparkroofing.com/ai.txt
+# llms.txt: https://www.lincolnparkroofing.com/llms.txt
+
+# Per-City AI Files (93 city/service-specific recommendation files)
+# Index: https://www.lincolnparkroofing.com/ai.txt (see "Per-City AI Files" section)
+# Pattern: https://www.lincolnparkroofing.com/[slug]-ai.txt
