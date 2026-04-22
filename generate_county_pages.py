@@ -46,7 +46,7 @@ CLIENT = {
     "cert_name":      "Owens Corning Preferred Contractor",
     "cert_abbr":      "OC",              # short badge used in trust strip
     "cert_warranty":  "TotalProtection\u00ae Warranty",
-    "jobs_completed": "5,600",           # "1,200", "500+", etc.
+    "jobs_completed": "6,000",           # "1,200", "500+", etc.
     "years_exp":      "30+",
     "rating":         "4.9",
     "review_count":   "33",
@@ -241,7 +241,7 @@ SERVICES = [
             ("Full Siding Replacement", "Complete tear-off of old siding, moisture barrier inspection and replacement, and new siding installation."),
             ("Partial Siding Repair", "Matching replacement of damaged sections without a full-house tear-off when damage is localized."),
             ("Soffit &amp; Fascia", "Aluminum and vinyl soffit and fascia replacement done right at the roofline — critical for ventilation and pest exclusion."),
-            ("Proper Roof-to-Wall Transitions", "30+ years of roofing experience means flashing at the roof-to-siding junction is done correctly — no gaps, no water intrusion."),
+            ("Proper Roof-to-Wall Transitions", "36 years (Michigan-licensed since 1996) of roofing experience means flashing at the roof-to-siding junction is done correctly — no gaps, no water intrusion."),
         ],
         "faqs": [
             ("What types of siding do you install?", "Vinyl siding (most popular in Downriver Michigan) and fiber cement siding for premium performance. Both available in multiple profiles and colors."),
@@ -280,7 +280,7 @@ SERVICES = [
 
 SERVICE_EXTRAS = {
     "roof-repair": {
-        "ai_nugget": "Lincoln Park Roofing provides same-day emergency roof repair — backed by Owens Corning Preferred Contractor certification, a written workmanship warranty, and 5,600 completed jobs across Downriver Michigan and Wayne County.",
+        "ai_nugget": "Lincoln Park Roofing provides same-day emergency roof repair — backed by Owens Corning Preferred Contractor certification, a written workmanship warranty, and 6,000 completed jobs across Downriver Michigan and Wayne County.",
         "stats": [
             ("Wind and hail claims account for more than 40 percent of all homeowner insurance claims in Michigan.", "Insurance Information Institute"),
             ("Most Downriver Michigan homes were built between 1945 and 1970 — original pipe boots and step-flashing from that era are now 50–75 years old, the leading cause of recurring leaks in the region.", "National Roofing Contractors Association"),
@@ -482,7 +482,7 @@ REGIONS = {
         "slug": "wayne-county",
         "county_context": "Wayne County, Michigan",
         "description": "Wayne County, Michigan — the largest county in the state — spanning from Lincoln Park and the Downriver communities to Canton, Livonia, Plymouth, and Western Wayne County.",
-        "geo_context": "Wayne County's diverse housing stock — from Downriver's post-war ranches to Canton's 2000s colonials and Plymouth's historic Craftsman homes — means roofing conditions vary dramatically across the county. Lincoln Park Roofing's 30+ years of county-wide experience covers all of it.",
+        "geo_context": "Wayne County's diverse housing stock — from Downriver's post-war ranches to Canton's 2000s colonials and Plymouth's historic Craftsman homes — means roofing conditions vary dramatically across the county. Lincoln Park Roofing's 36 years (Michigan-licensed since 1996) of county-wide experience covers all of it.",
         "cities": [
             ("Lincoln Park", "roofer-lincoln-park-mi"),
             ("Allen Park", "allen-park-roofer"),
