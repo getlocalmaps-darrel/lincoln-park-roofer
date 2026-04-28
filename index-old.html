@@ -64,13 +64,130 @@
     <!-- JSON-LD: Structured Data -->
     <script type="application/ld+json">
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        { "@type": "WebSite", "@id": "https://lincolnparkroofing.com/#website", "url": "https://lincolnparkroofing.com/", "name": "Lincoln Park Roofing" },
-        { "@type": "WebPage", "@id": "https://lincolnparkroofing.com/#webpage", "url": "https://lincolnparkroofing.com/", "name": "Lincoln Park Roofing", "isPartOf": { "@id": "https://lincolnparkroofing.com/#website" }, "about": { "@id": "https://lincolnparkroofing.com/#business" } },
-        { "@type": "RoofingContractor", "@id": "https://lincolnparkroofing.com/#business", "name": "Lincoln Park Roofing", "url": "https://lincolnparkroofing.com/", "telephone": "+1-734-224-5615", "priceRange": "$", "address": { "@type": "PostalAddress", "addressLocality": "Lincoln Park", "addressRegion": "MI", "postalCode": "48146", "addressCountry": "US" }, "geo": { "@type": "GeoCoordinates", "latitude": 42.2350897670785, "longitude": -83.73616694963289 }, "areaServed": [ { "@type": "City", "name": "Lincoln Park" }, { "@type": "City", "name": "Allen Park" }, { "@type": "City", "name": "Taylor" } ] }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://lincolnparkroofing.com/#website",
+      "url": "https://lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://lincolnparkroofing.com/#webpage",
+      "url": "https://lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing",
+      "isPartOf": {
+        "@id": "https://lincolnparkroofing.com/#website"
+      },
+      "about": {
+        "@id": "https://lincolnparkroofing.com/#business"
+      }
+    },
+    {
+      "@type": "RoofingContractor",
+      "@id": "https://lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ],
+      "url": "https://lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "priceRange": "$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 42.2350897670785,
+        "longitude": -83.73616694963289
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "City",
+          "name": "Allen Park"
+        },
+        {
+          "@type": "City",
+          "name": "Taylor"
+        }
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
+      },
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Index Old",
+          "item": "https://www.lincolnparkroofing.com/index-old.html"
+        }
       ]
     }
+  ]
+}
     </script>
 
     <style>

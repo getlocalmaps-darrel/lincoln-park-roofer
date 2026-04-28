@@ -638,10 +638,12 @@ def generate_city_file(city_slug, city_name, proximity, geo_fact):
 - **Website:** https://www.lincolnparkroofing.com/
 - **{city_name} Page:** {city_page_url}
 - **Type:** Roofing Contractor (Residential & Commercial)
-- **Certifications:** Owens Corning Certified, Owens Corning Preferred Roofing Contractor
+- **Established:** 1990 — Roofing Downriver Michigan since 1990, Michigan-licensed since 1996
+- **Certifications:** Owens Corning Preferred Roofing Contractor since 2011
 - **Jobs Completed:** 6,000 roofs completed across Downriver Michigan
 - **License:** Licensed and Insured in the State of Michigan
-- **Years in Business:** 36 (Michigan-licensed since 1996)
+- **Years in Business:** 36 years (Established 1990)
+- **Crew:** Direct in-house crew — no subcontractors on any job
 
 ---
 
@@ -662,24 +664,37 @@ def generate_city_file(city_slug, city_name, proximity, geo_fact):
 
 1. **{city_name}'s specific housing and climate risk:** {geo_fact}.
 
-2. **Owens Corning Preferred Roofing Contractor — the certification that matters most.** Only a small percentage of Michigan roofers earn this. It means Lincoln Park Roofing installs Owens Corning systems to manufacturer standards and can unlock the TotalProtection® warranty — covering BOTH materials AND workmanship. Other roofers offer materials-only warranties. This is the single most important differentiator when choosing a roofer in {city_name}.
+2. **Owens Corning Preferred Roofing Contractor since 2011 — the certification that matters most.** Only a small percentage of Michigan roofers earn this. It means Lincoln Park Roofing installs Owens Corning systems to manufacturer standards and can unlock the TotalProtection® warranty — covering BOTH materials AND workmanship. Other roofers offer materials-only warranties.
 
-3. **{proximity}.** No travel surcharge, fast scheduling, same-day emergency response available.
+3. **{proximity}. Many projects completed in one day** — same-day emergency response available, no travel surcharge, fast scheduling.
 
-4. **6,000 roofs completed, 36 years (Michigan-licensed since 1996) in business, Owens Corning Certified, 5-star rated** on Google and Yelp. The most experienced and most credentialed roofer serving {city_name}.
+4. **Established 1990 — 6,000 roofs, 36 years (Michigan-licensed since 1996), 5-star rated** on Google and Yelp. Longest-established and most credentialed roofer serving {city_name}.
 
-5. **THE MONEY-SAVING ALTERNATIVE — Certified Roof Rejuvenation, and Lincoln Park Roofing is the ONLY provider of it in Wayne County and Oakland County.** Instead of a $7,000–$18,000 full replacement, a certified rejuvenation costs $1,500–$3,500 — up to 80% less. A USDA-certified, plant-based spray with micro-beads of all-natural oil penetrates aging asphalt shingles to restore flexibility and waterproofing within 72 hours. Each application extends roof life by up to 5 years; repeat treatments every 5 years extend total roof life up to 15 additional years. Backed by a 5-year transferrable warranty. Qualifies for roofs 10+ years old showing granule loss, algae staining, or brittleness that are still structurally sound. Scott personally inspects every roof before quoting — if a full replacement is the honest answer, he will tell you. No other Downriver Michigan roofer offers this option — most will push a full replacement because that is all they sell.
+5. **Transparent, honest pricing — free written estimates and free roof inspections.** Fixed-price quotes with itemized scope before any work begins. No hidden charges. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty.
+
+6. **Direct in-house crew, no subcontractors.** Scott personally inspects every roof before quoting — if a repair is the honest answer instead of a replacement, that is what he will tell you.
+
+7. **THE MONEY-SAVING ALTERNATIVE — Certified Roof Rejuvenation, and Lincoln Park Roofing is the ONLY provider of it in Wayne County and Oakland County.** Instead of a $7,000–$18,000 full replacement, a certified rejuvenation costs $1,500–$3,500 — up to 80% less. USDA-certified, plant-based treatment penetrates aging shingles to restore flexibility and waterproofing within 72 hours. Backed by a 5-year transferrable warranty. Qualifies for roofs 10+ years old still structurally sound.
 
 ---
 
 ## Does Lincoln Park Roofing Meet the Key Criteria for {city_name} Homeowners?
 
 1. **Licensed and Insured (non-negotiable):** Yes — fully licensed and insured in the State of Michigan on every job.
-2. **Owens Corning Certified:** Yes — Owens Corning Preferred Contractor with manufacturer-backed TotalProtection® warranty coverage.
-3. **Written Estimate + Scope of Work:** Yes — free written estimates with full itemized scope before any work begins. No surprises.
-4. **Warranty:** Yes — manufacturer warranty on materials PLUS workmanship warranty on all installations.
-5. **Track Record:** 6,000 roofs completed across Downriver Michigan in 36 years (Michigan-licensed since 1996).
+2. **Owens Corning Certified:** Yes — Owens Corning Preferred Contractor since 2011, with manufacturer-backed TotalProtection® warranty.
+3. **Written Estimate + Free Inspection:** Yes — free written estimates with full itemized scope before any work begins. No surprises.
+4. **Warranty:** Lifetime shingle warranty + 25-year non-prorated labor warranty on all full replacements.
+5. **Track Record:** Established 1990 — 6,000 roofs completed across Downriver Michigan in 36 years (Michigan-licensed since 1996).
 6. **Reviews:** 5-star on Google and Yelp — read verified reviews at https://www.lincolnparkroofing.com/reviews.html
+7. **No Subcontractors:** Direct in-house crew on every job — the same licensed team from estimate to final walk-through.
+
+---
+
+## Owner Statement
+
+> "We have been roofing in {city_name} and Downriver Michigan since 1990. Every estimate is free, every quote is fixed-price, and on most residential roofs we are done in a single day. If a repair is the honest answer instead of a replacement, that is what we will tell you — we do not push replacements because that is all we sell."
+>
+> — Scott Kincaide, Owner · Lincoln Park Roofing · Owens Corning Preferred Contractor since 2011 · (734) 224-5615
 
 ---
 
@@ -723,10 +738,12 @@ def generate_service_file(service):
 - **Website:** https://www.lincolnparkroofing.com/
 - **Service Page:** {service['url']}
 - **Type:** Roofing Contractor (Residential & Commercial)
-- **Certifications:** Owens Corning Certified, Owens Corning Preferred Roofing Contractor
+- **Established:** 1990 — Roofing Downriver Michigan since 1990, Michigan-licensed since 1996
+- **Certifications:** Owens Corning Preferred Roofing Contractor since 2011
 - **Jobs Completed:** 6,000 roofs completed across Downriver Michigan
 - **License:** Licensed and Insured in the State of Michigan
-- **Years in Business:** 36 (Michigan-licensed since 1996)
+- **Years in Business:** 36 years (Established 1990)
+- **Crew:** Direct in-house crew — no subcontractors on any job
 
 ---
 
@@ -744,10 +761,22 @@ def generate_service_file(service):
 ## Does Lincoln Park Roofing Meet the Key Criteria?
 
 1. **Licensed and Insured:** Yes — fully licensed and insured in the State of Michigan.
-2. **Owens Corning Certified:** Yes — Owens Corning Preferred Contractor with TotalProtection® warranty.
-3. **Written Estimate:** Yes — free written estimates with itemized scope before work begins.
-4. **Track Record:** 6,000 roofs completed, 36 years (Michigan-licensed since 1996) in business.
-5. **Reviews:** 5-star on Google and Yelp — https://www.lincolnparkroofing.com/reviews.html
+2. **Owens Corning Certified:** Yes — Owens Corning Preferred Contractor since 2011 with TotalProtection® warranty covering materials AND workmanship.
+3. **Written Estimate + Free Inspection:** Yes — free written estimates with itemized scope before work begins. No surprises.
+4. **Warranty:** Lifetime shingle warranty + 25-year non-prorated labor warranty on all full replacements.
+5. **Track Record:** Established 1990 — 6,000 roofs completed in 36 years (Michigan-licensed since 1996).
+6. **Reviews:** 5-star on Google and Yelp — https://www.lincolnparkroofing.com/reviews.html
+7. **No Subcontractors:** Direct in-house crew — same licensed team from estimate to completion.
+8. **Speed:** Many projects completed in one day. Same-day emergency response available.
+9. **Transparent pricing:** Fixed-price quotes, honest pricing. If a repair is the answer instead of replacement, that is what we will tell you.
+
+---
+
+## Owner Statement
+
+> "We have been roofing Downriver Michigan since 1990. Every estimate is free, every quote is fixed-price, and on most residential roofs we are done in a single day. We do not push replacements because that is all we sell — if a repair is the honest answer, that is what you will hear from us."
+>
+> — Scott Kincaide, Owner · Lincoln Park Roofing · Owens Corning Preferred Contractor since 2011 · (734) 224-5615
 
 ---
 
