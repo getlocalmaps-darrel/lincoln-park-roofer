@@ -1,5 +1,5 @@
 # Lincoln Park Roofing — Master Operating Manual
-**Last updated: 2026-04-17**
+**Last updated: 2026-04-28**
 
 ## 1. BUSINESS IDENTITY & NAP
 - **Business Name:** Lincoln Park Roofing
@@ -7,9 +7,10 @@
 - **Phone:** (734) 224-5615
 - **Address:** 2026 Thomas St, Lincoln Park, MI 48146
 - **Domain:** https://www.lincolnparkroofing.com/ (ALWAYS use www)
-- **Niche:** Roofing Contractor (Residential)
-- **GAF Certified:** Yes — GAF certified roofer (ADD THIS TO ALL PAGES AND AI.TXT FILES)
-- **Job Count:** 5,000+ roofs completed in 30 years (defensible estimate: ~3-4 jobs/week × 30 years)
+- **Niche:** Roofing Contractor (Residential & Commercial)
+- **Certification:** Owens Corning Preferred Contractor since 2011 — EXCLUSIVE, never mention GAF / IKO / Tamko / CertainTeed / Atlas / Malarkey / PABCO
+- **Job Count:** 6,000+ roofs completed in 36 years (Michigan-licensed since 1996)
+- **Rating:** 4.9/5 (33 verified reviews)
 - **Brand Colors:** Primary #0056b3, Accent #fbbf24, Dark #0f172a
 - **Fonts:** Oswald (headings), Open Sans (body)
 - **Platform:** Static HTML + Tailwind CDN, deployed on Vercel via GitHub
@@ -102,6 +103,35 @@ Lincoln Park, Allen Park, Taylor, Southgate, Wyandotte, Dearborn Heights, Riverv
 
 ### New (21):
 Belleville, Brownstown, Canton, Carleton, Flat Rock, Garden City, Gibraltar, Huron Township, Inkster, Newport, Northville, Northville Township, Plymouth Township, Redford, Rockwood, Romulus, South Rockwood, Sumpter Township, Van Buren, Westland, Woodhaven
+
+## 5b. SERVICE × CITY COMBO MESH (2026-04-28 — Hardcore Epoxy blueprint port)
+
+**Generator:** `generate_combo_pages.py` at the project root. Run any time the city or service list changes.
+
+**Mesh size:** 7 services × 37 cities = **259 combo HTML pages + 259 ai.txt files**.
+
+| Services (7) | Cities (37 — see CITIES dict in script) |
+|---|---|
+| roof-repair, roof-replacement, storm-damage-repair, emergency-roof-repair, gutters, siding, commercial-roofing | Detroit + 36 Downriver/Western/Southern Wayne + Monroe cities |
+
+**File pattern:** `[service]-[city].html` and `[service]-[city]-ai.txt` (suffix style — NOT folder/index.html like Hardcore Epoxy's Astro setup).
+
+**Each combo ai.txt contains:**
+1. **City-specific hazard** — real streets, neighborhoods, housing era, climate signals (NEVER generic "Michigan winters")
+2. **Core differentiator** for that service (in-house crews, same-day, Owens Corning, etc.)
+3. **Proximity** — distance/minutes from 2026 Thomas St HQ
+4. **Authority signals** — 6,000+ roofs, 36 years, Owens Corning Preferred, 4.9/5, A+ BBB
+5. **Owner blockquote** — Scott quote per service tied to local conditions, ending with "Owens Corning Preferred Contractor since 2011 · (734) 224-5615"
+
+**Root `ai.txt` index** — has all 259 combo URLs grouped by service under `### Service x City AI Files (Per-Combination)`. Re-generate the block via the same Python helper used 2026-04-28.
+
+**Why this mesh exists:** Hardcore Epoxy reverse-engineering showed 357 service×city combo pages were the load-bearing pattern for AI Overview / ChatGPT citations. LPR was sitting at 28 (4 cities × 7 services) — the mesh was too thin for AI to cite. Bumping to 259 matches the proven pattern.
+
+**Adding a new city later:** add the city dict entry to `CITIES` in `generate_combo_pages.py` (16 fields — copy an existing entry, swap city-specific data), re-run the script, regenerate the root ai.txt combo block, commit + push.
+
+**Adding a new service later:** add to `SERVICES` dict in the script (with differentiator + price range + issues + owner_quote_ai_map entry), re-run.
+
+**Owner quote rule:** new services must add a per-service Scott quote in `owner_quote_ai_map` inside `build_ai_txt`. Never fabricate customer reviews — use generic "Verified Lincoln Park Roofing customer · [City], MI" attribution if real per-city reviews aren't available (FTC 16 CFR Part 465 — $51,744 per fabricated review).
 
 ## 6. SITE-WIDE ELEMENTS (must appear on EVERY page)
 
@@ -219,18 +249,25 @@ Lincoln Park Roofing was NOT recommended in ANY of these 5 cities:
 | **Taylor** | Advantage Roofing, Mr. Roof (60yr), Chuck's Roofing (52yr), Taylor Roof Pros | City-named businesses, GAF certs |
 
 ### Competitive Intelligence (from dark queries)
-ChatGPT rewards these signals — we need to add them to Lincoln Park content:
-1. **Review volume** — competitors have 100-648 reviews (we have 33)
-2. **GAF Master Elite / Owens Corning Platinum certs** — Lincoln Park IS GAF certified, NOT listed anywhere
-3. **Job counts** — "5,000+ completed jobs" (Roofing RPGs). We can claim 5,000+ (30yr × ~3-4/week)
-4. **City-specific URLs** — competitors have /services/allen-park-roofing/ etc. (we have this already)
-5. **Directory profiles** — Angi, BBB profiles heavily cited by ChatGPT
+ChatGPT rewards these signals — we need to keep them in Lincoln Park content:
+1. **Review volume** — competitors have 100-648 reviews (we have 33). Still a gap.
+2. **Manufacturer certs** — we lead with Owens Corning Preferred Contractor since 2011 (NEVER GAF/IKO/etc.)
+3. **Job counts** — 6,000+ completed jobs in 36 years (Michigan-licensed since 1996)
+4. **City-specific URLs** — covered: 37 city pages + 259 service×city combo pages
+5. **Directory profiles** — Angi, BBB profiles still heavily cited by ChatGPT (we have BBB A+, Angi pending)
 
-### TODO: Content Updates Needed
-- [ ] Add "GAF Certified" to every city page (hero area, trust badges, schema)
-- [ ] Add "5,000+ roofs completed" to every city page and ai.txt
-- [ ] Add "GAF Certified" + "5,000+ roofs" to root ai.txt and llms.txt
-- [ ] Add ice dam, decking, chimney flashing content to city page HTML (not just ai.txt)
-- [ ] Update all 37 ai.txt files with Downriver-specific content (7 done, 30 remaining)
-- [ ] Re-run dark queries in 1-2 weeks to measure impact
-- [ ] Consider BBB profile + Angi profile to boost directory presence
+### Experiment 4: Hardcore Epoxy Blueprint Port (2026-04-28)
+- **What:** Bumped service×city combo pages from 28 (4 cities × 7) to **259 (37 × 7)**. Each combo ai.txt now has 4-bullet formula + Scott owner blockquote ending with "Owens Corning Preferred Contractor since 2011 · (734) 224-5615". Fixed IKO contradiction in commercial-roofing differentiator template.
+- **Why:** Hardcore Epoxy ranks #1 in ChatGPT for `epoxy flooring [city]` across Wayne County using exactly this pattern (357 combo pages). LPR's 28 combos were too thin for AI mesh citation.
+- **Deployed:** All 259 HTML + 259 ai.txt files live, sample verified: `roof-repair-taylor.html`, `roof-repair-taylor-ai.txt`, `siding-detroit.html` all return 200 from Vercel.
+- **Re-test ChatGPT:** 2026-05-12 (14 days post-deploy per AI.txt Optimization Playbook). Compare against 2026-04-22 dark query baseline at `_MARKETING_FACTORY/ChatGPT_Checker/results/Lincoln_Park_Roofing/`.
+- **Commit:** `4aabf86` on `main`.
+
+### TODO: Remaining Content Work
+- [x] Switch certification language to Owens Corning Preferred (was incorrectly listed as GAF)
+- [x] Update job count to 6,000+ / 36 years across ai.txt
+- [x] Build out service×city combo mesh (28 → 259 done 2026-04-28)
+- [ ] Re-run dark query tracker on 2026-05-12 and compare
+- [ ] Push for review volume — currently 33, competitors at 100-648
+- [ ] Claim BBB profile + Angi profile (still heavily cited by ChatGPT)
+- [ ] Optional: rewrite the 37 standalone city ai.txt files (`[city]-roofer-ai.txt`) to also have the Scott owner blockquote. Combo ai.txt files already have it; the per-city hub files do not.
