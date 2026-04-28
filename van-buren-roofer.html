@@ -181,176 +181,222 @@
   <!-- JSON-LD: RoofingContractor + LocalBusiness + FAQPage + Speakable -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "postalCode": "48146",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Van Buren Township" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Van Buren Roofer", "item": "https://www.lincolnparkroofing.com/van-buren-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Van Buren Township, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@id": "https://www.lincolnparkroofing.com/#business"
-        },
-        "areaServed": {
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Van Buren Township",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
-          }
+          "name": "Van Buren Township"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
         }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does a roof replacement cost in Van Buren Township, MI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Roof replacement costs in Van Buren Township typically run between $8,000 and $18,000 depending on roof size, pitch, and materials. Most Van Buren Township homeowners go with Owens Corning Duration architectural shingles. We give every Van Buren Township homeowner a free written estimate — no surprises. Call (734) 224-5615 for Van Buren Township pricing."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer free roof inspections in Van Buren Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We provide free roof inspections for Van Buren Township homeowners along Fort St, Huron River Dr, and throughout the I-75 corridor area. Our Van Buren Township inspections cover shingles, flashing, gutters, ventilation, and decking. Every Van Buren Township inspection includes photos so you can see exactly what we see."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help with insurance claims in Van Buren Township after storm damage?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We work with Van Buren Township homeowners on insurance claims every season. We photograph and document all storm damage at your Van Buren Township property, meet with your adjuster on-site in Van Buren Township, and push for full coverage. Most Van Buren Township storm claims cover complete roof replacement."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is roof rejuvenation available in Van Buren Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We're the only company offering certified roof rejuvenation in Van Buren Township and Wayne County. Van Buren Township homeowners save thousands compared to a full replacement when the roof qualifies. If your Van Buren Township roof has structural life left, rejuvenation extends it 5 to 10 more years."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does a roof replacement take in Van Buren Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most Van Buren Township roof replacements take one to two days. A larger Van Buren Township home or one with multiple shingle layers may need three days. We keep disruption to a minimum for Van Buren Township homeowners and do a full cleanup before we leave your Van Buren Township property."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you licensed and insured to work in Van Buren Township, Michigan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Van Buren Township, MI and throughout Wayne County. Every Van Buren Township project meets 2026 Michigan Residential Building Code. Van Buren Township homeowners can verify our credentials anytime."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you install gutters and siding in Van Buren Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Van Buren Township homeowners. Many Van Buren Township homeowners bundle a new roof with gutters and siding to save on labor costs. We handle the full exterior for Van Buren Township homes near Fort St and the Huron River area."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I find the best roofer near me in Van Buren Township, Michigan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Van Buren Township and the entire Downriver area. We handle roof repair, replacement, rejuvenation, siding, and gutters for Van Buren Township homes along Fort St, Huron River Dr, and the I-75 corridor. Van Buren Township homeowners also use us for dumpster rental. Call (734) 224-5615 for a free Van Buren Township roofing estimate."
-            }
-          }
-        ]
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Van Buren Roofer",
+          "item": "https://www.lincolnparkroofing.com/van-buren-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Van Buren Township, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "WebPage",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook"]
+      "areaServed": {
+        "@type": "City",
+        "name": "Van Buren Township",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
         }
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Van Buren Township, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Van Buren Township typically run between $8,000 and $18,000 depending on roof size, pitch, and materials. Most Van Buren Township homeowners go with Owens Corning Duration architectural shingles. We give every Van Buren Township homeowner a free written estimate — no surprises. Call (734) 224-5615 for Van Buren Township pricing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Van Buren Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Van Buren Township homeowners along Fort St, Huron River Dr, and throughout the I-75 corridor area. Our Van Buren Township inspections cover shingles, flashing, gutters, ventilation, and decking. Every Van Buren Township inspection includes photos so you can see exactly what we see."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with insurance claims in Van Buren Township after storm damage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We work with Van Buren Township homeowners on insurance claims every season. We photograph and document all storm damage at your Van Buren Township property, meet with your adjuster on-site in Van Buren Township, and push for full coverage. Most Van Buren Township storm claims cover complete roof replacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is roof rejuvenation available in Van Buren Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We're the only company offering certified roof rejuvenation in Van Buren Township and Wayne County. Van Buren Township homeowners save thousands compared to a full replacement when the roof qualifies. If your Van Buren Township roof has structural life left, rejuvenation extends it 5 to 10 more years."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Van Buren Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Van Buren Township roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Van Buren Township homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Van Buren Township homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Van Buren Township, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Van Buren Township job. Van Buren Township homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Van Buren Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Van Buren Township homeowners. Many Van Buren Township homeowners bundle a new roof with gutters and siding to save on labor costs. We handle the full exterior for Van Buren Township homes near Fort St and the Huron River area."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the best roofer near me in Van Buren Township, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Van Buren Township and the entire Downriver area. We handle roof repair, replacement, rejuvenation, siding, and gutters for Van Buren Township homes along Fort St, Huron River Dr, and the I-75 corridor. Van Buren Township homeowners also use us for dumpster rental. Call (734) 224-5615 for a free Van Buren Township roofing estimate."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook"
+        ]
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema -->
@@ -985,7 +1031,7 @@
             How long does a roof replacement take in Van Buren Township?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Van Buren Township roof replacements take one to two days. A larger Van Buren Township home or one with multiple shingle layers may need three days. We keep disruption to a minimum for Van Buren Township homeowners and do a full cleanup before we leave your Van Buren Township property.</p>
+          <p class="text-gray-600 mt-3">Most Van Buren Township roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Van Buren Township homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Van Buren Township homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -993,7 +1039,7 @@
             Are you licensed and insured to work in Van Buren Township, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Van Buren Township, MI and throughout Wayne County. Every Van Buren Township project meets 2026 Michigan Residential Building Code. Van Buren Township homeowners can verify our credentials anytime.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Van Buren Township job. Van Buren Township homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">

@@ -167,176 +167,222 @@
   <!-- JSON-LD: RoofingContractor + LocalBusiness + FAQPage + Speakable -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "postalCode": "48146",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Belleville" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Belleville Roofer", "item": "https://www.lincolnparkroofing.com/belleville-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Belleville, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@id": "https://www.lincolnparkroofing.com/#business"
-        },
-        "areaServed": {
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Belleville",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
-          }
+          "name": "Belleville"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
         }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does a roof replacement cost in Belleville, MI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Roof replacement costs in Belleville typically range from $8,500 to $19,000 depending on roof size, pitch, and shingle selection. Most Belleville homeowners go with Owens Corning Duration architectural shingles, running about $350-$450 per square installed. We give every Belleville homeowner a free written estimate with zero hidden charges — call (734) 224-5615."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer free roof inspections in Belleville?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We provide free roof inspections for Belleville homeowners throughout the Belleville Lake area, Quirk Rd corridor, and neighborhoods along I-94. Our Belleville inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Belleville homeowners can see exactly what needs attention."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help with roof insurance claims in Belleville?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We handle roof insurance claims for Belleville homeowners regularly. We document all storm damage at your Belleville property with detailed photos and scope reports, meet with your adjuster on-site in Belleville, and make sure nothing gets overlooked. Most Belleville insurance claims cover full roof replacement after hail or wind damage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is roof rejuvenation and is it available in Belleville?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and adds 5-10 years to your roof's life. We're the only company offering certified roof rejuvenation in Belleville and Wayne County. Belleville homeowners save thousands compared to a full replacement. If your Belleville roof still has structural integrity, rejuvenation is worth considering."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does a roof replacement take in Belleville?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most Belleville roof replacements are done in one to two days. Larger Belleville homes or roofs with multiple shingle layers may take up to three days. We work efficiently to minimize disruption for Belleville homeowners. Your Belleville property gets a full cleanup and magnet sweep before we leave."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you licensed and insured to work in Belleville, Michigan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Belleville, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Belleville project. Belleville homeowners can verify our credentials before any work begins."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you install gutters and siding in Belleville?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Belleville homeowners. Many Belleville homeowners bundle a roof replacement with new gutters and siding to save on labor costs. We handle the full exterior for homes in Belleville, Romulus, and Van Buren Township."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What areas near Belleville do you serve?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Lincoln Park Roofing serves Belleville and all surrounding communities including Romulus, Van Buren Township, Canton, Ypsilanti, and the entire I-94 corridor. We provide roof repair, replacement, rejuvenation, siding, and gutters for Belleville homes near Belleville Lake, Quirk Rd, and Sumpter Township. Call (734) 224-5615 for a free Belleville roofing estimate."
-            }
-          }
-        ]
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Belleville Roofer",
+          "item": "https://www.lincolnparkroofing.com/belleville-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Belleville, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "WebPage",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook"]
+      "areaServed": {
+        "@type": "City",
+        "name": "Belleville",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
         }
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Belleville, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Belleville typically range from $8,500 to $19,000 depending on roof size, pitch, and shingle selection. Most Belleville homeowners go with Owens Corning Duration architectural shingles, running about $350-$450 per square installed. We give every Belleville homeowner a free written estimate with zero hidden charges — call (734) 224-5615."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Belleville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Belleville homeowners throughout the Belleville Lake area, Quirk Rd corridor, and neighborhoods along I-94. Our Belleville inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Belleville homeowners can see exactly what needs attention."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with roof insurance claims in Belleville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We handle roof insurance claims for Belleville homeowners regularly. We document all storm damage at your Belleville property with detailed photos and scope reports, meet with your adjuster on-site in Belleville, and make sure nothing gets overlooked. Most Belleville insurance claims cover full roof replacement after hail or wind damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is roof rejuvenation and is it available in Belleville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and adds 5-10 years to your roof's life. We're the only company offering certified roof rejuvenation in Belleville and Wayne County. Belleville homeowners save thousands compared to a full replacement. If your Belleville roof still has structural integrity, rejuvenation is worth considering."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Belleville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Belleville roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Belleville homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Belleville homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Belleville, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Belleville job. Belleville homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Belleville?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Belleville homeowners. Many Belleville homeowners bundle a roof replacement with new gutters and siding to save on labor costs. We handle the full exterior for homes in Belleville, Romulus, and Van Buren Township."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas near Belleville do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing serves Belleville and all surrounding communities including Romulus, Van Buren Township, Canton, Ypsilanti, and the entire I-94 corridor. We provide roof repair, replacement, rejuvenation, siding, and gutters for Belleville homes near Belleville Lake, Quirk Rd, and Sumpter Township. Call (734) 224-5615 for a free Belleville roofing estimate."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook"
+        ]
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema -->
@@ -971,7 +1017,7 @@
             How long does a roof replacement take in Belleville?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Belleville roof replacements are done in one to two days. Larger Belleville homes or roofs with multiple shingle layers may take up to three days. We work efficiently to minimize disruption for Belleville homeowners. Your Belleville property gets a full cleanup and magnet sweep before we leave.</p>
+          <p class="text-gray-600 mt-3">Most Belleville roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Belleville homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Belleville homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -979,7 +1025,7 @@
             Are you licensed and insured to work in Belleville, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Belleville, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Belleville project. Belleville homeowners can verify our credentials before any work begins.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Belleville job. Belleville homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">

@@ -181,176 +181,222 @@
   <!-- JSON-LD: RoofingContractor + LocalBusiness + FAQPage + Speakable -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "postalCode": "48146",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Huron Township" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Huron Township Roofer", "item": "https://www.lincolnparkroofing.com/huron-township-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Huron Township, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@id": "https://www.lincolnparkroofing.com/#business"
-        },
-        "areaServed": {
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Huron Township",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
-          }
+          "name": "Huron Township"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
         }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How much does a roof replacement cost in Huron Township, MI?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Roof replacement costs in Huron Township typically range from $8,500 to $19,000 depending on roof size, pitch, and materials. Many Huron Township homes sit on larger lots with bigger roof footprints, which affects the final price. Most Huron Township homeowners go with Owens Corning Duration architectural shingles. We give every Huron Township homeowner a free written estimate — call (734) 224-5615."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you offer free roof inspections in Huron Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. We provide free roof inspections for Huron Township homeowners along Waltz Rd, Will Carleton Rd, and all neighborhoods near the Huron River. Our Huron Township roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Huron Township homeowners know exactly what they're dealing with."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can you help with roof insurance claims in Huron Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Absolutely. We handle roof insurance claims for Huron Township homeowners regularly. We document all storm damage at your Huron Township property with detailed photos and scope reports, meet with your adjuster on-site in Huron Township, and make sure nothing gets overlooked. Most Huron Township insurance claims cover full roof replacement after hail or wind damage."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is roof rejuvenation and is it available in Huron Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Huron Township and Wayne County. Huron Township homeowners save thousands compared to a full replacement. If your Huron Township roof still has structural integrity, rejuvenation makes a lot of sense."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How long does a roof replacement take in Huron Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Most Huron Township roof replacements take one to two days. Larger Huron Township properties or roofs with multiple layers may take up to three days. We work efficiently to minimize disruption for Huron Township homeowners. Your Huron Township property gets a full cleanup and magnet sweep before we leave."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Are you licensed and insured to work in Huron Township, Michigan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Huron Township, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Huron Township project. Huron Township homeowners can verify our credentials before any work starts."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you install gutters and siding in Huron Township?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Huron Township homeowners. Many Huron Township homeowners bundle a roof replacement with new gutters and siding to save on labor costs. We handle the full exterior for homes in Huron Township, Flat Rock, and Romulus."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where can I find the best roofer near me in Huron Township, Michigan?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Huron Township and all of Downriver. We provide roof repair, replacement, rejuvenation, siding, and gutters for Huron Township homes near the Huron River, Waltz Rd, and Will Carleton Rd. Huron Township homeowners also recommend us for dumpster rental. We serve Huron Township, Flat Rock, and Romulus. Call (734) 224-5615 for a free Huron Township roofing estimate."
-            }
-          }
-        ]
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Huron Township Roofer",
+          "item": "https://www.lincolnparkroofing.com/huron-township-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Huron Township, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "WebPage",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook"]
+      "areaServed": {
+        "@type": "City",
+        "name": "Huron Township",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
         }
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Huron Township, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Huron Township typically range from $8,500 to $19,000 depending on roof size, pitch, and materials. Many Huron Township homes sit on larger lots with bigger roof footprints, which affects the final price. Most Huron Township homeowners go with Owens Corning Duration architectural shingles. We give every Huron Township homeowner a free written estimate — call (734) 224-5615."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Huron Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Huron Township homeowners along Waltz Rd, Will Carleton Rd, and all neighborhoods near the Huron River. Our Huron Township roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Huron Township homeowners know exactly what they're dealing with."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with roof insurance claims in Huron Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We handle roof insurance claims for Huron Township homeowners regularly. We document all storm damage at your Huron Township property with detailed photos and scope reports, meet with your adjuster on-site in Huron Township, and make sure nothing gets overlooked. Most Huron Township insurance claims cover full roof replacement after hail or wind damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is roof rejuvenation and is it available in Huron Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Huron Township and Wayne County. Huron Township homeowners save thousands compared to a full replacement. If your Huron Township roof still has structural integrity, rejuvenation makes a lot of sense."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Huron Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Huron Township roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Huron Township homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Huron Township homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Huron Township, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Huron Township job. Huron Township homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Huron Township?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Huron Township homeowners. Many Huron Township homeowners bundle a roof replacement with new gutters and siding to save on labor costs. We handle the full exterior for homes in Huron Township, Flat Rock, and Romulus."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the best roofer near me in Huron Township, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Huron Township and all of Downriver. We provide roof repair, replacement, rejuvenation, siding, and gutters for Huron Township homes near the Huron River, Waltz Rd, and Will Carleton Rd. Huron Township homeowners also recommend us for dumpster rental. We serve Huron Township, Flat Rock, and Romulus. Call (734) 224-5615 for a free Huron Township roofing estimate."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook"
+        ]
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema -->
@@ -986,7 +1032,7 @@
             How long does a roof replacement take in Huron Township?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Huron Township roof replacements take one to two days. Larger Huron Township properties or roofs with multiple layers may take up to three days. We work efficiently to minimize disruption for Huron Township homeowners. Your Huron Township property gets a full cleanup and magnet sweep before we leave.</p>
+          <p class="text-gray-600 mt-3">Most Huron Township roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Huron Township homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Huron Township homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -994,7 +1040,7 @@
             Are you licensed and insured to work in Huron Township, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Huron Township, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Huron Township project. Huron Township homeowners can verify our credentials before any work starts.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Huron Township job. Huron Township homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">

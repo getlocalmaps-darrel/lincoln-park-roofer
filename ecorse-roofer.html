@@ -214,176 +214,222 @@
   <!-- JSON-LD: RoofingContractor + LocalBusiness + FAQPage + Speakable -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "postalCode": "48146",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Ecorse" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering"
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Ecorse Roofer", "item": "https://www.lincolnparkroofing.com/ecorse-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Ecorse, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@id": "https://www.lincolnparkroofing.com/#business"
-        },
-        "areaServed": {
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Ecorse",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
-          }
+          "name": "Ecorse"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
         }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-                    "@type": "Question",
-                    "name": "How much does a roof replacement cost in Ecorse, MI?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof replacement costs in Ecorse typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Ecorse homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Ecorse homeowner a free written estimate with no hidden fees \u2014 call (734) 224-5615."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you offer free roof inspections in Ecorse?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. We provide free roof inspections for Ecorse homeowners throughout the W Jefferson Ave, Outer Drive, and Southfield Rd areas. Our Ecorse roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Ecorse homeowners can make an informed decision."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Can you help with roof insurance claims in Ecorse?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Absolutely. We handle roof insurance claims for Ecorse homeowners every week. We document all storm damage at your Ecorse property with detailed photos and scope reports, meet with your adjuster on-site in Ecorse, and make sure nothing gets missed. Most Ecorse insurance claims cover full roof replacement after hail or wind damage."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "What is roof rejuvenation and is it available in Ecorse?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Ecorse and Wayne County. Ecorse homeowners save thousands compared to a full replacement. If your Ecorse roof still has structural life, rejuvenation is worth a look."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "How long does a roof replacement take in Ecorse?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Most Ecorse roof replacements take one to two days. Larger Ecorse homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Ecorse homeowners. Your Ecorse property gets a full cleanup before we leave."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Are you licensed and insured to work in Ecorse, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Ecorse, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Ecorse project. Ecorse homeowners can verify our credentials before any work begins."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you install gutters and siding in Ecorse?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Ecorse homeowners. Many Ecorse homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Ecorse, River Rouge, and Lincoln Park."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Where can I find the best roofer near me in Ecorse, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Ecorse and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Ecorse homes near W Jefferson Ave, Outer Drive, and Southfield Rd. Ecorse homeowners also recommend us for dumpster rental. We serve Ecorse, River Rouge, and Lincoln Park. Call (734) 224-5615 for a free Ecorse roofing estimate."
-                    }
-          }
-]
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Ecorse Roofer",
+          "item": "https://www.lincolnparkroofing.com/ecorse-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Ecorse, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
       },
-      {
-        "@type": "WebPage",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook"]
+      "areaServed": {
+        "@type": "City",
+        "name": "Ecorse",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
         }
       }
-    ]
-  }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Ecorse, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Ecorse typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Ecorse homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Ecorse homeowner a free written estimate with no hidden fees — call (734) 224-5615."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Ecorse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Ecorse homeowners throughout the W Jefferson Ave, Outer Drive, and Southfield Rd areas. Our Ecorse roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Ecorse homeowners can make an informed decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with roof insurance claims in Ecorse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We handle roof insurance claims for Ecorse homeowners every week. We document all storm damage at your Ecorse property with detailed photos and scope reports, meet with your adjuster on-site in Ecorse, and make sure nothing gets missed. Most Ecorse insurance claims cover full roof replacement after hail or wind damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is roof rejuvenation and is it available in Ecorse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Ecorse and Wayne County. Ecorse homeowners save thousands compared to a full replacement. If your Ecorse roof still has structural life, rejuvenation is worth a look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Ecorse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Ecorse roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Ecorse homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Ecorse homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Ecorse, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Ecorse job. Ecorse homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Ecorse?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Ecorse homeowners. Many Ecorse homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Ecorse, River Rouge, and Lincoln Park."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the best roofer near me in Ecorse, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Ecorse and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Ecorse homes near W Jefferson Ave, Outer Drive, and Southfield Rd. Ecorse homeowners also recommend us for dumpster rental. We serve Ecorse, River Rouge, and Lincoln Park. Call (734) 224-5615 for a free Ecorse roofing estimate."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook"
+        ]
+      }
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema — triggers star rich results in Google -->
@@ -1038,7 +1084,7 @@
             How long does a roof replacement take in Ecorse?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Ecorse roof replacements take one to two days. Larger Ecorse homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Ecorse homeowners. Your Ecorse property gets a full cleanup before we leave.</p>
+          <p class="text-gray-600 mt-3">Most Ecorse roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Ecorse homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Ecorse homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -1046,7 +1092,7 @@
             Are you licensed and insured to work in Ecorse, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Ecorse, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Ecorse project. Ecorse homeowners can verify our credentials before any work begins.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Ecorse job. Ecorse homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">

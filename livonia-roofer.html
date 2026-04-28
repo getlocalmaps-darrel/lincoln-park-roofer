@@ -214,181 +214,227 @@
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "postalCode": "48146",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "areaServed": [
-          { "@type": "City", "name": "Livonia" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering",
-          "Roof repair",
-          "Roof replacement",
-          "New roof construction",
-          "Roof rejuvenation",
-          "Siding",
-          "Gutters"
-        ],
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook"]
-        },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "postalCode": "48146",
+        "addressCountry": "US"
       },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Livonia Roofer", "item": "https://www.lincolnparkroofing.com/livonia-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Livonia, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "Lincoln Park Roofing",
-          "url": "https://www.lincolnparkroofing.com"
-        },
-        "areaServed": {
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Livonia",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
+          "name": "Livonia"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
+        }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering",
+        "Roof repair",
+        "Roof replacement",
+        "New roof construction",
+        "Roof rejuvenation",
+        "Siding",
+        "Gutters"
+      ],
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook"
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
+      },
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Livonia Roofer",
+          "item": "https://www.lincolnparkroofing.com/livonia-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Livonia, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Lincoln Park Roofing",
+        "url": "https://www.lincolnparkroofing.com"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Livonia",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
+        }
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Livonia, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Livonia typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Livonia homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Livonia homeowner a free written estimate with no hidden fees — call (734) 224-5615."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Livonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Livonia homeowners throughout the Plymouth Rd, Middlebelt Rd, and Schoolcraft Rd areas. Our Livonia roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Livonia homeowners can make an informed decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with roof insurance claims in Livonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We handle roof insurance claims for Livonia homeowners every week. We document all storm damage at your Livonia property with detailed photos and scope reports, meet with your adjuster on-site in Livonia, and make sure nothing gets missed. Most Livonia insurance claims cover full roof replacement after hail or wind damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is roof rejuvenation and is it available in Livonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Livonia and Wayne County. Livonia homeowners save thousands compared to a full replacement. If your Livonia roof still has structural life, rejuvenation is worth a look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Livonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Livonia roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Livonia homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Livonia homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Livonia, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Livonia job. Livonia homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Livonia?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Livonia homeowners. Many Livonia homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Livonia, Wayne, and Plymouth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the best roofer near me in Livonia, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Livonia and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Livonia homes near Plymouth Rd, Middlebelt Rd, and Schoolcraft Rd. Livonia homeowners also recommend us for dumpster rental. We serve Livonia, Wayne, and Plymouth. Call (734) 224-5615 for a free Livonia roofing estimate."
           }
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-                    "@type": "Question",
-                    "name": "How much does a roof replacement cost in Livonia, MI?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof replacement costs in Livonia typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Livonia homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Livonia homeowner a free written estimate with no hidden fees \u2014 call (734) 224-5615."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you offer free roof inspections in Livonia?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. We provide free roof inspections for Livonia homeowners throughout the Plymouth Rd, Middlebelt Rd, and Schoolcraft Rd areas. Our Livonia roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Livonia homeowners can make an informed decision."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Can you help with roof insurance claims in Livonia?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Absolutely. We handle roof insurance claims for Livonia homeowners every week. We document all storm damage at your Livonia property with detailed photos and scope reports, meet with your adjuster on-site in Livonia, and make sure nothing gets missed. Most Livonia insurance claims cover full roof replacement after hail or wind damage."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "What is roof rejuvenation and is it available in Livonia?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Livonia and Wayne County. Livonia homeowners save thousands compared to a full replacement. If your Livonia roof still has structural life, rejuvenation is worth a look."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "How long does a roof replacement take in Livonia?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Most Livonia roof replacements take one to two days. Larger Livonia homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Livonia homeowners. Your Livonia property gets a full cleanup before we leave."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Are you licensed and insured to work in Livonia, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Livonia, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Livonia project. Livonia homeowners can verify our credentials before any work begins."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you install gutters and siding in Livonia?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Livonia homeowners. Many Livonia homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Livonia, Wayne, and Plymouth."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Where can I find the best roofer near me in Livonia, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Livonia and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Livonia homes near Plymouth Rd, Middlebelt Rd, and Schoolcraft Rd. Livonia homeowners also recommend us for dumpster rental. We serve Livonia, Wayne, and Plymouth. Call (734) 224-5615 for a free Livonia roofing estimate."
-                    }
-          }
-]
-      }
-    ]
-  }
+      ]
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema — triggers star rich results in Google -->
@@ -1050,7 +1096,7 @@
             How long does a roof replacement take in Livonia?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Livonia roof replacements take one to two days. Larger Livonia homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Livonia homeowners. Your Livonia property gets a full cleanup before we leave.</p>
+          <p class="text-gray-600 mt-3">Most Livonia roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Livonia homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Livonia homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -1058,7 +1104,7 @@
             Are you licensed and insured to work in Livonia, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Livonia, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Livonia project. Livonia homeowners can verify our credentials before any work begins.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Livonia job. Livonia homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">

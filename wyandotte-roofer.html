@@ -214,181 +214,228 @@
   <!-- JSON-LD -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://www.lincolnparkroofing.com/#website",
-        "url": "https://www.lincolnparkroofing.com/",
-        "name": "Lincoln Park Roofing"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.lincolnparkroofing.com/#website",
+      "url": "https://www.lincolnparkroofing.com/",
+      "name": "Lincoln Park Roofing"
+    },
+    {
+      "@type": [
+        "RoofingContractor",
+        "LocalBusiness"
+      ],
+      "@id": "https://www.lincolnparkroofing.com/#business",
+      "name": "Lincoln Park Roofing",
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "foundingDate": "1990",
+      "founder": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
       },
-      {
-        "@type": [ "RoofingContractor", "LocalBusiness" ],
-        "@id": "https://www.lincolnparkroofing.com/#business",
-        "name": "Lincoln Park Roofing",
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "logo": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "foundingDate": "1990",
-        "founder": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "employee": { "@id": "https://www.lincolnparkroofing.com/#owner" },
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ],
-        "url": "https://www.lincolnparkroofing.com/",
-        "telephone": "+1-734-224-5615",
-        "areaServed": [
-          { "@type": "City", "name": "Wyandotte" },
-          { "@type": "City", "name": "Lincoln Park" },
-          { "@type": "AdministrativeArea", "name": "Wayne County" }
-        ],
-        "knowsAbout": [
-          "Residential Roofing Systems",
-          "Asphalt Shingle Restoration",
-          "Storm Damage Mitigation",
-          "Seamless Gutter Engineering",
-          "Roof repair",
-          "Roof replacement",
-          "New roof construction",
-          "Roof rejuvenation",
-          "Siding",
-          "Gutters"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-            "streetAddress": "2026 Thomas St",
-          "addressLocality": "Lincoln Park",
-          "addressRegion": "MI",
-          "addressCountry": "US"
+      "employee": {
+        "@id": "https://www.lincolnparkroofing.com/#owner"
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "33",
-          "bestRating": "5"
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
         }
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-                    "@type": "Question",
-                    "name": "How much does a roof replacement cost in Wyandotte, MI?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof replacement costs in Wyandotte typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Wyandotte homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Wyandotte homeowner a free written estimate with no hidden fees \u2014 call (734) 224-5615."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you offer free roof inspections in Wyandotte?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. We provide free roof inspections for Wyandotte homeowners throughout the Biddle Ave, Oak St, and the downtown historic district areas. Our Wyandotte roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Wyandotte homeowners can make an informed decision."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Can you help with roof insurance claims in Wyandotte?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Absolutely. We handle roof insurance claims for Wyandotte homeowners every week. We document all storm damage at your Wyandotte property with detailed photos and scope reports, meet with your adjuster on-site in Wyandotte, and make sure nothing gets missed. Most Wyandotte insurance claims cover full roof replacement after hail or wind damage."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "What is roof rejuvenation and is it available in Wyandotte?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Wyandotte and Wayne County. Wyandotte homeowners save thousands compared to a full replacement. If your Wyandotte roof still has structural life, rejuvenation is worth a look."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "How long does a roof replacement take in Wyandotte?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Most Wyandotte roof replacements take one to two days. Larger Wyandotte homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Wyandotte homeowners. Your Wyandotte property gets a full cleanup before we leave."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Are you licensed and insured to work in Wyandotte, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Wyandotte, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Wyandotte project. Wyandotte homeowners can verify our credentials before any work begins."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Do you install gutters and siding in Wyandotte?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Wyandotte homeowners. Many Wyandotte homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Wyandotte, Southgate, and Riverview."
-                    }
-          },
-          {
-                    "@type": "Question",
-                    "name": "Where can I find the best roofer near me in Wyandotte, Michigan?",
-                    "acceptedAnswer": {
-                              "@type": "Answer",
-                              "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Wyandotte and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Wyandotte homes near Biddle Ave, Oak St, and the downtown historic district. Wyandotte homeowners also recommend us for dumpster rental. We serve Wyandotte, Southgate, and Riverview. Call (734) 224-5615 for a free Wyandotte roofing estimate."
-                    }
-          }
-]
-      },
-      {
-        "@type": "WebPage",
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": [".speakable-hook", ".speakable-answer"]
-        }
-      },
-      {
-        "@type": "Person",
-        "@id": "https://www.lincolnparkroofing.com/#owner",
-        "name": "Scott Kincaide",
-        "jobTitle": "Owner",
-        "worksFor": { "@id": "https://www.lincolnparkroofing.com/#business" },
-        "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
-        "knowsAbout": [
-          "Residential Roofing",
-          "Owens Corning Preferred Installation",
-          "Storm Damage Assessment",
-          "Roof Rejuvenation",
-          "Seamless Gutter Engineering",
-          "Michigan Residential Building Code"
-        ],
-        "hasCredential": [
-          { "@type": "EducationalOccupationalCredential", "name": "Owens Corning Preferred Contractor", "credentialCategory": "manufacturer-certification" },
-          { "@type": "EducationalOccupationalCredential", "name": "Licensed in Michigan since 1996", "credentialCategory": "license" }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.lincolnparkroofing.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Wyandotte Roofer", "item": "https://www.lincolnparkroofing.com/wyandotte-roofer.html" }
-        ]
-      },
-      {
-        "@type": "Service",
-        "name": "Roofing Services in Wyandotte, MI",
-        "serviceType": "Roofing",
-        "provider": {
-          "@id": "https://www.lincolnparkroofing.com/#business"
-        },
-        "areaServed": {
+      ],
+      "url": "https://www.lincolnparkroofing.com/",
+      "telephone": "+1-734-224-5615",
+      "areaServed": [
+        {
           "@type": "City",
-          "name": "Wyandotte",
-          "containedInPlace": {
-            "@type": "AdministrativeArea",
-            "name": "Wayne County, Michigan"
+          "name": "Wyandotte"
+        },
+        {
+          "@type": "City",
+          "name": "Lincoln Park"
+        },
+        {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County"
+        }
+      ],
+      "knowsAbout": [
+        "Residential Roofing Systems",
+        "Asphalt Shingle Restoration",
+        "Storm Damage Mitigation",
+        "Seamless Gutter Engineering",
+        "Roof repair",
+        "Roof replacement",
+        "New roof construction",
+        "Roof rejuvenation",
+        "Siding",
+        "Gutters"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "2026 Thomas St",
+        "addressLocality": "Lincoln Park",
+        "addressRegion": "MI",
+        "addressCountry": "US"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "33",
+        "bestRating": "5"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a roof replacement cost in Wyandotte, MI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof replacement costs in Wyandotte typically range from $8,000 to $18,000 depending on roof size, pitch, and materials. Most Wyandotte homeowners choose Owens Corning Duration architectural shingles, which run about $350-$450 per square installed. We give every Wyandotte homeowner a free written estimate with no hidden fees — call (734) 224-5615."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free roof inspections in Wyandotte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We provide free roof inspections for Wyandotte homeowners throughout the Biddle Ave, Oak St, and the downtown historic district areas. Our Wyandotte roof inspections cover shingles, flashing, gutters, ventilation, and decking. We document everything with photos so Wyandotte homeowners can make an informed decision."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you help with roof insurance claims in Wyandotte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely. We handle roof insurance claims for Wyandotte homeowners every week. We document all storm damage at your Wyandotte property with detailed photos and scope reports, meet with your adjuster on-site in Wyandotte, and make sure nothing gets missed. Most Wyandotte insurance claims cover full roof replacement after hail or wind damage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is roof rejuvenation and is it available in Wyandotte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Roof rejuvenation is a treatment that restores aging asphalt shingles and extends your roof's life by 5-10 years. We're the only company offering certified roof rejuvenation in Wyandotte and Wayne County. Wyandotte homeowners save thousands compared to a full replacement. If your Wyandotte roof still has structural life, rejuvenation is worth a look."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a roof replacement take in Wyandotte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most Wyandotte roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Wyandotte homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Wyandotte homeowners, and your property gets a full cleanup before we leave."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you licensed and insured to work in Wyandotte, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Wyandotte job. Wyandotte homeowners can verify our credentials before any work begins."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you install gutters and siding in Wyandotte?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Beyond roofing, we install seamless gutters, gutter guards, and vinyl or James Hardie fiber cement siding for Wyandotte homeowners. Many Wyandotte homeowners bundle a roof replacement with new gutters and siding to save on labor. We handle the full exterior for homes in Wyandotte, Southgate, and Riverview."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I find the best roofer near me in Wyandotte, Michigan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lincoln Park Roofing is a trusted local roofing contractor serving Wyandotte and the entire Downriver area. We provide roof repair, replacement, rejuvenation, siding, and gutters for Wyandotte homes near Biddle Ave, Oak St, and the downtown historic district. Wyandotte homeowners also recommend us for dumpster rental. We serve Wyandotte, Southgate, and Riverview. Call (734) 224-5615 for a free Wyandotte roofing estimate."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".speakable-hook",
+          ".speakable-answer"
+        ]
+      }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://www.lincolnparkroofing.com/#owner",
+      "name": "Scott Kincaide",
+      "jobTitle": "Owner",
+      "worksFor": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
+      },
+      "image": "https://www.lincolnparkroofing.com/lincoln park logo.png",
+      "knowsAbout": [
+        "Residential Roofing",
+        "Owens Corning Preferred Installation",
+        "Storm Damage Assessment",
+        "Roof Rejuvenation",
+        "Seamless Gutter Engineering",
+        "Michigan Residential Building Code"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Owens Corning Preferred Contractor",
+          "credentialCategory": "manufacturer-certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Licensed in Michigan since 1996",
+          "credentialCategory": "license"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.lincolnparkroofing.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Wyandotte Roofer",
+          "item": "https://www.lincolnparkroofing.com/wyandotte-roofer.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "name": "Roofing Services in Wyandotte, MI",
+      "serviceType": "Roofing",
+      "provider": {
+        "@id": "https://www.lincolnparkroofing.com/#business"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Wyandotte",
+        "containedInPlace": {
+          "@type": "AdministrativeArea",
+          "name": "Wayne County, Michigan"
         }
       }
-    ]
-  }
+    }
+  ]
+}
   </script>
 
   <!-- Product Schema — triggers star rich results in Google -->
@@ -1044,7 +1091,7 @@
             How long does a roof replacement take in Wyandotte?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Most Wyandotte roof replacements take one to two days. Larger Wyandotte homes or roofs with multiple layers may take up to three days. We work rain or shine when possible to minimize disruption for Wyandotte homeowners. Your Wyandotte property gets a full cleanup before we leave.</p>
+          <p class="text-gray-600 mt-3">Most Wyandotte roof replacements are completed in one day. Our direct in-house crew — no subcontractors — has completed 6,000 roofs across Downriver Michigan since Established 1990. Larger Wyandotte homes or roofs with multiple layers may take two days. We work efficiently to minimize disruption for Wyandotte homeowners, and your property gets a full cleanup before we leave.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
@@ -1052,7 +1099,7 @@
             Are you licensed and insured to work in Wyandotte, Michigan?
             <i class="fas fa-plus text-brand-primary ml-4"></i>
           </summary>
-          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing is fully licensed and insured for all roofing work in Wyandotte, MI and throughout Wayne County. We follow 2026 Michigan Residential Building Code on every Wyandotte project. Wyandotte homeowners can verify our credentials before any work begins.</p>
+          <p class="text-gray-600 mt-3">Yes. Lincoln Park Roofing has been fully licensed and insured in Michigan since 1996 — Established 1990, with 6,000 roofs completed across Downriver Michigan. Owens Corning Preferred Contractor since 2011. Every full replacement comes with a lifetime shingle warranty plus a 25-year non-prorated labor warranty on workmanship. Direct in-house crew only — no subcontractors on any Wyandotte job. Wyandotte homeowners can verify our credentials before any work begins.</p>
         </details>
 
         <details class="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
