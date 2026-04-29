@@ -52,7 +52,7 @@ def build_city_grid(city_slug: str, city_name: str) -> str:
 <section class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">Roofing Services in {city_name}</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-3">All {city_name} Roofing Services — Owens Corning Preferred Since 2011</h2>
       <p class="text-gray-600 max-w-2xl mx-auto">Every {city_name} roofing service we offer — from emergency leak repair to full replacement — is handled by the same Owens Corning Preferred crew that has completed 6,000+ roofs across Downriver Michigan.</p>
     </div>
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">{cards_html}
