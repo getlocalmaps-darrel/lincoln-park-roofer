@@ -1597,7 +1597,7 @@ def build_main_body(service_slug, city_slug):
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
         <!-- LEFT COLUMN -->
         <div class="lg:col-span-8">
-          <h2 class="speakable-hook big-text text-3xl md:text-5xl font-bold text-brand-primary mb-4">{sn} Contractor Serving {cn}, Michigan</h2>
+          <h2 class="speakable-hook big-text text-3xl md:text-5xl font-bold text-brand-primary mb-4">{sn} Experts Serving {cn}, Michigan</h2>
 
           <p class="text-gray-800 text-lg md:text-xl font-semibold leading-relaxed mb-5">
             {nugget}
@@ -1804,7 +1804,7 @@ def build_faq_section(service_slug, city_slug):
   <section id="faq" class="py-12 md:py-20 bg-brand-light">
     <div class="container mx-auto px-4 md:px-6">
       <div class="text-center mb-10">
-        <h2 class="big-text text-3xl md:text-5xl font-bold text-brand-primary">{svc['name']} FAQs for {city['name']} Homeowners</h2>
+        <h2 class="big-text text-3xl md:text-5xl font-bold text-brand-primary">{svc['name']} FAQ — {city['name']}</h2>
         <p class="text-gray-600 text-base md:text-lg mt-3 max-w-3xl mx-auto">
           Quick answers to the {svc['name'].lower()} questions we hear most from {city['name']} homeowners.
         </p>
