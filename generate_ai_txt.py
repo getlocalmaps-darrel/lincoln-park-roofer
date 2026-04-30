@@ -8,6 +8,43 @@ Uses the proven 4-bullet formula:
 """
 
 import os
+import sys
+
+# !!! DO NOT RUN WITHOUT READING THIS !!! ----------------------------------
+# 2026-04-29: 10 roof-repair-*-ai.txt files were manually patched with
+# intro-mined sections (5 cities = unique-signal H2s, 5 cities = "Warranty
+# & Customer Confidence" block). Running this script as-is will OVERWRITE
+# all 10 manual edits and lose the intro-mining work.
+#
+# Cities patched (DO NOT regenerate without first baking the new sections
+# into the template below OR adding INTRO_MINING_START/END markers):
+#   Unique-signal H2:  taylor, livonia, plymouth, trenton, grosse-ile
+#   Warranty block:    allen-park, wyandotte, southgate, dearborn-heights, ecorse
+#
+# Permanent fix options (pick one before removing this guard):
+#   (A) Add intro_signals + warranty_section fields to the CITIES dict and
+#       bake them into the build_ai_txt() template
+#   (B) Add <!-- INTRO_MINING_START --> / <!-- INTRO_MINING_END --> markers
+#       and teach the generator to preserve content between them
+#   (C) Detect known section headers ("Warranty & Customer Confidence",
+#       "Ice Dam", "Hail Damage", "Freeze-Thaw", "High-Wind") and skip
+#       files that contain them
+#
+# Cross-references:
+#   - intro_mining_methodology_2026-04-29.md (memory)
+#   - web_design_master.md §16.0
+#   - client_site_launch_playbook.md Phase 1.5
+#
+# To override the guard for a partial regen, run with:  --force
+# --------------------------------------------------------------------------
+if "--force" not in sys.argv:
+    print("[BLOCKED] generate_ai_txt.py is guarded — see DO NOT RUN block at top.")
+    print("          10 roof-repair-*-ai.txt files contain manual intro-mined")
+    print("          edits that this script will overwrite.")
+    print("          Pass --force to override (last resort).")
+    sys.exit(1)
+
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
